@@ -1,0 +1,22 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>Analysis Groups</title>
+{% endblock %}
+{% block content %}
+
+    <h1>Analysis Groups</h1>
+      
+      {% regroup sets by group as set_list %}
+      {% for l in set_list %}
+      <a name="{{l.grouper.slug}}"></a><h2>{{l.grouper.name}}</h2>
+      {% for s in l.list %}
+        <p><b>{{s.h_label}}</b>:
+        {% for l in s.ordered_labels %}<a href="{% url 'exp_label_view' service.slug s.slug l.slug default_collection_type %}">{{l.name}}</a>{% if forloop.last == False %}, {% endif %}{% endfor %}</p>
+      {% endfor %}
+      {% endfor %}
+      
+{% endblock %}

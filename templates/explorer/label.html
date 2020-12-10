@@ -1,0 +1,38 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+
+{% block head %}
+    <title>{{label.parent.h_label}} - {{label.name}}</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">{{label.parent.h_label}} - {{label.name}}</h1>
+    <h3 class="text-center">Part of <a href="{% url 'exp_labels_view' service.slug %}#{{label.parent.group.slug}}">{{label.parent.group.name}}</a></h3>
+	
+	<p class="text-center">Other Options:     {% for c in alt_options %}
+	<a href="{% url 'exp_label_view' service.slug label.parent.slug c.slug collection_type.slug %}">{{c.name}}</a>{% if forloop.last == False %} - {% endif %}
+    {% endfor %}</p>
+	
+
+    <hr>
+	      {{chart.render_div}}  
+		  
+{% if collection_types|length > 1 %}
+<ul class="nav nav-tabs">
+    {% for c in collection_types %}
+    <li role="presentation" {% if c.slug == collection_type.slug %}class="active"{% endif %}><a href="{% url 'exp_label_view' service.slug label.parent.slug label.slug c.slug %}">{{c.name}}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+     
+{{table.render_div}}
+    <br>
+{% endblock %}
+
+{% block code %}
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+{{chart_collection.render_code}}
+{% endblock %}

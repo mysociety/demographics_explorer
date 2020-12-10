@@ -1,0 +1,31 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>Data Explorer {{service.name}}</title>
+{% endblock %}
+{% block content %}
+
+    <h1>Data Explorer - {{service.name}}</h1>
+    
+    <p>
+    This mini-site examines how much the distribution of reports for a reporting category differ from the 'normal' for the {{service.name}} dataset.</p>
+    
+    <p>Columns in <span style="color:#62B356">green</span> and <span style="color:#E04B4B">red</span> have at least a 95% chance of a real difference from the general dataset and at least a {{large_cutoff}}% different from the expected value.</p>
+    
+	<p>As each graph only explores the interaction of two variables analysis may be incomplete or misleading where other variables interact with both. A relationship can be statistically significant without necessarily implying one causes the other.</p>
+	
+    <p><span style="color:#62B356">Green</span> means a category has more reports than expected. <span style="color:#E04B4B">Red</span> means it has less.</p>
+
+	{% with service.default as default %}
+	The default exploration mode is <a href="{% url 'exp_categories_view' service.slug default.slug 'all' %}">{{default.name}}</a>, but you can also explore by {% for c in service.all_types_but_default %}<a href="{% url 'exp_categories_view' service.slug c.slug 'all' %}">{{c.name}}</a>, {% endfor%} or by <a href="{% url 'exp_labels_view' service.slug %}">Analysis Type</a>. See explanations for these <a href="{% url 'exp_exploring_view' service.slug %}">here</a>.</p> 
+	{% endwith %}
+	
+	{% if service.slug == "la" %}
+		<b>Data Sources:</b>
+
+<p><a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015">IMD</a>, <a href="https://www2.gov.scot/Topics/Statistics/SIMD">SIMD</a>, <a href="https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Welsh-Index-of-Multiple-Deprivation">WIMD</a>, <a href="https://www.gov.uk/government/collections/local-authority-revenue-expenditure-and-financing">England and Wales Budget</a>, <a href="https://www2.gov.scot/Topics/Statistics/Browse/Local-Government-Finance/PubScottishLGFStats">Scotland Budget</a>, <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatestimeseriesdataset">Population Growth</a> ,<a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">Population Age</a>, <a href="https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/2011censuskeystatisticsforlocalauthoritiesinenglandandwales/r21ewrttableks201ewladv1_tcm77-290595.xls ">Ethnicity</a>, <a href="http://opencouncildata.co.uk/">Councillor Information</a></p>
+{% endif %}
+{% endblock %}

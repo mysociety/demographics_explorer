@@ -1,0 +1,75 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+
+{% block head %}
+    <title>{{superset.name}} - {{category.name}}</title>
+{% endblock %}
+
+{% block content %}
+    <h2  class="text-center">{{collection.name}} - <a href="{% url 'exp_category_view' service.slug collection.slug category.slug "overview" %}">{{category.name}}</a></h2>
+    <h2  class="text-center">{{superset.name}}</h2>
+
+    <hr>
+	<br>
+	
+	{% if collection.description %}
+	<p><b>Description of {{collection.name}}:</b><p>
+	{{collection.markdown_description}}
+	{% endif %}
+	
+	{% if superset.description %}
+	<p><b>Description of {{superset.name}}:</b><p>
+	<p>{{superset.markdown_description}}</p>
+	{% endif %}
+	{% if collection.description or superset.description %}
+    <hr>
+	<br>	
+	{% endif %}
+	
+	<h3>Report distribution</h3>
+	<p>The chart below shows the distribution of {{service.collective_name|lower}} in <b>{{collection.name}} - {{category.name}}</b> for <b>{{superset.name}}</b>.</p>
+	
+	<p>This analysis has used a chi-square test to examine the differences between this distribution and how it would be expected to be distributed if behaved identically to the general dataset (all {{service.collective_name|lower}}).</p>
+	
+	<p>The test statistic is {{comparison_set.chi2|round|intcomma}} and the p-value is {{comparison_set.p|readable_p}}.</p>
+
+	<p>As each graph only explores the interaction of two variables analysis may be incomplete or misleading where other variables interact with both. A relationship can be statistically significant without necessarily implying one causes the other.</p>
+	
+    <p>Columns in <span style="color:#62B356">green</span> and <span style="color:#E04B4B">red</span> have at least a 95% chance of a real difference from the global dataset and at least a {{large_cutoff}}% different from the expected value.</p>
+    <p><span style="color:#62B356">Green</span> means a category has more reports than expected. <span style="color:#E04B4B">Red</span> means it has less.</p>
+        {{chart.render_div}}    
+
+    <hr>
+	<br>
+	<h3>Comparison with General Dataset</h3>
+		<p>In the next chart, grey bars are overlayed indicated the expected distribution if counts were distributed in the same pattern as the general dataset.</p>
+
+	{{expected_chart.render_div}}
+	
+		<p>This helps to demonstrate the scale of any deviation from the general dataset. When the amount of data available is large, a difference can be statistically significant while being relatively small.</p>
+	<hr>
+	<br>
+	<h3>Difference by Percent</h3>
+	<p>This chart shows the percentage difference between the expected and actual result - representing the scale of difference between this category and the general dataset. </p>
+	{{percentage_diff.render_div}}
+	<hr>
+	<br>
+	<h3>Absolute Difference</h3>
+	<p>This chart shows the absolute difference between the expected and actual result - representing how many more or less reports were received in this category compared to what was expected. </p>	
+	{{absolute_diff.render_div}}	
+	<hr>
+	<br>
+	<h3>Data Table</h3>
+	 {{table.render_div}}
+	
+	
+    <br>
+    {% endblock %}
+
+{% block code %}
+{{chart_collection.render_code}}  
+  
+{% endblock %}

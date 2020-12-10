@@ -1,0 +1,29 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>{{service.name}} - {{collection.name}}</title>
+{% endblock %}
+
+{% block content %}
+	<h1>{{service.name}} - {{collection.name}}</h1>
+	<h3></h3>
+    <h3>{{grand_total|intcomma}} {{service.collective_name}} {%if year == "all" %} all time.{% else %}in {{year}}.{%endif%}</h3>
+	{{collection.markdown_description}}
+	<p>View all <a href="{% url 'exp_exploring_view' service.slug %}">exploring options</a>.</p>
+<hr>
+<ul class="nav nav-tabs">
+  <li role="presentation" {% if year == "all" %}class="active"{% endif %}><a href="{% url 'exp_categories_view' service.slug collection.slug 'all' %}">All Time</a></li>
+    {% for y in allowed_years %}
+    <li role="presentation" {% if year == y %}class="active"{% endif %}><a href="{% url 'exp_categories_view' service.slug collection.slug y %}">{{y}}</a></li>
+    {% endfor %}
+</ul>
+
+       {{table.render_div}}
+{% endblock %}
+
+{% block code %}
+{{chart_collection.render_code}}
+{% endblock %}

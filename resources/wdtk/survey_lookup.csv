@@ -1,0 +1,261 @@
+qid,qname,aname,aid
+referrer,How did you find out about this site?,From another mySociety site,1
+referrer,How did you find out about this site?,"From media such as newspapers, etc",2
+referrer,How did you find out about this site?,From a search engine ,3
+referrer,How did you find out about this site?,Recommendation by friends or colleagues,4
+referrer,How did you find out about this site?,From a campaigning website,5
+referrer,How did you find out about this site?,Other,9
+referrer_other,How did you find out about this site?,,please specify
+referrer,How did you find out about this site?,Can't remember,98
+referrer,How did you find out about this site?,Don’t want to answer,95
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),Please select what applies to you,please select what applies to you
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),0 - not at all likely,0
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),1,1
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),2,2
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),3,3
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),4,4
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),5 - neutral,5
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),6,6
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),7,7
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),8,8
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),9,9
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),10 - extremely likely,10
+netpromoter,How likely is it that you would recommend this site to a friend or colleague? (assuming they would be interested in such a service),Don’t want to answer,95
+authority,What kind of authority did your request go to?,Please select,please select
+authority,What kind of authority did your request go to?,Central Government,1
+authority,What kind of authority did your request go to?,Local and regional,2
+authority,What kind of authority did your request go to?,Education,3
+authority,What kind of authority did your request go to?,Environment,4
+authority,What kind of authority did your request go to?,Health,5
+authority,What kind of authority did your request go to?,Media and Culture,6
+authority,What kind of authority did your request go to?,Military and Security Services,7
+authority,What kind of authority did your request go to?,Emergency services and the courts,8
+authority,What kind of authority did your request go to?,Transport,9
+authority,What kind of authority did your request go to?,Other,97
+authority,What kind of authority did your request go to?,Don’t want to answer,95
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,Please select,please select
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,Only yourself or your family,1
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,"Only other people, but not yourself or your family",2
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,"Yourself or your family, as well as others like you",3
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,All people in the community,4
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,All people in the nation or all people in the world,5
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,Don’t know,94
+messageconcern,Which of these categories best describes to whom the information you have requested would be relevant?,Don’t want to answer,95
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",Yes,1
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",No,0
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",Don’t want to answer,95
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",Yes,1
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",No,0
+response,"Did you get a reply from the authority you have contacted? (this means a substantive reply, not just a note acknowledging your request)",Don’t want to answer,95
+response,yes,No,0
+response,yes,Don’t want to answer,95
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Yes,1
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,No,0
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Did not receive a response,98
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Don’t want to answer,95
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Yes,1
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,No,0
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Did not receive a response,98
+satisfaction,If you received a substantive response from the public authority: Were you satisfied with it?,Don’t want to answer,95
+satisfaction,yes,No,0
+satisfaction,yes,Did not receive a response,98
+satisfaction,yes,Don’t want to answer,95
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Yes,1
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,No,0
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Did not receive a response,98
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Don’t want to answer,95
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Yes,1
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,No,0
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Did not receive a response,98
+followupaction,If you received a substantive response: Have you taken any action as a result of the information released?,Don’t want to answer,95
+followupaction,yes,No,0
+followupaction,yes,Did not receive a response,98
+followupaction,yes,Don’t want to answer,95
+dialogue,Will you get in touch again with the public authority to which you sent your request?,Yes,1
+dialogue,Will you get in touch again with the public authority to which you sent your request?,No,0
+dialogue,Will you get in touch again with the public authority to which you sent your request?,Don’t want to answer,95
+dialogue,Will you get in touch again with the public authority to which you sent your request?,Yes,1
+dialogue,Will you get in touch again with the public authority to which you sent your request?,No,0
+dialogue,Will you get in touch again with the public authority to which you sent your request?,Don’t want to answer,95
+dialogue,yes,No,0
+dialogue,yes,Don’t want to answer,95
+previouscontact,"Before you used this site, have you ever made a Freedom of Information request at all - and if so, how did you do it?",Never made a request before I used this site,0
+previouscontact,"Before you used this site, have you ever made a Freedom of Information request at all - and if so, how did you do it?",Made request(s) before using offline means ,1
+previouscontact,"Before you used this site, have you ever made a Freedom of Information request at all - and if so, how did you do it?",Made request(s) before using the Internet ,2
+previouscontact,"Before you used this site, have you ever made a Freedom of Information request at all - and if so, how did you do it?",Made request(s) before using both online and offline means,3
+previouscontact,"Before you used this site, have you ever made a Freedom of Information request at all - and if so, how did you do it?",Don’t want to answer,95
+opinion_navigation,How much do you agree with the following statements?,strongly disagree,0
+opinion_navigation,How much do you agree with the following statements?,disagree,1
+opinion_navigation,How much do you agree with the following statements?,agree,2
+opinion_navigation,How much do you agree with the following statements?,strongly agree,3
+opinion_navigation,How much do you agree with the following statements?,don't want to answer,99
+opinion_structure,How much do you agree with the following statements?,strongly disagree,0
+opinion_structure,How much do you agree with the following statements?,disagree,1
+opinion_structure,How much do you agree with the following statements?,agree,2
+opinion_structure,How much do you agree with the following statements?,strongly agree,3
+opinion_structure,How much do you agree with the following statements?,don't want to answer,99
+opinion_objectivity,How much do you agree with the following statements?,strongly disagree,0
+opinion_objectivity,How much do you agree with the following statements?,disagree,1
+opinion_objectivity,How much do you agree with the following statements?,agree,2
+opinion_objectivity,How much do you agree with the following statements?,strongly agree,3
+opinion_objectivity,How much do you agree with the following statements?,don't want to answer,99
+opinion_design,How much do you agree with the following statements?,strongly disagree,0
+opinion_design,How much do you agree with the following statements?,disagree,1
+opinion_design,How much do you agree with the following statements?,agree,2
+opinion_design,How much do you agree with the following statements?,strongly agree,3
+opinion_design,How much do you agree with the following statements?,don't want to answer,99
+opinion_navigation,How much do you agree with the following statements?,strongly disagree,0
+opinion_navigation,How much do you agree with the following statements?,disagree,1
+opinion_navigation,How much do you agree with the following statements?,agree,2
+opinion_navigation,How much do you agree with the following statements?,strongly agree,3
+opinion_navigation,How much do you agree with the following statements?,don't want to answer,99
+opinion_structure,How much do you agree with the following statements?,strongly disagree,0
+opinion_structure,How much do you agree with the following statements?,disagree,1
+opinion_structure,How much do you agree with the following statements?,agree,2
+opinion_structure,How much do you agree with the following statements?,strongly agree,3
+opinion_structure,How much do you agree with the following statements?,don't want to answer,99
+opinion_objectivity,How much do you agree with the following statements?,strongly disagree,0
+opinion_objectivity,How much do you agree with the following statements?,disagree,1
+opinion_objectivity,How much do you agree with the following statements?,agree,2
+opinion_objectivity,How much do you agree with the following statements?,strongly agree,3
+opinion_objectivity,How much do you agree with the following statements?,don't want to answer,99
+opinion_design,How much do you agree with the following statements?,strongly disagree,0
+opinion_design,How much do you agree with the following statements?,disagree,1
+opinion_design,How much do you agree with the following statements?,agree,2
+opinion_design,How much do you agree with the following statements?,strongly agree,3
+opinion_design,How much do you agree with the following statements?,don't want to answer,99
+opinion_navigation,WhatDoTheyKnow is easy to navigate,strongly disagree,0
+opinion_navigation,WhatDoTheyKnow is easy to navigate,disagree,1
+opinion_navigation,WhatDoTheyKnow is easy to navigate,agree,2
+opinion_navigation,WhatDoTheyKnow is easy to navigate,strongly agree,3
+opinion_navigation,WhatDoTheyKnow is easy to navigate,don't want to answer,99
+opinion_structure,WhatDoTheyKnow is well structured,strongly disagree,0
+opinion_structure,WhatDoTheyKnow is well structured,disagree,1
+opinion_structure,WhatDoTheyKnow is well structured,agree,2
+opinion_structure,WhatDoTheyKnow is well structured,strongly agree,3
+opinion_structure,WhatDoTheyKnow is well structured,don't want to answer,99
+opinion_objectivity,WhatDoTheyKnow provides information in an unbiased and unpartisan way,strongly disagree,0
+opinion_objectivity,WhatDoTheyKnow provides information in an unbiased and unpartisan way,disagree,1
+opinion_objectivity,WhatDoTheyKnow provides information in an unbiased and unpartisan way,agree,2
+opinion_objectivity,WhatDoTheyKnow provides information in an unbiased and unpartisan way,strongly agree,3
+opinion_objectivity,WhatDoTheyKnow provides information in an unbiased and unpartisan way,don't want to answer,99
+opinion_design,WhatDoTheyKnow is pretty to look at,strongly disagree,0
+opinion_design,WhatDoTheyKnow is pretty to look at,disagree,1
+opinion_design,WhatDoTheyKnow is pretty to look at,agree,2
+opinion_design,WhatDoTheyKnow is pretty to look at,strongly agree,3
+opinion_design,WhatDoTheyKnow is pretty to look at,don't want to answer,99
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,Please select what applies to you,please select what applies to you
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,This is the first time in the last 12 months,0
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,About once within the last 12 months,1
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,2 - 5 times within the last 12 months,2
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,6 - 10 times within the last 12 months,3
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,More than 10 times within the last 12 months,4
+usefrequency,Within the last twelve months: How often have you used WhatDoTheyKnow.com to make a Freedom of Information request?,Don’t want to answer,95
+registration,Are you a registered user of WhatDoTheyKnow?,Yes,1
+registration,Are you a registered user of WhatDoTheyKnow?,No,0
+registration,Are you a registered user of WhatDoTheyKnow?,Don’t want to answer,95
+registration,Are you a registered user of WhatDoTheyKnow?,Yes,1
+registration,Are you a registered user of WhatDoTheyKnow?,No,0
+registration,Are you a registered user of WhatDoTheyKnow?,Don’t want to answer,95
+registration,yes,No,0
+registration,yes,Don’t want to answer,95
+internetability,How would you rate your ability to use the Internet?,Please select,please select
+internetability,How would you rate your ability to use the Internet?,Excellent,5
+internetability,How would you rate your ability to use the Internet?,Good,4
+internetability,How would you rate your ability to use the Internet?,Fair,3
+internetability,How would you rate your ability to use the Internet?,Poor,2
+internetability,How would you rate your ability to use the Internet?,Bad,1
+internetability,How would you rate your ability to use the Internet?,Don’t know/can't say,97
+internetability,How would you rate your ability to use the Internet?,Don’t want to answer,95
+groups,"In the last twelve months have you been involved with a political or a community group, e.g. by being a formal member or by volunteering?",A political group ,2
+groups,"In the last twelve months have you been involved with a political or a community group, e.g. by being a formal member or by volunteering?",A community group ,1
+groups,"In the last twelve months have you been involved with a political or a community group, e.g. by being a formal member or by volunteering?",Both community as well as political group,3
+groups,"In the last twelve months have you been involved with a political or a community group, e.g. by being a formal member or by volunteering?",None of the above,0
+groups,"In the last twelve months have you been involved with a political or a community group, e.g. by being a formal member or by volunteering?",Don’t want to answer,95
+activity,"Apart from your use of this website: Within the last twelve months have you taken part in any broadly political activity? (This includes for example demonstrations, signing a petition, contacting a politician, boycotting a product, donating money or displaying a campaign badge)","Yes, online",2
+activity,"Apart from your use of this website: Within the last twelve months have you taken part in any broadly political activity? (This includes for example demonstrations, signing a petition, contacting a politician, boycotting a product, donating money or displaying a campaign badge)","Yes, offline",1
+activity,"Apart from your use of this website: Within the last twelve months have you taken part in any broadly political activity? (This includes for example demonstrations, signing a petition, contacting a politician, boycotting a product, donating money or displaying a campaign badge)",Yes both online as well as offline,3
+activity,"Apart from your use of this website: Within the last twelve months have you taken part in any broadly political activity? (This includes for example demonstrations, signing a petition, contacting a politician, boycotting a product, donating money or displaying a campaign badge)",None of the above,0
+activity,"Apart from your use of this website: Within the last twelve months have you taken part in any broadly political activity? (This includes for example demonstrations, signing a petition, contacting a politician, boycotting a product, donating money or displaying a campaign badge)",Don’t want to answer,95
+age,How old are you?,Please select what applies to you,please select what applies to you
+age,How old are you?,Less than 18 years old,1
+age,How old are you?,18-24 years old,2
+age,How old are you?,25-34 years old,3
+age,How old are you?,35-44 years old,5
+age,How old are you?,45-54 years old,7
+age,How old are you?,55-64 years old,9
+age,How old are you?,65-74 years old,11
+age,How old are you?,75 years and older,13
+age,How old are you?,Don’t want to answer,95
+gender,Could you please indicate your gender?,Female,1
+gender,Could you please indicate your gender?,Male,0
+gender,Could you please indicate your gender?,Don’t want to answer,95
+gender,Could you please indicate your gender?,Female,1
+gender,Could you please indicate your gender?,Male,0
+gender,Could you please indicate your gender?,Don’t want to answer,95
+gender,female,Male,0
+gender,female,Don’t want to answer,95
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Please select what applies to you,please select what applies to you
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Primary school or equivalent,0
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Secondary school or equivalent,1
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Special school or equivalent,2
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Sixth form college or equivalent,3
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Technical college or equivalent,4
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Further Education College,5
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Adult Community College,6
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",University or equivalent,7
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Other,9
+education_any,"What is the last type of educational institution (e.g. school, college or university) that you have attended or which type of educational institution are you attending now?",Don’t want to answer,95
+lifestage,Which of these descriptions best describes your current situation?,Please select what applies to you,please select what applies to you
+lifestage,Which of these descriptions best describes your current situation?,Working full time ,1
+lifestage,Which of these descriptions best describes your current situation?,Working part time ,2
+lifestage,Which of these descriptions best describes your current situation?,Retired,3
+lifestage,Which of these descriptions best describes your current situation?,Unemployed,4
+lifestage,Which of these descriptions best describes your current situation?,Permanently sick or disabled,5
+lifestage,Which of these descriptions best describes your current situation?,In community or military service,6
+lifestage,Which of these descriptions best describes your current situation?,Undergraduate student,7
+lifestage,Which of these descriptions best describes your current situation?,Postgraduate student,8
+lifestage,Which of these descriptions best describes your current situation?,In full time education ,9
+lifestage,Which of these descriptions best describes your current situation?,In part time education ,10
+lifestage,Which of these descriptions best describes your current situation?,"Doing housework, looking after children or other persons",11
+lifestage,Which of these descriptions best describes your current situation?,None of the above,98
+lifestage,Which of these descriptions best describes your current situation?,Don’t want to answer,95
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,Please select what applies to you,please select what applies to you
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"Up to    £12,500 per year",1
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"£12,501 to £25,000 per year",2
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"£25,001 to £40,000 per year",3
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"£40,001 to £50,000 per year",4
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"£50,001 to £60,000 per year",5
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"£60,001 to £100,000 per year",6
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,"More than £100,000 per year",7
+income,The incomes of households differ a lot in Britain today. Which figures best represents the total income of your household before tax?,Don’t want to answer,95
+ethnicity,To which one of these ethnic groups do you consider you belong?,Please select what applies to you,please select what applies to you
+ethnicity,To which one of these ethnic groups do you consider you belong?,British,1
+ethnicity,To which one of these ethnic groups do you consider you belong?,English,21
+ethnicity,To which one of these ethnic groups do you consider you belong?,Welsh,22
+ethnicity,To which one of these ethnic groups do you consider you belong?,Scottish,23
+ethnicity,To which one of these ethnic groups do you consider you belong?,Irish,2
+ethnicity,To which one of these ethnic groups do you consider you belong?,Other white,3
+ethnicity,To which one of these ethnic groups do you consider you belong?,White and Black Caribbean,4
+ethnicity,To which one of these ethnic groups do you consider you belong?,White and Black African,5
+ethnicity,To which one of these ethnic groups do you consider you belong?,White and Asian,6
+ethnicity,To which one of these ethnic groups do you consider you belong?,Other Mixed,7
+ethnicity,To which one of these ethnic groups do you consider you belong?,Indian,8
+ethnicity,To which one of these ethnic groups do you consider you belong?,Pakistani,9
+ethnicity,To which one of these ethnic groups do you consider you belong?,Bangladeshi,10
+ethnicity,To which one of these ethnic groups do you consider you belong?,Other Asian,11
+ethnicity,To which one of these ethnic groups do you consider you belong?,Caribbean,12
+ethnicity,To which one of these ethnic groups do you consider you belong?,African,13
+ethnicity,To which one of these ethnic groups do you consider you belong?,Other Black,14
+ethnicity,To which one of these ethnic groups do you consider you belong?,Chinese,15
+ethnicity,To which one of these ethnic groups do you consider you belong?,Any other ethnic group,16
+ethnicity,To which one of these ethnic groups do you consider you belong?,Don’t know,97
+ethnicity,To which one of these ethnic groups do you consider you belong?,Don’t want to answer,95
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",Yes,1
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",No,0
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",Don’t want to answer,95
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",Yes,1
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",No,0
+disability,"Do you have a health problem or disability which prevents you from doing every day tasks at home, work or school or which limits the kind or amount of work you can do?",Don’t want to answer,95
+disability,yes,No,0
+disability,yes,Don’t want to answer,95

@@ -1,0 +1,77 @@
+
+
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>Data Explorer</title>
+
+<style>
+
+iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+</style>
+
+
+{% endblock %}
+{% block content %}
+    <h1>Data Explorer</h1>
+   <p>This is a minisite to explore variations in the demographics, time of usage, and deprivation levels associated with user actions on mySociety services.</p>
+
+    <ul>
+        {% for s in services %}
+            <li><a href="{% url 'exp_home_view' s.slug %}">{{s.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+	<h2>Related blog posts</h2>
+	<iframe height="400" id="iframe_related" scrolling="no" src="https://research.mysociety.org/embed/explorer-series/"></iframe>
+	
+	
+	<div class="colour-red" >
+    <h2>mySociety research updates</h2>
+	{% if show_blurb %}
+    <p>
+        Sign up to our mailing list for updates about new research publications and events.
+    </p>
+	{% endif %}
+    <form style="max-width: 24em" action="//mysociety.us9.list-manage.com/subscribe/post?u=53d0d2026dea615ed488a8834&amp;id=287dc28511" method="POST">
+        <div style="position: absolute; left: -5000px;">
+            <input name="b_53d0d2026dea615ed488a8834_287dc28511" tabindex="-1" value="" type="text">
+        </div>
+        <input name="group[11745][16]" value="1" type="hidden">
+        <div class="inline-input">
+            <input id = "email" name="EMAIL" aria-label="Email address" type="email">
+        </div><div class="inline-button">
+            <input type="submit" class="button" name="subscribe" value="Subscribe" onclick="ga('send', 'event', 'Newsletter', 'Signup', 'Homepage')">
+        </div>
+		<label for="email">Enter your email address.</label>
+        <p>
+		</p>
+		<p>
+            <label>
+                <input name="group[11745][32]" value="1" type="checkbox" style="vertical-align: 0.1em; margin-right: 0.3em;">
+                sign up to mySociety news
+            </label>
+        </p>
+    </form>
+</div>
+{% endblock %}
+
+
+{% block title_link %}
+<a href="{% url 'exp_master_view' %}">Data Explorer</a>
+{% endblock %}
+
+{% block top_links %}
+{% endblock %}
+
+

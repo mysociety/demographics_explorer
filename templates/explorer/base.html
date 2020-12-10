@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Explore: {{service.name}}</title>
+{% endblock %}
+
+{% block title_link %}
+<a href="{% url 'exp_master_view' %}">Explorer:</a> <a href="{% url 'exp_home_view' service.slug %}">{{service.name}}</a>
+{% endblock %}
+
+{% block top_links %}
+{% with service.default as c %}
+<li><a class="page-scroll" href="{% url 'exp_categories_view' service.slug c.slug 'all' %}">{{c.name}}</a></li>
+{% endwith %}
+<li><a class="page-scroll" href="{% url 'exp_exploring_view' service.slug %}">Options</a></li>
+<li><a class="page-scroll" href="{% url 'exp_labels_view' service.slug %}">Analysis</a></li>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

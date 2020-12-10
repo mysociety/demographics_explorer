@@ -1,0 +1,20 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>Data Explorer {{service.name}}</title>
+{% endblock %}
+{% block content %}
+
+    <h1>{{service.name}} - Exploration Options</h1>
+	<p>This page shows the various different ways of examining data for {{service.name}}.</p>
+	{% for c in service.all_types %}
+	<h3>{{c.name}} <a href="{% url 'exp_categories_view' service.slug c.slug 'all' %}">(link)</a></h3>
+	{{c.markdown_description}}
+	{% endfor %}
+	<h3>Analysis Type <a href="{% url 'exp_labels_view' service.slug %}">(link)</a></h3>
+	<p>Explore from the 'other direction' - the various features being crossed against the above.</p>
+ 
+{% endblock %}
