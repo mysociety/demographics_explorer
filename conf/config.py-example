@@ -1,9 +1,9 @@
 
 import os
-SITE_SLUG = "foi-monitor"
-CORE_APP_NAME = "pi_monitor"
+SITE_SLUG = "explorer"
+CORE_APP_NAME = "explorer"
 SECRET_KEY = ''
-SITE_NAME = 'FOI Monitoring'
+SITE_NAME = 'Demographics Explorer'
 LIVE_ROOT = 'http://research.mysociety.org/sites/'
 SHARE_IMAGE = ''
 TWITTER_SHARE_IMAGE = ''
@@ -21,3 +21,10 @@ BAKE_MEDIA_LOCATION = os.path.join(
 CHART_FOLDER = os.path.join(BAKE_MEDIA_LOCATION, "charts")
 CSV_FOLDER = os.path.join(BAKE_MEDIA_LOCATION, "csvs")
 CHROME_DRIVER = ""
+
+FMS_CURRENT_YEAR = 2019
+WTT_CURRENT_YEAR = 2019
+WDTK_CURRENT_YEAR = 2019
+FMS_EXPLORER_SOURCE = r"\_exports\explorer"
+WTT_EXPLORER_SOURCE = r"\_exports\wttexplorer"
+WDTK_EXPLORER_SOURCE = r"wdtk_survey"
