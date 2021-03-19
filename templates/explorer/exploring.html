@@ -14,7 +14,7 @@
 	<h3>{{c.name}} <a href="{% url 'exp_categories_view' service.slug c.slug 'all' %}">(link)</a></h3>
 	{{c.markdown_description}}
 	{% endfor %}
-	<h3>Analysis Type <a href="{% url 'exp_labels_view' service.slug %}">(link)</a></h3>
+	<h3>analysis type <a href="{% url 'exp_labels_view' service.slug %}">(link)</a></h3>
 	<p>Explore from the 'other direction' - the various features being crossed against the above.</p>
  
 {% endblock %}

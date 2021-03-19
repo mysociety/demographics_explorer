@@ -9,7 +9,10 @@ from useful_grid import QuickGrid, QuickText
 
 regenerate_processed = False
 
-current_df = QuickGrid()
+# store the final product in the project directory
+# rather than the source folder
+# can be committed to allow database to be regenerated
+store_in_demographics_folder = True
 
 join = os.path.join
 
@@ -81,6 +84,9 @@ class CollectionType(object):
         labels = [x[0] for x in labels]
         return labels
 
+    def label_lookup(self):
+        return {}
+
 
 class AnalysisType(object):
     """
@@ -93,13 +99,14 @@ class AnalysisType(object):
 
     name = ""
     slug = ""
-    h_label = ""
+    h_label = "Category"
     description = ""
     group = ""
     overview = False
     exclusions = []
     _register = None
 
+    priority = 0
     source_file = ""
     allowed_values = []  # if blank uses all values of property
     verbose_allowed_values = []  # list of nicer namers for the allowed values
@@ -153,11 +160,13 @@ class AnalysisType(object):
 
     @property
     def final_location(self):
-        return os.path.join(self.experiment_folder, self.final_csv_name)
+        return self.grid_file_location()
 
     @property
     def final_csv_name(self):
-        return "{0}_{1}_{2}.csv".format(self._register.service, self.collection.slug, self.slug)
+        return "{0}_{1}_{2}.csv".format(self._register.service,
+                                        self.collection.slug,
+                                        self.slug)
 
     def get_source_df(self):
         df = pd.read_csv(self.source_file)
@@ -167,7 +176,14 @@ class AnalysisType(object):
         return join(self.processed_folder, self.final_csv_name)
 
     def grid_file_location(self):
-        return join(self.experiment_folder, self.final_csv_name)
+        if store_in_demographics_folder is True:
+            service_folder = join("resources", "processed",
+                                  self._register.service)
+            if os.path.exists(service_folder) is False:
+                os.makedirs(service_folder)
+            return join(service_folder, self.final_csv_name)
+        else:
+            return join(self.experiment_folder, self.final_csv_name)
 
     @property
     def processed_df(self):
@@ -179,12 +195,12 @@ class AnalysisType(object):
     def processed_df(self, value):
         self._processed_df = value
 
-    def process(self, optional_restriction_function=None, optional_required_columns=[]):
+    def process(self, optional_restriction_function=None, optional_required_columns=[], regenerate=False):
         if self.__class__.use_passthrough_cross:
             self.create_passthrough_cross()
         else:
-            if os.path.exists(join(self.processed_folder, self.final_csv_name)) is False or regenerate_processed:
-                self.created_processed(optional_restriction_function, optional_required_columns)
+            self.created_processed(
+                optional_restriction_function, optional_required_columns, regenerate=regenerate)
             self.create_cross_table()
 
     def passthrough_cross(self):
@@ -316,7 +332,7 @@ class AnalysisType(object):
 
         # apply restriction at the analysis or collection level
         # need to do it here so we are always loading and saving the full columns
-        # apply optional restriction first as it tends to be the largest 
+        # apply optional restriction first as it tends to be the largest
         # and the usage can be cached
         if optional_restriction_function:
             self.source_df = optional_restriction_function(self.source_df)
@@ -330,6 +346,9 @@ class AnalysisType(object):
         # uncomment to see what is being generated
         #pdf.to_csv(self.processed_file_location(), index=False)
         self._processed_df = pdf
+
+    def reorder_columns(self, columns):
+        return columns
 
     def transform_function(self):
         return lambda x: None
@@ -355,7 +374,7 @@ class AnalysisType(object):
 
         # what are valid columns
         if self.allowed_values == []:
-            self.allowed_values = list(set(df[self.slug]))
+            self.allowed_values = df[self.slug].unique()
             self.allowed_values = [
                 x for x in self.allowed_values if x not in banned and str(x) != 'nan']
             self.allowed_values.sort()
@@ -367,7 +386,7 @@ class AnalysisType(object):
         if "id" not in df.columns:
             df = df.assign(id=1)
 
-        #force floats into ints
+        # force floats into ints
         if df[self.slug].dtype == "float":
             df[self.slug] = df[self.slug].fillna(0).astype(int)
 
@@ -380,20 +399,41 @@ class AnalysisType(object):
         # get column headings to their verbose version
         nice_columns = {x: y for x, y in zip(
             self.allowed_values, self.verbose_allowed_values)}
+        nice_columns_str = {str(x): y for x, y in zip(
+            self.allowed_values, self.verbose_allowed_values)}
+        nice_columns.update(nice_columns_str)
+        final = final.rename(columns={x: str(x) for x in final.columns})
         final = final.rename(columns=nice_columns)
 
         # removed non allowed values
+
+        verbose_with_str = self.verbose_allowed_values
+        verbose_with_str += [str(x) for x in self.verbose_allowed_values]
+
         bad_cols = [
-            x for x in final.columns if x not in self.verbose_allowed_values]
+            x for x in final.columns if x not in verbose_with_str]
         final = final.drop(columns=bad_cols)
 
         # remove zero rows
         final = final.drop(final.loc[final.sum(axis=1) == 0].index)
 
+        # reorder columns
+        col_order = self.reorder_columns(final.columns.values)
+        final = final[col_order]
+
         # bring back values for first column
         final = final.reset_index()
 
-        # remove any not allowed rob numbers
+        # where the values need to made human from a code
+        value_lookup = self.collection.label_lookup()
+        if value_lookup:
+            final = final[final[self.collection.slug] != "please select"]
+            new = final[self.collection.slug]
+            new = new.astype(int).apply(lambda x:str(x))
+            new = new.map(value_lookup)
+            final[self.collection.slug] = new
+
+        # remove any not allowed values
         allowed_row_values = self.collection.allowed_values()
         if isinstance(allowed_row_values[0], int):
             allowed_row_values = [str(x) for x in allowed_row_values]
@@ -407,8 +447,7 @@ class AnalysisType(object):
 
         if len(final) == 0:
             raise ValueError("Contains No Data")
-        final.to_csv(join(self.experiment_folder,
-                          self.final_csv_name), index=False)
+        final.to_csv(self.grid_file_location(), index=False)
 
 
 class AnalysisRegister(object):
@@ -488,7 +527,7 @@ class AnalysisRegister(object):
         return lambda x: x
 
     @classmethod
-    def run_all(cls, force=False, create_locks=False):
+    def run_all(cls, force=False, create_locks=False, regenerate_pickle=False):
 
         collections = cls.collections_stored
         analysis = cls.analysis_stored
@@ -506,13 +545,14 @@ class AnalysisRegister(object):
                 if c.slug not in a.exclusions:
                     print(a.name, "{0}/{1}".format(count, total))
                     combo = a(c)
-                    if os.path.exists(combo.final_location) == False or force:
+                    if os.path.exists(combo.final_location) is False or force:
                         partial_loc = combo.final_location + ".partial.txt"
                         if os.path.exists(partial_loc):
                             continue
                         elif create_locks is True:
                             QuickText().save(partial_loc)
                         a(c).process(func,
-                                     required_cols)
+                                     required_cols,
+                                     regenerate=regenerate_pickle)
                         if os.path.exists(partial_loc):
                             os.remove(partial_loc)

@@ -15,10 +15,8 @@
 	<p class="text-center">Other Options:     {% for c in alt_options %}
 	<a href="{% url 'exp_label_view' service.slug label.parent.slug c.slug collection_type.slug %}">{{c.name}}</a>{% if forloop.last == False %} - {% endif %}
     {% endfor %}</p>
-	
-
     <hr>
-	      {{chart.render_div}}  
+	{{chart.render_div}}  
 		  
 {% if collection_types|length > 1 %}
 <ul class="nav nav-tabs">

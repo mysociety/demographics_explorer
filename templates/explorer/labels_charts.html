@@ -1,0 +1,33 @@
+{% extends "explorer/base.html" %}
+
+{% load bootstrap %}
+{% load extra_tags %}
+{% load humanize %}
+{% block head %}
+<title>Analysis group - {{group.name}}</title>
+{% endblock %}
+{% block content %}
+
+    <h1>{{group.name}}</h1>
+      
+      <ul class="nav nav-tabs">
+      <li role="presentation" ><a href="{% url "exp_labels_view" service.slug %}">Overview</a></li>
+      {% for g in groups %}
+          <li role="presentation" {% if group == g %}class="active"{% endif %}><a href="{% url "expo_labels_charts" service.slug g.slug %}">{{g.name}}</a></li>
+      {% endfor %}
+      </ul>
+
+      {% for s in sets %}
+
+      <a name="{{s.slug}}"></a>
+      {{s.chart.render_div}}
+        <p><b> Options:</b>
+    {% for l in s.ordered_labels %}<a href="{% url 'exp_label_view' service.slug s.slug l.slug default_collection_type %}">{{l.name}}</a>{% if forloop.last == False %}, {% endif %}{% endfor %}
+        (<a href="#{{s.slug}}">link to this chart</a>)</p>
+      {% endfor %}
+
+{% endblock %}
+
+{% block code %}
+{{chart_collection.render_code}} 
+{% endblock %}

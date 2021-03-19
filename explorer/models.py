@@ -13,9 +13,26 @@ from django.utils.text import slugify as dslugify
 from django_sourdough.models import FlexiBulkModel
 from markdown import markdown
 from research_common.charts import AltairChart, Table, query_to_df
+import research_common.altair_theme as theme
 from scipy.stats import chi2_contingency
 from scipy.stats.contingency import margins
 from useful_grid import QuickGrid
+
+#local_negative = theme.adjusted_colours["colour_berry"]
+#local_positive = theme.adjusted_colours["colour_blue"]
+#local_positive_label = "Blue"
+#local_negative_label = "Red"
+
+local_negative = theme.adjusted_colours["colour_blue"]
+local_positive = theme.adjusted_colours["colour_berry"]
+local_positive_label = "Red"
+local_negative_label = "Blue"
+
+local_grey = theme.colours["colour_light_grey"]
+dark_grey = theme.colours["colour_dark_grey"]
+background_blue = theme.monochrome_colours["colour_blue_light_20"]
+highlight_blue = theme.monochrome_colours["colour_blue_dark_30"]
+offwhite = theme.colours["colour_off_white"]
 
 
 class ObjectsToDataFrame(dict):
@@ -39,11 +56,19 @@ def intcomma(x):
     return "{:,}".format(x)
 
 
-def fix_label(v):
+def fix_label(v, try_int=False):
+    try:
+        if try_int:
+            return int(v)
+    except Exception:
+        pass
+
+    return v
+    # removed for moment
     v = v.encode('ascii', errors='ignore').decode('ascii')
     v = v.replace("'", "").replace('\n', '')
     v = v.replace("'", "").replace('\r', '')
-    v = v.replace("ethnic group", "")  # fix for long lanbels in LA
+    v = v.replace("ethnic group", "")  # fix for long labels in LA
     return v
 
 
@@ -75,6 +100,8 @@ class Service(FlexiBulkModel):
     slug = models.CharField(max_length=255, null=True)
     collective_name = models.CharField(
         max_length=255, null=True, default="Reports")
+    singular_name = models.CharField(
+        max_length=255, null=True, default="Report")
 
     def header_types(self):
         return self.collections.filter(display_in_header=True).order_by('name')
@@ -198,7 +225,6 @@ class CollectionType(FlexiBulkModel):
             return '<a href="{0}">{1}</a>'.format(url, name)
 
         category_link = {c.slug: get_link(c) for c in categories}
-
         table.format[self.name] = category_link.get
         table.format[self.service.collective_name] = intcomma
         table.format["%"] = fix_percentage
@@ -409,6 +435,7 @@ class ComparisonSuperSet(FlexiBulkModel):
         ComparisonGroup, related_name="sets", null=True,
         on_delete=models.CASCADE)
     overview = models.BooleanField(default=False)
+    priority = models.IntegerField(default=0)
 
     def ordered_labels(self):
         return self.labels.all().order_by('order')
@@ -444,7 +471,7 @@ class ComparisonSet(FlexiBulkModel):
         """
         return self.units.filter(collection=collection_item).order_by("order")
 
-    def get_grand_total_chart(self, label):
+    def get_grand_total_chart(self, label, summary=False):
         """
         generates chart showing the grand total for the rows in question
         """
@@ -466,43 +493,60 @@ class ComparisonSet(FlexiBulkModel):
             avg_length = sum([len(m.label)
                               for m in column_totals])/len(column_totals)
 
-
         def make_url(row):
             return reverse('exp_label_view', args=(service.slug,
                                                    label.parent.slug,
                                                    row["label_slug"],
                                                    self.collectiontype.slug))
 
+        col_name = service.collective_name
+
         odf = ObjectsToDataFrame()
         odf["label_slug"] = lambda x: x.label_slug
         odf["label"] = lambda x: fix_label(x.label)
-        odf["report"] = lambda x: x.column_total
+        odf[col_name] = lambda x: x.column_total
         df = odf.apply_objects(column_totals)
 
-        df["percent"] = (df["report"] / df["report"].sum() * 100).round(2)
+        df["percent"] = (df[col_name] / df[col_name].sum() * 100).round(2)
         df["url"] = df.apply(make_url, axis="columns")
-        df["color"] = "#E2DFD9"
-        df.loc[df["label_slug"] == label.slug, "color"] = "#6C6B68"
+        df["color"] = local_grey
+        df.loc[df["label_slug"] == label.slug, "color"] = highlight_blue
 
         name = " ".join(
             [self.superset.name, self.collectiontype.name, label.name])
 
         switch = avg_length > 10
         if switch:
-            xx = "report"
+            xx = col_name
             yy = alt.Y("label", sort=None, axis=alt.Axis(title=""))
         else:
-            xx = alt.X("label", sort=None, axis=alt.Axis(title=""))
-            yy = "report"
+            xx = alt.X("label", sort=None, axis=alt.Axis(
+                title="", labelAngle=0))
+            yy = col_name
 
-        chart = AltairChart(df, name=name, chart_type="bar")
+        # try and remove cap while preserving acronyms
+        l_case_name = self.superset.name
+        if l_case_name[0] == l_case_name[0].upper():
+            if l_case_name[1] != l_case_name[1].upper():
+                l_case_name = l_case_name.lower()[0] + l_case_name[1:]
+
+        if summary:
+            title = alt.TitleParams(service.name + ": " + l_case_name,
+                                    subtitle=[])
+        else:
+            title = None
+
+        chart = AltairChart(df, name=name, title=title, chart_type="bar")
         chart.set_options(x=xx,
                           y=yy,
                           color=alt.Color("color", scale=None),
                           href="url",
                           tooltip=["label",
-                                   alt.Tooltip("report", format=',.2r'),
+                                   alt.Tooltip(col_name, format=',.2r'),
                                    "percent"])
+
+        if summary:
+            del chart.options["color"]
 
         return chart
 
@@ -541,8 +585,9 @@ class ComparisonSet(FlexiBulkModel):
 
         def highlight_sig(row):
             not_sig = ""
-            sig_less_than_expected = '#E04B4B'
-            sig_more_than_expected = '#62B356'
+
+            sig_less_than_expected = local_negative
+            sig_more_than_expected = local_positive
 
             diff = row["Expected Diff%"]
             chi = row["Std. Res."]
@@ -564,6 +609,8 @@ class ComparisonSet(FlexiBulkModel):
         table.format["item"] = label_lookup.get
         table.style_on_row["Expected Diff%"] = highlight_sig
         table.style_on_row["Std. Res."] = highlight_sig
+        table.format["Count"] = intcomma
+        table.format["Expected"] = intcomma
 
         return table
 
@@ -574,18 +621,18 @@ class ComparisonSet(FlexiBulkModel):
         name = " ".join(["comparison", self.superset.name,
                          self.collectiontype.name, collection_item.name])
         collective_name = self.collectiontype.service.collective_name
+        service = self.collectiontype.service
 
         units = self.get_units(collection_item)
 
         odf = ObjectsToDataFrame()
-        odf["item"] = lambda x: fix_label(x.label)
+        odf["item"] = lambda x: fix_label(x.label, try_int=True)
         odf[collective_name] = lambda x: x.int_value
         odf["tooltip"] = lambda x: "Actual: {0}".format(x.int_value)
         odf["style"] = lambda x: x.cell_style()
 
         actual = odf.apply_objects(units)
-        actual["series"] = "Actual"
-        actual["opacity"] = 0.8
+        actual["series"] = "A"
 
         odf = ObjectsToDataFrame()
         odf["item"] = lambda x: fix_label(x.label)
@@ -593,20 +640,42 @@ class ComparisonSet(FlexiBulkModel):
         odf["tooltip"] = lambda x: "Expected: {0}".format(x.expected)
 
         expected = odf.apply_objects(units)
-        expected["series"] = "Expected"
-        expected["opacity"] = 0.4
-        expected["style"] = '#6C6B68'
+        expected["series"] = "E"
+        expected["style"] = dark_grey
 
         df = pd.concat([actual, expected])
 
-        chart = AltairChart(df, name=name, chart_type="bar")
+        category_label = " - ".join([service.name,
+                                     self.collectiontype.name,
+                                     collection_item.name])
 
-        chart.set_options(x=alt.X("item", sort=None, axis=alt.Axis(
+        subtitle = [self.superset.name,
+                    category_label]
+
+        title = alt.TitleParams("Actual vs expected", subtitle=subtitle)
+
+        # default width is like this because of a bug in autosizing for facet plots
+        # keep an eye on https://github.com/vega/vega-lite/pull/6672
+
+        item_count = len(df["item"].unique())
+        if item_count < 12:
+            unique_options = (item_count) + 2
+        else:
+            unique_options = (item_count + 1) * 1.2
+
+        chart = AltairChart(df, name=name, title=title,
+                            chart_type="bar", facet_width=unique_options)
+
+        header_options = alt.Header(
+            labelFont="Source Sans Pro", labelFontSize=12)
+
+        chart.set_options(x=alt.X("series", sort=None, axis=alt.Axis(
             title="", labelAngle=0)),
-            y=alt.Y(collective_name, stack=None),
+            y=alt.Y(collective_name, title="",
+                    axis=alt.Axis(offset=0, titleX=-15)),
             tooltip="tooltip",
             color=alt.Color("style", scale=None),
-            opacity=alt.Opacity("opacity", scale=None))
+            column=alt.Column("item", sort=None, title=None, header=header_options))
 
         return chart
 
@@ -614,8 +683,14 @@ class ComparisonSet(FlexiBulkModel):
         """
         chart showing expected differences in comparison set
         """
+        if percentage:
+            str_percentage = "percentage"
+        else:
+            str_percentage = ""
+
         name = " ".join(["differences", self.superset.name,
-                         self.collectiontype.name])
+                         self.collectiontype.name,
+                         str_percentage])
 
         def make_tooltip(m):
             if percentage:
@@ -633,7 +708,9 @@ class ComparisonSet(FlexiBulkModel):
 
             return tooltip_str
 
-        collective_name = self.collectiontype.service.collective_name
+        service = self.collectiontype.service
+        collective_name = service.collective_name
+        singular_name = service.singular_name
 
         odf = ObjectsToDataFrame()
         odf["Item"] = lambda m: fix_label(m.label)
@@ -641,24 +718,37 @@ class ComparisonSet(FlexiBulkModel):
         if percentage:
             label = "Percentage"
             odf[label] = lambda m: m.diff_percent_rel
+            title_str = "Percentage difference"
         else:
             label = collective_name
             odf[label] = lambda m: m.expected_diff
+            title_str = "Absolute difference"
         odf["tooltip"] = make_tooltip
 
         units = self.get_units(collection_item)
         df = odf.apply_objects(units)
 
-        chart = AltairChart(df, name=name, chart_type="bar")
+        disclaimer = (f"A {local_positive_label.lower()} bar means "
+                      f"the value is higher than expected"
+                      f" for a 'typical' {singular_name.lower()}, "
+                      f"{local_negative_label.lower()} means it is lower.")
+        category_label = " - ".join([service.name,
+                                     self.collectiontype.name,
+                                     collection_item.name])
 
-        chart.set_options(x=alt.X("Item", sort=None, axis=alt.Axis(title="", labelAngle=0)),
+        title = alt.TitleParams(title_str, subtitle=[
+                                disclaimer, category_label])
+
+        axis_options = alt.Axis(title="", labelAngle=0)
+        chart = AltairChart(df, name=name, title=title, chart_type="bar")
+        chart.set_options(x=alt.X("Item", sort=None, axis=axis_options),
                           y=label,
                           tooltip="tooltip",
                           color=alt.Color("style", scale=None))
 
         return chart
 
-    def get_chart(self, collection_item):
+    def get_chart(self, collection_item, tidy=False):
         """
         chart showing distribution of comparison set
         """
@@ -679,10 +769,13 @@ class ComparisonSet(FlexiBulkModel):
                                                    x.label_slug,
                                                    self.collectiontype.slug))
 
-        collective_name = self.collectiontype.service.collective_name
+        service = self.collectiontype.service
+        singular_name = service.singular_name
+        collective_name = service.collective_name
+        h_label = self.superset.h_label
 
         odf = ObjectsToDataFrame()
-        odf["Group"] = lambda m: fix_label(m.label)
+        odf[h_label] = lambda m: fix_label(m.label)
         odf[collective_name] = lambda m: m.value
         odf["style"] = lambda m: m.cell_style()
         odf["%"] = lambda m: str(m.as_row_percent) + "%"
@@ -697,7 +790,7 @@ class ComparisonSet(FlexiBulkModel):
 
         # make things that look better as ints into ints
         try:
-            df["Group"] = df["Group"].astype(
+            df[h_label] = df[h_label].astype(
                 'float').astype("int").astype("str")
         except Exception:
             pass
@@ -707,20 +800,38 @@ class ComparisonSet(FlexiBulkModel):
 
         if switch:
             xx = alt.X(collective_name)
-            yy = alt.Y("Group", sort=None, axis=alt.Axis(
-                title="", labelAngle=0))
+            yy = alt.Y(h_label, sort=None, axis=alt.Axis(labelAngle=0))
         else:
-            xx = alt.X("Group", sort=None, axis=alt.Axis(
-                title="", labelAngle=0))
+            xx = alt.X(h_label, sort=None, axis=alt.Axis(labelAngle=0))
             yy = alt.Y(collective_name)
 
-        chart = AltairChart(df=df, name=name, chart_type="bar")
+        disclaimer = (f"A {local_positive_label.lower()} bar means "
+                      f"the value is higher than expected"
+                      f" for a 'typical' {singular_name.lower()}, "
+                      f"{local_negative_label.lower()} means it is lower.")
+        category_label = " - ".join([service.name,
+                                     self.collectiontype.name,
+                                     collection_item.name])
+
+        if tidy:
+            subtitle = [category_label]
+        else:
+            subtitle = [disclaimer, category_label]
+
+        title = alt.TitleParams(self.superset.name, subtitle=subtitle)
+
+        chart = AltairChart(
+            df=df, name=name, title=title, chart_type="bar")
         chart.set_options(x=xx,
                           y=yy,
-                          tooltip=["Group", collective_name, "%",
+                          tooltip=[h_label, collective_name, "%",
                                    "Expected", "Diff", "Std. Res"],
                           color=alt.Color("style", scale=None),
                           href="url")
+
+        if tidy:
+            # do not show a different colour for bars
+            del chart.options["color"]
 
         return chart
 
@@ -733,7 +844,7 @@ class ComparisonSet(FlexiBulkModel):
         meta_lookup = {x.name: x.id for x in CollectionItem.objects.filter(
             parent=self.collectiontype)}
 
-        qg = QuickGrid().open(self.source_file)
+        qg = QuickGrid().open(self.source_file, force_unicode=True)
 
         qg.data = [x for x in qg.data if x[0]]
 
@@ -864,14 +975,14 @@ class ComparisonLabel(FlexiBulkModel):
                                                             collection_type.slug,
                                                             slug,
                                                             superset.slug))
-            return '<a href="{0}">{1}</a> (<a href="{2}">Direct</a>)'.format(url,
-                                                                             name,
-                                                                             item_url)
+            composite = f'<a href="{url}">{name}</a> (<a href="{item_url}">Direct</a>)'
+            return composite
 
         def highlight_sig(row):
             not_sig = ""
-            sig_less_than_expected = 'background-color: #E04B4B;'
-            sig_more_than_expected = 'background-color: #62B356'
+            sig_less_than_expected = f'background-color: {local_negative};'
+            sig_more_than_expected = f'background-color: {local_positive};'
+            sig_more_than_expected += f"color: {offwhite};"
 
             diff = row["Expected Diff%"]
             chi = row["Std. Res."]
@@ -895,7 +1006,7 @@ class ComparisonLabel(FlexiBulkModel):
         table.format["Category"] = url_lookup.get
         table.format["Reports"] = intcomma
         table.format["Expected"] = intcomma
-        #table.format["%"] = fix_percentage
+        # table.format["%"] = fix_percentage
         table.format["Std. Res."] = lambda x: round(x, 2)
         table.style_on_row["Expected Diff%"] = highlight_sig
         table.style_on_row["Std. Res."] = highlight_sig
@@ -907,6 +1018,7 @@ class ComparisonLabel(FlexiBulkModel):
         """
         extract labels from comparison units that have been popualted
         """
+        print("deleting previous generation")
         cls.objects.filter(parent__group__service=service).delete()
 
         done = []
@@ -926,7 +1038,7 @@ class ComparisonLabel(FlexiBulkModel):
 
 class ComparisonUnit(FlexiBulkModel):
     """
-    'cell' of the sheet - what a value is, 
+    'cell' of the sheet - what a value is,
     and if it's expected or not given overall distributions
     """
 
@@ -944,13 +1056,13 @@ class ComparisonUnit(FlexiBulkModel):
     chi_value = models.FloatField(default=0, null=True)
 
     def cell_style(self):
-        not_sig = '#6C6B68'  # grey
+        not_sig = local_grey  # grey
 
-        sig_less_than_expected_large = '#E04B4B'
+        sig_less_than_expected_large = local_negative
         sig_less_than_expected_small = not_sig
         sig_more_than_expected_small = not_sig
 
-        sig_more_than_expected_large = '#62B356'
+        sig_more_than_expected_large = local_positive
 
         upper = sig_cutoff
         lower = 0 - upper
@@ -970,27 +1082,27 @@ class ComparisonUnit(FlexiBulkModel):
         else:
             return not_sig
 
-    @property
+    @ property
     def as_row_percent(self):
         return round((self.value / float(self.row_total)) * 100, 2)
 
-    @property
+    @ property
     def round_chi(self):
         return round(self.chi_value, 2)
 
-    @property
+    @ property
     def expected(self):
         return int(self.expected_value)
 
-    @property
+    @ property
     def expected_diff(self):
         return int(self.value - self.expected)
 
-    @property
+    @ property
     def int_value(self):
         return int(self.value)
 
-    @property
+    @ property
     def diff_percent_rel(self):
         ed = self.expected_diff
         if self.expected:
@@ -1001,7 +1113,7 @@ class ComparisonUnit(FlexiBulkModel):
             else:
                 return -100
 
-    @property
+    @ property
     def diff_percent(self):
         """
         does not allow negative percentages

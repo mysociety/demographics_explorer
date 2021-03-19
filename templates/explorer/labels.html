@@ -4,15 +4,23 @@
 {% load extra_tags %}
 {% load humanize %}
 {% block head %}
-<title>Analysis Groups</title>
+<title>Analysis groups</title>
 {% endblock %}
 {% block content %}
 
-    <h1>Analysis Groups</h1>
+    <h1>Analysis groups</h1>
       
       {% regroup sets by group as set_list %}
+      <ul class="nav nav-tabs">
+      <li role="presentation" class="active" ><a href="{% url "exp_labels_view" service.slug %}">Overview</a></li>
+      {% for l in set_list %}
+          <li role="presentation" ><a href="{% url "expo_labels_charts" service.slug l.grouper.slug %}">{{l.grouper.name}}</a></li>
+      {% endfor %}
+      </ul>
+
       {% for l in set_list %}
       <a name="{{l.grouper.slug}}"></a><h2>{{l.grouper.name}}</h2>
+      <a href="{% url "expo_labels_charts" service.slug l.grouper.slug %}">View charts for this group.</a>
       {% for s in l.list %}
         <p><b>{{s.h_label}}</b>:
         {% for l in s.ordered_labels %}<a href="{% url 'exp_label_view' service.slug s.slug l.slug default_collection_type %}">{{l.name}}</a>{% if forloop.last == False %}, {% endif %}{% endfor %}</p>

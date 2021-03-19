@@ -8,11 +8,19 @@ import calendar
 
 import pandas as pd
 from proj import settings
-
+from functools import lru_cache
 # when re-running this, fix the absolute references below
 current_year = settings.WDTK_CURRENT_YEAR
 
 join = os.path.join
+
+
+@lru_cache(maxsize=None)
+def get_value_lookup():
+    lookup_folder = os.path.join("resources", "wdtk")
+    df = QuickGrid().open(
+        [lookup_folder, "survey_lookup.csv"], force_unicode=True)
+    return df
 
 
 class wdtk_register(AnalysisRegister):
@@ -21,6 +29,22 @@ class wdtk_register(AnalysisRegister):
 
 class WDTKCollection(CollectionType):
     lookup_folder = os.path.join("resources", "wdtk")
+    lookup_value = ""
+
+    def label_lookup(self):
+        df = get_value_lookup()
+        items = [x for x in df if x["qid"] == self.__class__.lookup_value]
+        items = [x for x in items if "select" not in x["aname"]]
+        return {x["aid"]: x["aname"] for x in items}
+
+    def get_labels(self):
+        df = get_value_lookup()
+        items = [x["aname"]
+                 for x in df if x["qid"] == self.__class__.lookup_value]
+        items = [x for x in items if "select" not in x]
+        items = [[x, None] for x in items]
+
+        return items
 
 
 class WDTKAnalysis(AnalysisType):
@@ -33,10 +57,9 @@ class WDTKAnalysis(AnalysisType):
         source_folder, "survey_reduced.csv")
     create_analysis = False
 
-    def load_allowed_values(self):
+    def load_verbose_allowed_values(self):
 
-        df = QuickGrid().open(
-            [self.lookup_folder, "survey_lookup.csv"], force_unicode=True)
+        df = get_value_lookup()
 
         items = [x for x in df if x["qid"] ==
                  self.slug and "select" not in x["aname"]]
@@ -46,6 +69,22 @@ class WDTKAnalysis(AnalysisType):
         for i in items:
             if i["aid"] not in done:
                 final.append(i["aname"])
+                done.append(i["aid"])
+
+        return final
+
+    def load_allowed_values(self):
+
+        df = get_value_lookup()
+
+        items = [x for x in df if x["qid"] ==
+                 self.slug and "select" not in x["aname"]]
+        items.sort(key=lambda x: int(x["aid"]))
+        done = []
+        final = []
+        for i in items:
+            if i["aid"] not in done:
+                final.append(i["aid"])
                 done.append(i["aid"])
 
         return final
@@ -69,7 +108,7 @@ class YearCollection(WDTKCollection):
 
     def create_collection_column(self, df):
 
-        df[self.slug] = df["whenstored"].str.slice(stop=4).as_type('float')
+        df[self.slug] = df["whenstored"].str.slice(start=-4).astype('int')
 
     def get_labels(self):
         return [[str(x), ""] for x in range(2012, current_year + 1)]
@@ -77,73 +116,47 @@ class YearCollection(WDTKCollection):
 
 @wdtk_register.register
 class AuthorityType(WDTKCollection):
-    name = "Authority Type"
+    name = "Authority type"
     slug = "authority_type"
     description = "The kind of local authority the request was sent to."
     default = True
     require_columns = ["authority"]
+    lookup_value = "authority"
 
     def create_collection_column(self, df):
         df[self.slug] = df["authority"]
         return df
 
-    def get_labels(self):
-        df = QuickGrid().open(
-            [self.lookup_folder, "survey_lookup.csv"], force_unicode=True)
-
-        items = [x["aname"] for x in df if x["qid"] == "authority"]
-        items = [x for x in items if "select" not in items]
-        items = [[x, None] for x in items]
-
-        return items
-
 
 @wdtk_register.register
-class PreiviousUse(WDTKCollection):
-    name = "Previous FOI Use"
+class PreviousUse(WDTKCollection):
+    name = "Previous FOI use"
     slug = "previous_foi_use"
     description = "If users previously sent an FOI. "
     require_columns = ["previouscontact"]
+    lookup_value = "previouscontact"
 
     def create_collection_column(self, df):
         df[self.slug] = df["previouscontact"]
 
         return df
 
-    def get_labels(self):
-        df = QuickGrid().open(
-            [self.lookup_folder, "survey_lookup.csv"], force_unicode=True)
-
-        items = [x["aname"] for x in df if x["qid"] == "previouscontact"]
-        items = [x for x in items if "select" not in items]
-        items = [[x, None] for x in items]
-
-        return items
-
 
 @wdtk_register.register
 class MessageConcern(WDTKCollection):
-    name = "Message Concern"
+    name = "Message concern"
     slug = "messageconcern"
     description = "The purpose of the request"
+    lookup_value = "messageconcern"
 
     def create_collection_column(self, df):
         return df
-
-    def get_labels(self):
-        df = QuickGrid().open(
-            [self.lookup_folder, "survey_lookup.csv"], force_unicode=True)
-
-        items = [x["aname"] for x in df if x["qid"] == "messageconcern"]
-        items = [x for x in items if "select" not in items]
-        items = [[x, None] for x in items]
-        return items
 
 
 @wdtk_register.register
 class Gender(WDTKAnalysis):
 
-    name = "Requests by Gender of Sender"
+    name = "Requests by gender of sender"
     slug = "gender"
     h_label = "Gender"
     group = "Demographics"
@@ -154,18 +167,26 @@ class Gender(WDTKAnalysis):
 @wdtk_register.register
 class Age(WDTKAnalysis):
 
-    name = "Requests by Age of Sender"
+    name = "Requests by age of sender"
     slug = "age"
     h_label = "Age"
     group = "Demographics"
     overview = True
     description = "Age of sender as declared in survey."
 
+    def reorder_columns(self, columns):
+        def change(v):
+            lv = v.lower().strip()
+            lv = lv.replace("less than", "")
+            return lv[0]
+        columns = list(columns)
+        columns.sort(key=change)
+        return columns
 
 @wdtk_register.register
 class Education(WDTKAnalysis):
 
-    name = "Requests by Education of Sender"
+    name = "Requests by education of sender"
     slug = "education_any"
     h_label = "Education"
     group = "Demographics"
@@ -175,7 +196,7 @@ class Education(WDTKAnalysis):
 @wdtk_register.register
 class Lifestage(WDTKAnalysis):
 
-    name = "Requests by Lifestage of Sender"
+    name = "Requests by lifestage of sender"
     slug = "lifestage"
     h_label = "Lifestage"
     group = "Demographics"
@@ -186,7 +207,7 @@ class Lifestage(WDTKAnalysis):
 @wdtk_register.register
 class Income(WDTKAnalysis):
 
-    name = "Requests by Income of Sender"
+    name = "Requests by income of sender"
     slug = "income"
     h_label = "Income"
     group = "Demographics"
@@ -195,7 +216,7 @@ class Income(WDTKAnalysis):
 
 @wdtk_register.register
 class Ethnicity(WDTKAnalysis):
-    name = "Requests by Ethnicity of Sender"
+    name = "Requests by ethnicity of sender"
     slug = "ethnicity"
     h_label = "Ethnicity"
     group = "Demographics"
@@ -204,11 +225,11 @@ class Ethnicity(WDTKAnalysis):
 
 @wdtk_register.register
 class BAME(WDTKAnalysis):
-    name = "Reduced Ethnicity of Sender"
+    name = "Requests by Ethnicity (grouped)"
     slug = "bame"
-    h_label = "Reduced Ethnicity"
+    h_label = "Ethnicity (grouped)"
     group = "Demographics"
-    description = "Reduced ethnicity of sender as declared in survey."
+    description = "Grouped ethnicity of sender as declared in survey."
     create_analysis = True
     require_columns = ["ethnicity"]
 
@@ -227,16 +248,17 @@ class BAME(WDTKAnalysis):
         na = ["Don't know",
               "Don't want to answer"]
 
-        def get_bame(v):
-            if "want to answer" in v.lower() or "know" in v.lower():
-                return "NA"
-            if v in white:
-                return "Not BAME"
-            else:
-                return "BAME"
+        vdf = get_value_lookup()
 
-        df[self.slug] = "BAME"
-        df.loc[df["ethnicity"].isin(white), self.slug] = "Not BAME"
+        items = [x for x in vdf if x["qid"] ==
+                 "ethnicity" and "select" not in x["aname"]]
+        items.sort(key=lambda x: int(x["aid"]))
+        lookup = {x["aid"]: x["aname"] for x in items}
+
+        df["ethnicity"] = df["ethnicity"].map(lookup)
+
+        df[self.slug] = "Ethnic minority (excluding white minorities)"
+        df.loc[df["ethnicity"].isin(white), self.slug] = "White ethnicities"
         df.loc[df["ethnicity"].isin(na), self.slug] = "NA"
 
         return df
@@ -244,7 +266,7 @@ class BAME(WDTKAnalysis):
 
 @wdtk_register.register
 class Disability(WDTKAnalysis):
-    name = "Requests by Disability of Sender"
+    name = "Requests by if sender has a disability"
     slug = "disability"
     h_label = "Disability"
     group = "Demographics"
@@ -273,7 +295,7 @@ class Groups(WDTKAnalysis):
 
 @wdtk_register.register
 class PreviousContact(WDTKAnalysis):
-    name = "Previously Made FOI"
+    name = "Previously made an FOI request"
     slug = "previouscontact"
     h_label = "Previous FOI"
     group = "Participation"
@@ -313,15 +335,14 @@ class TimeAnalysis(WDTKAnalysis):
         """
         df = self.source_df
         print("creating column: {0}".format(self.slug))
-        dt = pd.to_datetime(df['whenstored'], format='%Y-%m-%d')
+        dt = pd.to_datetime(df['whenstored'], format='%d/%m/%Y')
         df[self.slug] = getattr(dt.dt, self.__class__.time_part)
-
 
 
 @wdtk_register.register
 class Year(TimeAnalysis):
 
-    name = "Requests by Year"
+    name = "Requests by year"
     slug = "year"
     h_label = "Year"
     description = ""
@@ -351,6 +372,16 @@ class NetPromoter(WDTKAnalysis):
     group = "WDTK"
     description = "Would user recommend WDTK as declared in survey."
 
+    def reorder_columns(self, columns):
+        def change(v):
+            lv = v[:2].strip()
+            if len(lv) == 1:
+                lv = "0" + lv
+            return lv
+        columns = list(columns)
+        columns.sort(key=change)
+        return columns
+
 
 @wdtk_register.register
 class MessageConcernA(WDTKAnalysis):
@@ -359,7 +390,7 @@ class MessageConcernA(WDTKAnalysis):
     h_label = "Information is relevant for"
     group = "Request"
     description = "Who would information be relevant for as declared in survey."
-    exclusion = ["messageconcern"]
+    exclusions = ["messageconcern"]
     overview = True
 
 

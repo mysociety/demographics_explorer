@@ -12,7 +12,7 @@ Set the `BUILD_PATH` (where the completed site will be rendered to, not necessar
 You will need to run the 'explorer' and 'wttexplorer' exports from the [Export Tool](https://github.com/mysociety/fms_export) and make those avalaible on the same computer. 
 If updating a previous version of the source folder, delete the contents of the `pickles` and `grid` folders inside those folders (these cache results).
 
-The legacy WDTK Survey can be downloaded from `survey.mysociety.org` - download restricted to 'WhatDoTheyKnow' and name `reduced_survey.csv` and place in the WDTK path referenced in the config.py (this only needs this one file).
+The legacy WDTK Survey can be downloaded from `https://secure.mysociety.org/admin/survey/` - download restricted to 'WhatDoTheyKnow' and name `reduced_survey.csv` and place in the WDTK path referenced in the config.py (this only needs this one file).
 
 These are configured in the `config.py` as below:
 

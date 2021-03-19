@@ -7,7 +7,9 @@ from django_sourdough.views import ComboView, postlogic, prelogic
 
 from django.utils.timezone import now
 
-from .models import (large_cutoff, Service, CollectionType, CollectionItem,
+from .models import (large_cutoff, local_negative, local_positive,
+                     local_negative_label, local_positive_label,
+                     Service, CollectionType, CollectionItem,
                      ComparisonSuperSet, ComparisonSet, ComparisonLabel,
                      ComparisonGroup, ComparisonUnit)
 
@@ -48,6 +50,10 @@ class ServiceLogic(AnchorChartsMixIn):
         default = self.service.default()
         self.default_collection_type = default.slug
         self.large_cutoff = large_cutoff
+        self.local_negative = local_negative
+        self.local_positive = local_positive
+        self.local_positive_label = local_positive_label
+        self.local_negative_label = local_negative_label
 
 
 class ExplorerView(GenericSocial, ComboView):
@@ -62,10 +68,6 @@ class ExplorerView(GenericSocial, ComboView):
 
     def logic(self):
 
-        #allowed = ["fms_2018", "fms_no_cobrands",
-        #           "fms", "la", "wtt", "wtt-mps", "wtt_2018"]
-
-        #self.services = Service.objects.all().filter(slug__in=allowed).order_by('name')
         self.services = Service.objects.all().order_by('name')
 
 
@@ -111,7 +113,7 @@ class AllAnalysisView(GenericSocial, ComboView, ServiceLogic):
     url_patterns = [r'^(.*)/analysis/']
     url_name = "exp_labels_view"
     args = ["service_slug"]
-    share_title = "{{service.name}} - Analysis Options"
+    share_title = "{{service.name}} - Analysis options"
     share_description = "Exploring data patterns in {{service.name}} data."
 
     def logic(self):
@@ -122,6 +124,35 @@ class AllAnalysisView(GenericSocial, ComboView, ServiceLogic):
         all_services = service_query
         for s in all_services:
             yield [s.slug]
+
+
+class GroupedAnalysisChartView(GenericSocial, ComboView, ServiceLogic):
+    """
+    View for displaying overall charts for different sections
+    """
+    template = "explorer/labels_charts.html"
+    url_patterns = [r'^(.*)/analysis/charts/(.*)/']
+    url_name = "expo_labels_charts"
+    args = ["service_slug", "group_slug"]
+    share_title = "{{service.name}} - {{group.name}}"
+    share_description = "Overall charts for {{group.name}}."
+
+    def logic(self):
+        self.group = self.service.groups.get(slug=self.group_slug)
+        self.groups = self.service.groups.all().order_by("order")
+        self.sets = ComparisonSuperSet.objects.filter(
+            group=self.group).order_by('-priority')
+        for s in self.sets:
+            label = s.labels.first()
+            set = s.sets.first()
+            s.chart = set.get_grand_total_chart(label, summary=True)
+            self.chart_collection.register(s.chart)
+
+    def bake_args(self, limit=None):
+        all_services = service_query
+        for s in all_services:
+            for g in s.groups.all():
+                yield [s.slug, g.slug]
 
 
 class AnalysisView(GenericSocial, ComboView, ServiceLogic):
@@ -195,7 +226,6 @@ class CollectionTypeView(GenericSocial, ComboView, ServiceLogic):
     share_description = "Exploring data patterns in {{service.name}} data."
 
     def logic(self):
-
         start_year = self.service.start_year
         end_year = self.service.end_year
         self.collection = CollectionType.objects.get(
@@ -263,7 +293,6 @@ class CollectionItemView(GenericSocial, ComboView, ServiceLogic):
     share_description = "Exploring data patterns in {{service.name}} data."
 
     def logic(self):
-
         self.collection = CollectionType.objects.get(
             slug=self.collection_slug, service=self.service)
         self.category = CollectionItem.objects.get(
@@ -282,6 +311,8 @@ class CollectionItemView(GenericSocial, ComboView, ServiceLogic):
         self.sets = [self.category.get_set(
             s, self.collection) for s in set_slugs]
         self.sets = [x for x in self.sets if x and set_is_populated(x)]
+        self.sets.sort(key=lambda x: x.superset.name.lower())
+        self.sets.sort(key=lambda x: x.superset.priority, reverse=True)
 
         for s in self.sets:
             s.chart = s.get_chart(self.category)
@@ -329,6 +360,7 @@ class ComparisonSetView(GenericSocial, ComboView, ServiceLogic):
         cs = self.comparison_set
 
         self.chart = cs.get_chart(self.category)
+        self.tidy_chart = cs.get_chart(self.category, tidy=True)
         self.expected_chart = cs.get_expected_comparison_chart(
             self.category)
         self.percentage_diff = cs.get_comparison_chart(

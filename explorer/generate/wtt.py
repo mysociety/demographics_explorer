@@ -34,7 +34,7 @@ welsh_imds = ["wimd",
               "education",
               "access_to_services",
               "community_safety",
-              "physical_enviroment",
+              "physical_environment",
               "housing"]
 
 
@@ -64,12 +64,16 @@ english_imds = ["imd",
                 "outdoors"
                 ]
 
+uk_imds = ["UK_IMD_E",
+           "GB_IMD_E"]
+
 name_lookup = {"education_skills_training": "Education Skill and Training",
                "housing_and_services": "Housing and Access to Services",
                "geographic_barriers": "Geo Barriers (Access to Services)",
                "wider_barriers": "Wider Barriers (Housing)",
                "indoors": "Indoors Environment",
-               "outdoors": "Outdoors Environment"}
+               "outdoors": "Outdoors Environment",
+               "UK_IMD_E_rank": "Composite UK rankings"}
 
 
 def english_name(v):
@@ -119,7 +123,7 @@ class YearCollection(WTTCollection):
 
 @wtt_register.register
 class RecipientCollection(WTTCollection):
-    name = "Recipient Type"
+    name = "Recipient type"
     slug = "type_of_recipient"
     description = "The kind of elected (or not) representative that messages have been sent to."
     default = True
@@ -142,7 +146,7 @@ class RecipientCollection(WTTCollection):
 
 
 class RecipientCollectionLocal(WTTCollection):
-    name = "Recipient Type"
+    name = "Recipient type"
     slug = "type_of_recipient"
     default = True
     required_columns = ["recipient_type"]
@@ -165,7 +169,7 @@ class RecipientCollectionLocal(WTTCollection):
 
 @wtt_register.register
 class RecipientGender(WTTCollection):
-    name = "Rep Gender"
+    name = "Representative gender"
     slug = "gender_of_rep"
     description = "The gender of the representative. For MPs sourced from [everypolitician.org](http://everypolitician.org/), for others is derived from name."
     require_columns = ["recipient_gender"]
@@ -186,7 +190,7 @@ class RecipientGender(WTTCollection):
 
 @wtt_register.register
 class SenderCollection(WTTCollection):
-    name = "Sender Gender"
+    name = "Sender gender"
     slug = "gender_of_sender"
     description = "Gender of sender, derived from name. Where unclear this is ignored so this represents less than the full dataset."
     require_columns = ["sender_gender"]
@@ -206,7 +210,7 @@ class SenderCollection(WTTCollection):
 
 @wtt_register.register
 class FirstComm(WTTCollection):
-    name = "First Use"
+    name = "First use"
     slug = "first_use"
     display_in_header = False
     description = "Result of survey asking if this is the first time the sender has contacted their representative."
@@ -234,7 +238,7 @@ class FirstComm(WTTCollection):
 
 @wtt_register.register
 class GotResponseCollection(WTTCollection):
-    name = "Got Response"
+    name = "Got response"
     slug = "got_response"
     display_in_header = False
     description = "Result of survey asking if this is they got a response from their representative."
@@ -245,7 +249,7 @@ class GotResponseCollection(WTTCollection):
         lookup = pd.read_csv(
             join(self.source_folder, "questionnaire_first_time.csv"))
         lookup["answer"] = lookup["answer"].str.title()
-        lookup.loc[df["answer"] == "Unsatisfactory", "answer"] = "Yes"
+        lookup.loc[lookup["answer"] == "Unsatisfactory", "answer"] = "Yes"
         lookup = lookup.set_index("message_id")["answer"].to_dict()
 
         df[self.slug] = df["id"].map(lookup)
@@ -261,9 +265,35 @@ class GotResponseCollection(WTTCollection):
 
 
 @wtt_register.register
+class AnsweredSurveyCollection(WTTCollection):
+    name = "Answered survey"
+    slug = "answer_survey"
+    display_in_header = False
+    description = "Did they receive a response at all. Investigating non-response bias."
+    require_columns = ["id"]
+
+    def create_collection_column(self, df):
+
+        lookup = pd.read_csv(
+            join(self.source_folder, "questionnaire_first_time.csv"))
+
+        df[self.slug] = "No"
+        df.loc[df["id"].isin(lookup["message_id"]), self.slug] = "Yes"
+        return df
+
+    def restrict_source_df(self, df):
+        df = df[df[self.slug].isin(["Yes", "No"])]
+        return df
+
+    def get_labels(self):
+        options = ["Yes", "No"]
+        return [[x, ""] for x in options]
+
+
+@wtt_register.register
 class Gender(WTTAnalysis):
 
-    name = "Reports by Gender of Sender"
+    name = "Messages by gender of sender"
     slug = "gender"
     h_label = "Gender"
     description = ""
@@ -291,7 +321,7 @@ class FirstTime(WTTAnalysis):
 
     name = "Was this first time contacting?"
     slug = "first_time_contacting"
-    h_label = "First Time Contacting"
+    h_label = "First time contacting"
     description = ""
     group = "Characteristics"
     exclusions = ["first_use"]
@@ -315,11 +345,37 @@ class FirstTime(WTTAnalysis):
 
 
 @wtt_register.register
+class AnsweredSurvey(WTTAnalysis):
+
+    name = "Did the user answer the survey?"
+    slug = "answer_survey"
+    h_label = "Answered survey"
+    description = ""
+    group = "Characteristics"
+    exclusions = ["first_use", "answer_survey"]
+    description = "Did the user answer the survey at all? Used to gauge non-response bias."
+    allowed_values = ["yes", "no"]
+    verbose_allowed_values = ["Yes", "No"]
+    overview = False
+    require_columns = ["id"]
+
+    def create_analysis_column(self):
+        df = self.source_df
+
+        lookup = pd.read_csv(
+            join(self.source_folder, "questionnaire_first_time.csv"))
+
+        df[self.slug] = "No"
+        df.loc[df["id"].isin(lookup["message_id"]), self.slug] = "Yes"
+        return df
+
+
+@wtt_register.register
 class GotResponse(WTTAnalysis):
 
     name = "Did they get a response?"
     slug = "response"
-    h_label = "Did they get a response?"
+    h_label = "Response"
     description = ""
     group = "Characteristics"
     description = "Result of survey asking if they got a response."
@@ -358,9 +414,9 @@ class TimeAnalysis(WTTAnalysis):
 @wtt_register.register
 class Month(TimeAnalysis):
 
-    name = "Reports by Month"
+    name = "Messages by month"
     slug = "month"
-    h_label = "Month of Year"
+    h_label = "Month"
     description = ""
     time_part = "month"
     description = "Month the message was sent."
@@ -372,7 +428,7 @@ class Month(TimeAnalysis):
 @wtt_register.register
 class Year(TimeAnalysis):
 
-    name = "Reports by Year"
+    name = "Messages by year"
     slug = "year"
     h_label = "Year"
     description = ""
@@ -387,9 +443,9 @@ class Year(TimeAnalysis):
 @wtt_register.register
 class Hour(TimeAnalysis):
 
-    name = "Reports by Hour of Day"
+    name = "Messages by hour of day"
     slug = "hour"
-    h_label = "Time of Day"
+    h_label = "Hour"
     description = ""
     time_part = "hour"
     description = "Hour of the day the message was sent."
@@ -401,9 +457,9 @@ class Hour(TimeAnalysis):
 @wtt_register.register
 class Day(TimeAnalysis):
 
-    name = "Reports by Day of Week"
+    name = "Messages by day of week"
     slug = "day"
-    h_label = "Day of Week"
+    h_label = "Day of week"
     description = ""
     time_part = "dayofweek"
     description = "Day of the week the message was sent."
@@ -418,23 +474,90 @@ class Day(TimeAnalysis):
                               'Sunday']
 
 
-# generate seperate classes for each w_imd
+@wtt_register.register
+class Ruc(WTTAnalysis):
+    name = "Messages by composite UK rural/urban classification"
+    slug = "uk_ruc"
+    h_label = "Composite RUC category"
+    group = "UK IMD"
+    description = "3 point urban-ruralness division. Urban/Rural matches English RUC definition (settlement > 10,000). 'More Rural' is equiv to Scottish definition (<3000)"
+    allowed_values = [x for x in range(0, 3)]
+    verbose_allowed_values = ['Urban', 'Rural', 'More Rural']
+    require_columns = ["lsoa"]
+
+    def create_analysis_column(self):
+
+        df = self.source_df
+        ruc = pd.read_csv(join(self.lookup_folder, "composite_ruc.csv"))
+        ruc_map = ruc.set_index("lsoa")["ukruc-3"].to_dict()
+        df[self.slug] = df["lsoa"].map(ruc_map)
+
+
+@wtt_register.register
+class Ruc(WTTAnalysis):
+    name = "Messages by English rural/urban classification"
+    slug = "ruc"
+    h_label = "Composite RUC category"
+    group = "English IMD"
+    priority = 2
+    description = "7 point urban-ruralness division - A1 (Major Urban), E2(Rural village - dispersed) "
+    allowed_values = [x for x in range(1, 9)]
+    verbose_allowed_values = ['A1',
+                              'B1',
+                              'C1',
+                              'C2',
+                              'D1',
+                              'D2',
+                              'E1',
+                              'E2']
+    require_columns = ["lsoa"]
+
+    def create_analysis_column(self):
+
+        df = self.source_df
+        repeat = pd.read_csv(join(self.lookup_folder, "ruc_2011.csv"))
+        repeat = repeat.set_index("lsoa")["ruralness"].to_dict()
+        df[self.slug] = df["lsoa"].map(repeat)
+
+
+@wtt_register.register
+class DensityDeciles(WTTAnalysis):
+    name = "Messages by population density"
+    slug = "density_deciles"
+    h_label = "Density deciles"
+    group = "UK IMD"
+    allowed_values = [x for x in range(1, 11)]
+    description = "Reports sorted into ten deciles by how densely populated an area is. 1 is highest density, and 10 is lowest."
+    require_columns = ["lsoa"]
+
+    def create_analysis_column(self):
+        df = self.source_df
+        imd = pd.read_csv(join(self.lookup_folder, "composite_ruc.csv"))
+        index_lookup = imd.set_index(
+            "lsoa")["density_pop_decile"].to_dict()
+        df[self.slug] = df["lsoa"].map(index_lookup)
+
 
 for i in welsh_imds:
+    # generate seperate classes for each w_imd
+
+    nice_i = i.replace("_", " ").replace("-", " ").title()
 
     class GenericWIMD(WTTAnalysis):
         if i == "wimd":
             overview = True
-            name = "Reports by Welsh Index of Multiple Deprivation"
+            name = "Messages by Welsh index of multiple deprivation"
             slug = i
+            h_label = "WIMD deciles"
+            priority = 1
         else:
             overview = False
-            name = "Reports by " + \
-                i.replace("-", " ").replace("_", " ").title() + \
-                " Deprivation Subdomain (Wales)"
+            name = "Messages by " + \
+                nice_i.lower() + \
+                " deprivation subdomain (Wales)"
             slug = "w_" + i
+            h_label = "{0} deciles".format(nice_i)
         exclusions = ["mp_gender"]
-        h_label = "{0} deciles".format(i)
         group = "Welsh IMD"
         column = i
         allowed_values = [x for x in range(1, 11)]
@@ -444,7 +567,8 @@ for i in welsh_imds:
         def create_analysis_column(self):
 
             df = self.source_df
-            imd = pd.read_csv(join(self.lookup_folder, "w_imd.csv"))
+            imd = pd.read_csv(join(self.lookup_folder, "imd", "wimd2019.csv"))
+            imd = imd[:-2]
             # convert score to index
             imd[self.__class__.column] = (
                 imd[self.__class__.column] / (1909 / 10)) + 1
@@ -461,20 +585,24 @@ for i in welsh_imds:
 
 for i in english_imds:
 
+    nice_i = i.replace("_", " ").replace("-", " ").title()
+
     class GenericEIMD(WTTAnalysis):
         if i == "imd":
             overview = True
-            name = "Reports by Index of Multiple Deprivation"
+            name = "Messages by English index of multiple deprivation"
             slug = i
+            h_label = "IMD deciles"
+            priority = 2
         else:
             overview = False
-            name = "Reports by " + \
-                english_name(i) + \
-                " Deprivation Subdomain (England)"
+            name = "Messages by " + \
+                english_name(nice_i).lower() + \
+                " deprivation subdomain (England)"
             slug = "e_" + i
+            h_label = "{0} deciles".format(nice_i)
         column = i
         exclusions = ["mp_gender"]
-        h_label = "{0} deciles".format(i)
         group = "English IMD"
         allowed_values = [x for x in range(1, 11)]
         description = "Reports sorted by the decile rank in against the English Indices of Multiple Deprivation of the LSOA a report was made in.\n Lower deciles are more deprived, while higher deciles are better off on this measure."
@@ -483,7 +611,7 @@ for i in english_imds:
         def create_analysis_column(self):
 
             df = self.source_df
-            imd = pd.read_csv(join(self.lookup_folder, "imd2019.csv"))
+            imd = pd.read_csv(join(self.lookup_folder, "imd", "imd2019.csv"))
             index_lookup = imd.set_index(
                 "lsoa")[self.__class__.column + "_decile"].to_dict()
             df[self.slug] = df["lsoa"].map(index_lookup)
@@ -491,20 +619,54 @@ for i in english_imds:
     GenericEIMD.__name__ = GenericEIMD.slug
     wtt_register.register(GenericEIMD)
 
+for i in uk_imds:
+
+    class GenericUKIMD(WTTAnalysis):
+        if i == "UK_IMD_E":
+            overview = True
+            name = "Messages by composite UK index of multiple deprivation"
+            priority = 3
+        if i == "GB_IMD_E":
+            overview = False
+            name = "Messages by composite GB index of multiple deprivation"
+            priority = 2
+        slug = i
+        column = i
+        exclusions = ["mp_gender"]
+        h_label = "Composite UK deprivation deciles"
+        group = "UK IMD"
+        allowed_values = [x for x in range(1, 11)]
+        description = "Reports sorted by the decile rank in against the composite Index of Multiple Deprivation of the LSOA a report was made in.\n Lower deciles are more deprived, while higher deciles are better off on this measure. This measure excludes NI."
+        require_columns = ["lsoa"]
+
+        def create_analysis_column(self):
+            df = self.source_df
+            imd = pd.read_csv(join(self.lookup_folder, "imd", f"{self.slug}.csv"))
+            index_lookup = imd.set_index(
+                "lsoa")[f"{self.slug}_pop_decile"].to_dict()
+            df[self.slug] = df["lsoa"].map(index_lookup)
+
+    GenericUKIMD.__name__ = GenericUKIMD.slug
+    wtt_register.register(GenericUKIMD)
+
 for i in scottish_imds:
+
+    nice_i = i.replace("_", " ").replace("-", " ").title()
 
     class GenericSIMD(WTTAnalysis):
         if i == "simd":
             overview = True
-            name = "Reports by Scottish Index of Multiple Deprivation"
+            name = "Messages by Scottish index of multiple deprivation"
             slug = i
+            h_label = "SIMD deciles"
+            priority = 1
         else:
             overview = False
-            name = "Reports by " + \
-                i.replace("-", " ").replace("_", " ").title() + \
-                " Deprivation Subdomain (Scotland)"
+            name = "Messages by " + \
+                nice_i.lower() + \
+                " deprivation subdomain (Scotland)"
             slug = "s_" + i
-        h_label = "{0} deciles".format(i)
+            h_label = "{0} deciles".format(nice_i)
         column = i
         exclusions = ["mp_gender"]
         group = "Scottish IMD"
@@ -515,7 +677,7 @@ for i in scottish_imds:
         def create_analysis_column(self):
 
             df = self.source_df
-            imd = pd.read_csv(join(self.lookup_folder, "s_imd_domains.csv"))
+            imd = pd.read_csv(join(self.lookup_folder, "imd", "simd2020.csv"))
             # convert score to index
             imd[self.__class__.column] = (
                 imd[self.__class__.column] / (6976 / 10)) + 1
@@ -603,53 +765,3 @@ wtt_mp_only.clone(wtt_register, exclude=[
 @wtt_mp_only.register
 class MpRecipientGender(RecipientGender):
     default = True
-
-
-"""
-
-Decommissioned because EP won't be updated this year, using generic version instead
-bad_mp_ids = set(['2000005', '2000100'])
-
-
-@wtt_mp_only.register
-class RecipientGenderMP(WTTCollection):
-    name = "Rep Gender"
-    slug = "rep_gender"
-    default = True
-    description = "MP Gender sourced from EveryPolitician."
-    require_columns = ["recipient_id"]
-
-    def create_collection_column(self, df):
-
-        lookup = QuickGrid().open([self.lookup_folder, "wtt_id_to_ep.csv"])
-        lookup = {x["id"]: x["ep_id"] for x in lookup}
-
-        pop = Popolo.from_filename(join(
-            self.lookup_folder, "ep-popolo-v1.0.json"))
-        gender_lookup = {x.id: x.gender for x in pop.persons}
-
-        extra = {'78966': 'female',
-                 '84459': 'female',
-                 '78867': 'male',
-                 '84331': 'female'}
-
-        def get_gender(v):
-            if v in bad_mp_ids:
-                return ""
-            if v in extra:
-                return extra[v]
-            else:
-                return gender_lookup[lookup[v]].title() + " MPs"
-
-        df["ep_id"] = df["recipient_id"].map(lookup)
-        df[self.slug] = df["ep_id"].map(gender_lookup)
-
-        col = df.col_to_location("recipient_type")
-        df.generate_col(self.slug, lambda x: get_gender(x["recipient_id"]))
-
-        return df
-
-    def get_labels(self):
-        options = ["Male MPs", "Female MPs"]
-        return [[x, ""] for x in options]
-"""

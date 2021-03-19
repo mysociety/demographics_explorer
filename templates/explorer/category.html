@@ -5,14 +5,14 @@
 {% load humanize %}
 
 {% block head %}
-    <title>{{category.name}}</title>
+    <title>{{category.name}} - {{group.name}}</title>
 {% endblock %}
 
 {% block content %}
     <h2  class="text-center">{{collection.name}}</h2>
     <h1  class="text-center">{{category.name}}</h1>
-
     <hr>
+    
 <ul class="nav nav-tabs">
     {% for g in groups %}
     <li role="presentation" {% if group == g %}class="active"{% endif %}><a href="{% url 'exp_category_view' service.slug collection.slug category.slug g.slug %}">{{g.name}}</a></li>
@@ -24,17 +24,16 @@
      {% if group.slug == "all"%}
      <h2 class="text-center">{{g.grouper.name}}</h2>
      {% endif %}
-     {% for set in g.list %}  
+     {% for set in g.list %} 
+        <p style="text-align:right;"><a href="{% url 'exp_comparison_view' service.slug collection.slug category.slug set.superset.slug %}">More detail.</a></p>
         {{set.chart.render_div}}
-        <h3 class="text-center">{{set.superset.name}} - <a href="{% url 'exp_comparison_view' service.slug collection.slug category.slug set.superset.slug %}">See More.</a></h3>
-		<p class="text-center">-</p>
     {% endfor %}
     {% endfor %}
         <hr>
 
-    <p>Columns in <span style="color:#62B356">green</span> and <span style="color:#E04B4B">red</span> have at least a 95% chance of a real difference from the general dataset and at least a {{large_cutoff}}% different from the expected value.</p>
+    <p>Columns in <span style="color:{{local_positive}}">{{local_positive_label}}</span> and <span style="color:{{local_negative}}">{{local_negative_label}}</span> have at least a 95% chance of a real difference from the general dataset and at least a {{large_cutoff}}% different from the expected value.</p>
     
-    <p><span style="color:#62B356">Green</span> means a category has more reports than expected. <span style="color:#E04B4B">Red</span> means it has less.</p>
+    <p><span style="color:{{local_positive}}">{{local_positive_label}}</span> means a category has more reports than expected. <span style="color:{{local_negative}}">{{local_negative_label}}</span> means it has less.</p>
     <hr>
     <br>
     {% endblock %}
