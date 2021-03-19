@@ -13,7 +13,7 @@ GOOGLE_ANALYTICS_ACCOUNT = os.environ.get('GA', 'UA-660910-43')
 BAKE_LOCATION = "/bake_dir"
 BAKE_STATIC_LOCATION = os.path.join(
     BAKE_LOCATION, 'sites', SITE_SLUG, 'static')
-SASSC_LOCATION = os.path.join(r"C:\Python3\Scripts", 'sassc')
+SASSC_LOCATION = "/usr/bin/sass"
 BAKE_STATIC_LOCATION = os.path.join(
     BAKE_LOCATION, 'sites', SITE_SLUG, 'static')
 BAKE_MEDIA_LOCATION = os.path.join(
@@ -23,12 +23,15 @@ CSV_FOLDER = os.path.join(BAKE_MEDIA_LOCATION, "csvs")
 CHROME_DRIVER = ""
 ORG_LOGO = "/sites/explorer/static/img/mysociety-logo.jpg"
 
-FMS_CURRENT_YEAR = 2019
-WTT_CURRENT_YEAR = 2019
-WDTK_CURRENT_YEAR = 2019
-FMS_EXPLORER_SOURCE = r"\_exports\explorer"
-WTT_EXPLORER_SOURCE = r"\_exports\wttexplorer"
-WDTK_EXPLORER_SOURCE = r"wdtk_survey"
+FMS_CURRENT_YEAR = 2020
+WTT_CURRENT_YEAR = 2020
+WDTK_CURRENT_YEAR = 2020
+FMS_EXPLORER_SOURCE = os.path.join("_sources", "fms")
+WTT_EXPLORER_SOURCE = os.path.join("_sources", "wtt")
+WDTK_EXPLORER_SOURCE = os.path.join("_sources", "wdtk")
+EXPORT_CSVS = os.environ.get('EXPORT_CSVS', 'True').lower() == "true"
+EXPORT_CHARTS = os.environ.get('EXPORT_CHARTS', 'False').lower() == "true"
+FORCE_EXPORT_CHARTS = os.environ.get('FORCE_EXPORT_CHARTS', 'False').lower() == "true"
 VEGALITE_SERVER_URL = os.environ.get('VEGALITE_SERVER_URL', '')
-VEGALITE_USE_SERVER = os.environ.get('VEGALITE_USE_SERVER', False)
+VEGALITE_USE_SERVER = os.environ.get('VEGALITE_USE_SERVER', 'false').lower() == "true"
 VEGALITE_ENCRYPT_KEY = os.environ.get('VEGALITE_ENCRYPT_KEY', '')

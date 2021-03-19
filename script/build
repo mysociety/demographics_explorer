@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# script/build: builds the project
+#
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ "$1" = "--all" ]; then
+    script/bake
+    exit $?
+fi
+
+script/update
+
+# Build the image
+docker build -t mysocietyorg/demographics_explorer:latest .
+
+# Tag it with a timestamp
+NOW=$(date +%s)
+docker tag mysocietyorg/demographics_explorer:latest mysocietyorg/demographics_explorer:${NOW}
+
+# Extract the database
+CONTAINER=$(docker create mysocietyorg/demographics_explorer:latest)
+docker cp ${CONTAINER}:/app/databases/db.sqlite3 databases/db.sqlite3
+docker container rm $CONTAINER
