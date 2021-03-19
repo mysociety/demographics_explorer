@@ -1,492 +1,829 @@
 category,SHEF_A,SHEF_A_CODE
-1 signal light out,Street Lights,A81
-2 signal lights out,Street Lights,A81
-Abandoned and Untaxed Vehicles,Abandoned Vehicles,A1
-Abandoned car,Abandoned Vehicles,A1
-Abandoned vehicle,Abandoned Vehicles,A1
-Abandoned vehicles,Abandoned Vehicles,A1
-Access to a Countryside Pathway,Countryside RoW,A14
-Accumulated Litter,Accumulated Litter,A2
-Admin,Admin,A3
-All signal lights out,Street Lights,A81
-Allotment issue,Open Spaces/Parks,A53
-Bad Parking,Parking,A56
-Barrier/Bollard on a public right of way,Barriers/Bollards on RoW,A4
-Belisha Beacon broken,Pavement /Footway Defects,A57
-Bench/cycle rack/litter bin/planter,Benches/Bicycle Racks,A5
-Benches / bicycle racks,Benches/Bicycle Racks,A5
-Bin Repair,Bin Repair/Replacement,A7
-Blocked  Drains,Blocked Drains,A8
-Blocked drain,Blocked Drains,A8
-Blocked drain / Flooding,Blocked Drains,A8
-Blocked drainage gullies,Blocked Drains,A8
-Blocked drains,Blocked Drains,A8
-Blocked drains and gullies,Blocked Drains,A8
-Blocked or damaged drain,Blocked Drains,A8
-Bollard light not working,Street Signs,A83
-Bollards,Barriers/Bollards on RoW,A4
-Bollards (lit),Street Signs,A83
-Bollards (unlit),Street Signs,A83
-Bollards on a road or footway,Barriers/Bollards on RoW,A4
-Bollards or railings,Street Signs,A83
-Bridge,Bridge/Culvert Defects,A9
-Bridge or culvert defect,Bridge/Culvert Defects,A9
-"Bridge, Subway or Culvert in an open spa",Bridge/Culvert Defects,A9
-"Bridge, Subway or Culvert in an open space",Bridge/Culvert Defects,A9
-"Bridge, Subway or Culvert on a public ri",Bridge/Culvert Defects,A9
-"Bridge, Subway or Culvert on a public right of way",Bridge/Culvert Defects,A9
-"Bridge, Subway or Culvert on a road or f",Bridge/Culvert Defects,A9
-"Bridge, Subway Or Culvert on a road or footway",Bridge/Culvert Defects,A9
-Bridges,Bridge/Culvert Defects,A9
-Bridges/Subways,Bridge/Culvert Defects,A9
-Broken Fire Hydrant Covers,Broken Fire Hydrant,A10
-Broken Flags/Kerbs,Broken Kerbs,A11
-Broken manhole cover,Manhole Defects,A49
-Bus shelters,Bus Stops Damage,A12
-Bus stop damage,Bus Stops Damage,A12
-Bus stop/shelter issue,Bus Stops Damage,A12
-Bus stops,Bus Stops Damage,A12
-C.C.T.V Faults,C.C.T.V Faults,A13
-Car Park Barrier / Equipment,Parking,A56
-Car parking,Parking,A56
-Car parking issues,Parking,A56
-Car parks,Parking,A56
-Car parks (council run),Parking,A56
-Car parks (only council run ones),Parking,A56
-Car Parks and ticket machines,Parking,A56
-Carparks,Parking,A56
-Carriageway defect,Road Surface Defects,A69
-Council car parks,Parking,A56
-Countryside Paths / Public Rights of Way,Countryside RoW,A14
-Countryside Paths / Public Rights of Way (usually not tarmac),Pavement /Footway Defects,A57
-Crash Barriers,Street Signs,A83
-Crossing not working,Street Signs,A83
-Damage Public Litter Bin,Bin Repair/Replacement,A7
-"Damage to bins, benches, and infrastructure",Bin Repair/Replacement,A7
-Damage to pavement,Pavement /Footway Defects,A57
-Damage to road,Road Surface Defects,A69
-Damaged bollard or post,Barriers/Bollards on RoW,A4
-"Damaged dyke, ditch or culvert",Bridge/Culvert Defects,A9
-Damaged equipment,Open Spaces/Parks,A53
-"Damaged Railing, manhole, or drain cover",Road Surface Defects,A69
-"Damaged road edge, encroaches less than 100mm",Road Surface Defects,A69
-"Damaged road edge, encroaches more than 100mm",Road Surface Defects,A69
-Damaged road sign,Road Surface Defects,A69
-Damaged street nameplate,Street Name Plates,A82
-Damaged/missing boundary markers,Road Surface Defects,A69
-Damaged/missing cats eye,Road Surface Defects,A69
-Damaged/missing paving slab,Road Surface Defects,A69
-Dangerous Building,Dangerous Building/Structure,A15
-Dangerous structure,Dangerous Building/Structure,A15
-Dead animal,Dead Animals,A16
-Dead animals,Dead Animals,A16
-Debris & spillage,Debris/Spillage,A17
-Debris / Obstructions,Debris/Spillage,A17
-Debris/Spillage,Debris/Spillage,A17
-Defective road markings or signs,Road Markings,A67
-Demo,Demo,A18
-Discarded Syringes,Discarded Syringes,A19
-Ditch issue,Bridge/Culvert Defects,A9
-Dog and litter bins,Dog Litter Bin,A21
-Dog Bin,Dog Litter Bin,A21
-Dog Bin overflow,Dog Litter Bin,A21
-Dog bin overflowing,Dog Litter Bin,A21
-Dog fouling,Dog Fouling,A20
-Dog Mess,Dog Fouling,A20
-Dog Waste Bin,Dog Litter Bin,A21
-Dog Waste Bin on a verge or open space,Dog Litter Bin,A21
-Dogs and Dogs Fouling,Dog Fouling,A20
-Drain or Gully,Blocked Drains,A8
-Drainage,Blocked Drains,A8
-Drainage or Flooding on a public right o,Blocked Drains,A8
-Drainage Or Flooding on a public right of way,Blocked Drains,A8
-Drains,Blocked Drains,A8
-Dumped cylinder,Dumped Rubbish,A22
-Dumped rubbish,Dumped Rubbish,A22
-Dying or diseased tree,Fallen/Dangerous Trees,A24
-Enforcement,Parking,A56
-Environmental health,Environmental Health,A23
-Excessive or dangerous littering,Accumulated Litter,A2
-Exposed cables/wires,Environmental Health,A23
-Faded road markings,Road Markings,A67
-Fallen tree across road or pavement,Fallen/Dangerous Trees,A24
-Fault with temporary traffic signals,Street Signs,A83
-Faulty street light,Street Lights,A81
-Faulty street sign,Street Signs,A83
-Fences,Fences,A25
-Fences & barriers,Fences,A25
-Fire hydrants,Broken Fire Hydrant,A10
-Flooded subway,Blocked Drains,A8
-Flooding,Flooding,A26
-Flooding of a road or pavement,Blocked Drains,A8
-Flooding on a road or footway,Flooding,A26
-Flooding or standing water on road,Flooding,A26
-Floral displays,Floral displays,A27
-Fly Posting,Flyposting,A28
-Fly tipping,Fly-tipping,A29
-Fly Tipping on a public right of way,Fly-tipping,A29
-"Fly Tipping on a road, footway, verge or",Fly-tipping,A29
-"Fly Tipping on a road, footway, verge or open space",Fly-tipping,A29
-Flyposting,Flyposting,A28
-Fly-Posting,Flyposting,A28
-Flyposting (not by roadside),Flyposting,A28
-Flyposting (on road or roadside),Flyposting,A28
-Flytipping,Fly-tipping,A29
-Fly-Tipping,Fly-tipping,A29
-Flytipping and dumped rubbish,Fly-tipping,A29
-Footpath / pavement problem,Pavement /Footway Defects,A57
-Footpaths & rights of way,Right of Way,A66
-Footpaths/ Rights of way (usually not ta,Right of Way,A66
-Footpaths/ Rights of way (usually not tarmac),Right of Way,A66
-Footway Defect,Pavement /Footway Defects,A57
-Footway Defect on a road or footway,Pavement /Footway Defects,A57
-Footway or Footpath,Right of Way,A66
-Garden Waste,Garden Waste,A30
-Gates/Stiles on a public right of way,Gates/Stiles RoW,A31
-General Highways Enquiry,General Highways Enquiries,A32
-Graffiti,Graffiti,A33
-Graffiti (Offensive),Graffiti,A33
-Graffiti and flyposting,Graffiti,A33
-Graffiti on bridges/subways,Graffiti,A33
-Graffiti on council buildings,Graffiti,A33
-Graffiti on Council Property,Graffiti,A33
-Grafitti,Graffiti,A33
-Grass and Hedges,Grass/Weed Control,A34
-Grass Cutting,Grass/Weed Control,A34
-Grass Cutting on a public right of way,Grass/Weed Control,A34
-Grass Cutting on a verge or open space,Grass/Weed Control,A34
-Grass needs cutting,Grass/Weed Control,A34
-Grass verges,Grass/Weed Control,A34
-Grass/Weeds,Grass/Weed Control,A34
-Grids and Drains,Grids and Drains,A35
-Grit bin issue,Grit Bins,A36
-Grit bin refills,Grit Bins,A36
-Grit Bins,Grit Bins,A36
-Gritting,Gritting,A37
-Grounds Maintenance,Grounds Maintenance,A38
-Gullies,Gullies,A39
-Gully,Gullies,A39
-Gully and Catchpits,Gullies,A39
-Gully or Manhole,Manhole Covers,A48
-Gully or manhole defect,Gully/Manhole Defects,A40
-Gully/Drainage,Gullies,A39
-Hazardous or fallen trees,Fallen/Dangerous Trees,A24
-Hazardous spillage on road,Spillage on Road,A78
-Hedge problem,Fallen/Dangerous Trees,A24
-Hedges / trees on rights of way,Trees and Hedges RoW,A87
-Hedges / Trees on road or verge,Trees and Hedges RoW,A87
-Highway Condition,Highway Condition,A41
-Highway Condition (Assets),Highway Condition,A41
-Highway Condition Enquiry,Highway Condition,A41
-Highway Drainage or Flooding,Highway Drainage,A42
-Highway Improvements on a road or footwa,Highway Condition,A41
-Highway Improvements on a road or footway,Highway Condition,A41
-Highway Schemes,General Highways Enquiries,A32
-Highways,General Highways Enquiries,A32
-Highways Drainage,Highway Drainage,A42
-Highways Drainage on a road or footway,Highway Drainage,A42
-Highways Maintenance,Highway Condition,A41
-Household bins left out,Accumulated Litter,A2
-Ice,Ice & Snow,A43
-Ice & snow,Ice & Snow,A43
-Ice/Snow,Ice & Snow,A43
-Illegal advertising,Flyposting,A28
-Illegal parking,Parking,A56
-Illegally parked vehicle,Parking,A56
-Illuminated Sign,Street Lights,A81
-Iluminated Bollard,Street Lights,A81
-Inspection Covers,Manhole Covers,A48
-Japanese knotweed / ragwort,Grass/Weed Control,A34
-Kerb damage / issue,Broken Kerbs,A11
-Kerbs,Broken Kerbs,A11
-Leafing,Leafing,A44
-Leaves,Leafing,A44
-Lewisham Homes,Lewisham Homes,A45
-Light on during the day,Street Lights,A81
-Lines and Markings (Council Car Park),Road Markings,A67
-Lit Bollards (Electrical),Barriers/Bollards on RoW,A4
-Lit signs & bollards,Barriers/Bollards on RoW,A4
-Lit Signs (Electrical),Lit Signs,A46
-Litter,Litter/Litter Bin,A47
-Litter bin,Litter/Litter Bin,A47
-Litter bin damaged,Litter/Litter Bin,A47
-Litter bin full,Litter/Litter Bin,A47
-Litter Bin on a verge or open space,Litter/Litter Bin,A47
-Litter Bin overflow,Litter/Litter Bin,A47
-Litter Bin overflow in Parks & Open spaces,Litter/Litter Bin,A47
-Litter Bin Overflowing,Litter/Litter Bin,A47
-Litter in Parks & Open spaces,Litter/Litter Bin,A47
-Litter in the street,Litter/Litter Bin,A47
-Loose chippings,Pavement /Footway Defects,A57
-Loose/missing/chipped kerbstone,Broken Kerbs,A11
-Manhole,Manhole Covers,A48
-Manhole / Drain cover,Manhole Covers,A48
-Manhole Cover,Manhole Covers,A48
-Manhole covers,Manhole Covers,A48
-Manhole/drain cover on pavement/verge,Manhole Covers,A48
-Manhole/drain cover on road/cycleway,Manhole Covers,A48
-Manholes,Gully/Manhole Defects,A40
-Miscellaneous,Other,A54
-Missed bin collection,Missed Bin Collection,A50
-Missed Collection,Missed Bin Collection,A50
-Missed Collection (Green Waste),Missed Bin Collection,A50
-Missed Food Waste Collection,Missed Bin Collection,A50
-Missed Grass Cutting,Grass/Weed Control,A34
-Missing Gully/Manhole,Manhole Covers,A48
-Missing safety fence,Pavement /Footway Defects,A57
-Missing/Broken Sign on a public right of,Street Signs,A83
-Missing/Broken Sign on a public right of way,Street Signs,A83
-Motorways Defects,Highway Condition,A41
-Mud / Slippery surface,Road Surface Defects,A69
-Mud and Debris,Debris/Spillage,A17
-Mud or Debris on the road,Debris/Spillage,A17
-Multiple potholes (various sizes),Potholes,A60
-Needles,Environmental Health,A23
-Noise nuisance,Noise,A51
-Noxious weeds,Grass/Weed Control,A34
-Objects in the road,Obstruction,A52
-Obstruction,Obstruction,A52
-Obstruction on a public right of way,Obstruction,A52
-Obstruction on Highways / Sight Lines,Obstruction,A52
-Obstruction on pavement/verge,Obstruction,A52
-Obstruction on road or pavement,Obstruction,A52
-Obstruction on road/cycleway,Obstruction,A52
-Obstruction or hazard on road,Obstruction,A52
-"Obstructions (skips, A boards)",Obstruction,A52
-Obstructive vegetation,Overgrown Vegetation,A55
-Off Street Parking,Parking,A56
-Offensive Graffiti on Property,Graffiti,A33
-Oil spillage,Spillage on Road,A78
-On Street Parking,Parking,A56
-On-street parking,Parking,A56
-Other,Other,A54
-Overflowing litter bin,Litter/Litter Bin,A47
-Overflowing Street Litter Bin,Litter/Litter Bin,A47
-Overgrown tree/hedges,Overgrown Vegetation,A55
-Overgrown vegetation,Overgrown Vegetation,A55
-Overhanging Foliage,Overgrown Vegetation,A55
-Overhanging tree/foliage/bush,Overgrown Vegetation,A55
-Overhanging vegetation,Overgrown Vegetation,A55
-Overhanging vegetation from private land,Overgrown Vegetation,A55
-Parking,Parking,A56
-Parking enforcement,Parking,A56
-Parking Equipment (Council Car Park),Parking,A56
-Parking queries/reports,Parking,A56
-Parks,Open Spaces/Parks,A53
-Parks & Green Spaces,Open Spaces/Parks,A53
-Parks & open spaces,Open Spaces/Parks,A53
-Parks and Greenspace,Open Spaces/Parks,A53
-Parks and playgrounds,Open Spaces/Parks,A53
-Parks and playing fields,Open Spaces/Parks,A53
-Parks repairs,Open Spaces/Parks,A53
-Parks/landscapes,Open Spaces/Parks,A53
-Pavement and road repairs,Pavement /Footway Defects,A57
-Pavement Damaged/Cracked,Pavement /Footway Defects,A57
-Pavement defect,Pavement /Footway Defects,A57
-Pavement Jetting,Pavement /Footway Defects,A57
-Pavements,Pavement /Footway Defects,A57
-Pavements & kerbs,Pavement /Footway Defects,A57
-Pavements/footpaths,Pavement /Footway Defects,A57
-Pedestrian guard rail missing/damaged,Pavement /Footway Defects,A57
-Permanent Traffic Signals/Road Crossings,Street Signs,A83
-Pest Control,Pest Control,A58
-Phoenix HA,Phoenix HA,A59
-Play Area Issues on a verge or open spac,Open Spaces/Parks,A53
-Play Area Issues on a verge or open space,Open Spaces/Parks,A53
-Play area safety issue,Open Spaces/Parks,A53
-Playground Equipment,Open Spaces/Parks,A53
-Playing Fields,Open Spaces/Parks,A53
-Pole/signal knocked down,Street Signs,A83
-Poop Scoop Bins,Dog Fouling,A20
-Poor Parking (Council Car Park),Parking,A56
-Pothole,Potholes,A60
-Pothole (Council Car Park),Potholes,A60
-Pothole / Surface Defect,Potholes,A60
-Pothole on a road or footway,Potholes,A60
-Pothole on pavement/verge,Potholes,A60
-Pothole on road/cycleway,Potholes,A60
-Potholes,Potholes,A60
-Potholes (large),Potholes,A60
-Potholes (smaller than 30cm by 4cm),Potholes,A60
-Property damage,Property Damage,A61
-Protected trees (in Conservations Areas),Protected Trees,A62
-Public Conveniences,Public Toilets,A63
-Public Right of Way (including Cycleway),Right of Way,A66
-Public rights of way,Right of Way,A66
-"Public rights of way, alleyways and brid",Right of Way,A66
-"Public rights of way, alleyways and bridlepaths",Pavement /Footway Defects,A57
-Public Rights of Ways,Right of Way,A66
-Public toilet,Public Toilets,A63
-Public toilets,Public Toilets,A63
-Public Tree related issue,Overgrown Vegetation,A55
-Public tree requires pruning,Overgrown Vegetation,A55
-Public Trees,Overgrown Vegetation,A55
-Rats,Pest Control,A58
-Recycling (household waste),Recycling,A64
-Recycling and waste,Recycling,A64
-Refuse & recycling,Recycling,A64
-Refuse and recycling,Bin Collection,A6
-Refuse collection,Bin Collection,A6
-Retaining Wall,Retaining Wall,A65
-Rights of way,Right of Way,A66
-Road and Pavement Issues,Road Surface Defects,A69
-Road defect,Road Surface Defects,A69
-Road lighting,Street Lights,A81
-Road lines / road markings,Road Markings,A67
-Road Marking,Road Markings,A67
-Road markings,Road Markings,A67
-Road markings faded/missing,Road Markings,A67
-Road or pavement defect,Road/Pavement Defects,A71
-Road or pavement obstruction,Road/Pavement Defects,A71
-Road Safety,Road Safety,A68
-Road Sign,Street Signs,A83
-Road signage,Street Signs,A83
-Road signs,Street Signs,A83
-Road Signs and Markings,Street Signs,A83
-Road surface,Road Surface Defects,A69
-Road surface issue,Road Surface Defects,A69
-Road traffic signs,Street Signs,A83
-Road Traffic Signs and Road Markings,Street Signs,A83
-Road Works,Road Works,A70
-Road works problem,Road Works,A70
-Roads and Highways,Road Surface Defects,A69
-Roads and pavement surfaces - Overhangin,Overgrown Vegetation,A55
-Roads and pavement surfaces - Overhanging vegetation,Overgrown Vegetation,A55
-Roads/highways,Highway Condition,A41
-Roadside safety barrier,Road Surface Defects,A69
-Roadworks,Roadworks,A72
-Rotten timber handrails or decking,Pavement /Footway Defects,A57
-Rubbish,Rubbish,A73
-Rubbish (refuse and recycling),Rubbish,A73
-"Rubbish (refuse and recycling)	",Rubbish,A73
-Rubbish accumulation on private property,Accumulated Litter,A2
-Rubbish or fly tipping on the roads,Fly-tipping,A29
-Salt bin damaged,Salt Bins,A74
-Salt bin refill,Salt Bins,A74
-Salt Bin Request,Salt Bins,A74
-Shopping Trolley,Shopping Trolley,A75
-Shopping trolleys,Shopping Trolley,A75
-Sign (lit),Road Markings,A67
-Sign (unlit),Road Markings,A67
-Sign light not working,Road Markings,A67
-Sign or Marking,Sign or Marking,A76
-Sign problem,Road Markings,A67
-Signal head turned around,Road Markings,A67
-Signals stuck on red,Road Markings,A67
-Signs,Street Signs,A83
-Signs on a public right of way,Street Signs,A83
-Signs/Cones/Bollards/Barriers,Street Signs,A83
-Single pothole (less than 30cm wide and,Street Signs,A83
-Single pothole (less than 30cm wide and 4cm deep),Street Signs,A83
-Single pothole (more than 30cm wide and,Potholes,A60
-Single pothole (more than 30cm wide and 4cm deep),Potholes,A60
-Skip on road/verge,Skips,A77
-Skip problem,Skips,A77
-Skips and scaffolding,Skips,A77
-Snow and ice problem/winter salting,Ice & Snow,A43
-Spillage on the road,Spillage on Road,A78
-Street cleaning,Street Cleaning,A79
-Street cleansing,Street Cleaning,A79
-Street drainage,Blocked Drains,A8
-Street furniture,Street Furniture,A80
-Street Light,Street Lights,A81
-Street light dim,Street Lights,A81
-Street Light Fault,Street Lights,A81
-Street light intermittent,Street Lights,A81
-Street light not working,Street Lights,A81
-Street lighting,Street Lights,A81
-Street lighting (on adopted highways),Street Lights,A81
-"Street lighting (parks, car parks and op",Street Lights,A81
-"Street lighting (parks, car parks and open spaces)",Street Lights,A81
-"Street lighting (parks, car parks, open",Street Lights,A81
-"Street lighting (parks, car parks, open spaces and footpaths)",Street Lights,A81
-Street Lighting and Road Signs,Street Lights,A81
-Street Lights,Street Lights,A81
-Street Lights (Electrical),Street Lights,A81
-Street Name Plate,Street Name Plates,A82
-Street Name Plates,Street Name Plates,A82
-Street nameplaces,Street Name Plates,A82
-Street Nameplate,Street Name Plates,A82
-Street nameplates,Street Name Plates,A82
-Street needs gritting,Gritting,A37
-Street sign,Street Signs,A83
-Street weeds,Grass/Weed Control,A34
-Street Works (Utilities),Grounds Maintenance,A38
-Subway light,Bridge/Culvert Defects,A9
-Surface Defect on a public right of way,Road Surface Defects,A69
-Surface Defect on a road or footway,Road Surface Defects,A69
-Temporary Traffic Signals,Traffic Lights,A86
-Timing issue,Traffic Lights,A86
-To let signs,To Let Signs,A84
-Trade Waste,Trade Waste,A85
-Traffic light,Traffic Lights,A86
-Traffic light / crossing - button/beep/lamp,Traffic Lights,A86
-Traffic light / crossing - timing issues,Traffic Lights,A86
-Traffic Light Fault,Traffic Lights,A86
-Traffic lights,Traffic Lights,A86
-"Traffic lights & crossings problems with buttons, beep or lamps",Traffic Lights,A86
-Traffic lights & crossings problems with timings,Traffic Lights,A86
-Traffic lights & signals,Traffic Lights,A86
-Traffic Lights (permanent only),Traffic Lights,A86
-Traffic Lights (temporary only),Traffic Lights,A86
-Traffic lights problem at temporary roadworks,Traffic Lights,A86
-Traffic Signals,Traffic Lights,A86
-Tree,Fallen/Dangerous Trees,A24
-Tree (dangerous),Fallen/Dangerous Trees,A24
-Tree (fallen branches),Fallen/Dangerous Trees,A24
-Tree matters / Preservation Orders,Fallen/Dangerous Trees,A24
-Tree Or Shrub,Fallen/Dangerous Trees,A24
-Tree or Shrub on a public right of way,Trees on RoW,A88
-Tree or Shrub on a road or footway,Trees on RoW,A88
-Tree or Shrub on a verge or open space,Fallen/Dangerous Trees,A24
-Tree Requires Pruning,Overgrown Vegetation,A55
-Tree/branch - fallen,Fallen/Dangerous Trees,A24
-Tree/branch - may fall,Fallen/Dangerous Trees,A24
-Tree/branch/hedge - overgrown,Overgrown Vegetation,A55
-Trees,Fallen/Dangerous Trees,A24
-Trees & hedges,Fallen/Dangerous Trees,A24
-Trees (along Public Rights of Way),Trees on RoW,A88
-Trees (on sites owned by Three Rivers Di,Trees on RoW,A88
-Trees (on sites owned by Three Rivers District Council),Overgrown Vegetation,A55
-Trees (on the highway verge),Fallen/Dangerous Trees,A24
-Trees (Urban Areas),Fallen/Dangerous Trees,A24
-Trees and woodland,Overgrown Vegetation,A55
-Trees and Woodland Maintenance,Fallen/Dangerous Trees,A24
-"Trees in parks, commons and open  spaces",Overgrown Vegetation,A55
-Trees on and near highways and footpaths,Overgrown Vegetation,A55
-Trees or Vegetation,Overgrown Vegetation,A55
-Trees overhanging highways,Overgrown Vegetation,A55
-Trees overhanging roads/paths,Overgrown Vegetation,A55
-Trees overhanging/obstructing the road o,Overgrown Vegetation,A55
-Trees overhanging/obstructing the road or footpath,Overgrown Vegetation,A55
-Trees/Hedges Overhanging Roads Or Footpa,Overgrown Vegetation,A55
-Trees/Hedges Overhanging Roads Or Footpaths,Overgrown Vegetation,A55
-Trenches,Trenches,A89
-Trip hazard,Trip Hazard,A90
-Trip hazard/uneven surface,Trip Hazard,A90
-Trunkroad or motorway defect,Highway Condition,A41
-Unauthorised signs,Flyposting,A28
-Untaxed vehicle,Untaxed Vehcile,A91
+Zebra crossing,Zebra Crossing,A94
+Damage to grass verges,Verge Damage,A95
+Verges - Damaged by Vehicles,Verge Damage,A95
+Soft Verge Damaged/Overrun,Verge Damage,A95
+Vehicle Access (Assets),Vehicle Access,A93
+Vehicle Barrier Issue,Vehicle Access,A93
+Vehicle Access,Vehicle Access,A93
+Utility equipment,Utility Works,A92
+Utlility Covers,Utility Works,A92
+Utility Works and Manhole Covers,Utility Works,A92
+Utility Issue,Utility Works,A92
 Utilities,Utility Works,A92
+Utility Works and Manhole Covers (Street,Utility Works,A92
 Utility cabinets,Utility Works,A92
 Utility Work,Utility Works,A92
-Utility Works and Manhole Covers,Utility Works,A92
-Utility Works and Manhole Covers (Street,Utility Works,A92
 Utility Works and Manhole Covers (Streetworks),Utility Works,A92
-Utlility Covers,Utility Works,A92
-Vegetation on a public right of way,Overgrown Vegetation,A55
-Vegetation or Weeds,Overgrown Vegetation,A55
-Vegetation or Weeds on a public right of,Overgrown Vegetation,A55
-Vegetation Or Weeds on a public right of way,Overgrown Vegetation,A55
-Vegetation or Weeds on a verge or open s,Overgrown Vegetation,A55
-Vegetation Or Weeds on a verge or open space,Overgrown Vegetation,A55
-Vehicle Access,Vehicle Access,A93
-Vehicle Access (Assets),Vehicle Access,A93
-Verge cutting required,Grass/Weed Control,A34
+Utility Box/ cover damaged,Utility Works,A92
+Untaxed vehicle,Untaxed Vehcile,A91
+Trip hazard/uneven surface,Trip Hazard,A90
+Trip hazard,Trip Hazard,A90
+Trenches,Trenches,A89
+Tree or Shrub on a public right of way,Trees on RoW,A88
+Trees (along Public Rights of Way),Trees on RoW,A88
+Trees (on sites owned by Three Rivers Di,Trees on RoW,A88
+Tree or Shrub on a road or footway,Trees on RoW,A88
+Low hanging branches and general maintenance,Trees and Hedges RoW,A87
+Hedges / trees on rights of way,Trees and Hedges RoW,A87
+Hedges / Trees on road or verge,Trees and Hedges RoW,A87
+Traffic Signals Damaged,Traffic Lights,A86
+Timing issue,Traffic Lights,A86
+Traffic Signal Timing (perm),Traffic Lights,A86
+Traffic sign,Traffic Lights,A86
+Traffic Signals,Traffic Lights,A86
+Traffic light,Traffic Lights,A86
+Traffic lights problem at temporary roadworks,Traffic Lights,A86
+Traffic light / crossing - timing issues,Traffic Lights,A86
+Traffic Lights (temporary only),Traffic Lights,A86
+Traffic lights & signals,Traffic Lights,A86
+"Traffic lights & crossings problems with buttons, beep or lamps",Traffic Lights,A86
+Traffic lights & crossings problems with timings,Traffic Lights,A86
+Traffic Signals Not Working,Traffic Lights,A86
+Traffic lights,Traffic Lights,A86
+Traffic Lights (permanent only),Traffic Lights,A86
+Lamp out (traffic lights),Traffic Lights,A86
+Traffic signal obstructed by vegetation,Traffic Lights,A86
+Traffic Light Fault,Traffic Lights,A86
+Temporary Traffic Signals,Traffic Lights,A86
+Traffic light / crossing - button/beep/lamp,Traffic Lights,A86
+Temporary,Traffic Lights,A86
+Trade Waste Issue,Trade Waste,A85
+Business bins left out,Trade Waste,A85
+Trade Waste,Trade Waste,A85
+To let signs,To Let Signs,A84
+Missing/Broken Sign on a public right of way,Street Signs,A83
+Missing/Broken Sign on a public right of,Street Signs,A83
+Signs on a public right of way,Street Signs,A83
+Signs/Cones/Bollards/Barriers,Street Signs,A83
+Road signs,Street Signs,A83
+Bollards or railings,Street Signs,A83
+Signs,Street Signs,A83
+Road Traffic Signs and Road Markings,Street Signs,A83
+Bollards (unlit),Street Signs,A83
+Road Signs and Markings,Street Signs,A83
+Street sign,Street Signs,A83
+Bollards (lit),Street Signs,A83
+Road traffic signs,Street Signs,A83
+Bollard light not working,Street Signs,A83
+Road Sign,Street Signs,A83
+Permanent Traffic Signals/Road Crossings,Street Signs,A83
+Crossing not working,Street Signs,A83
+Road signage,Street Signs,A83
+Pole/signal knocked down,Street Signs,A83
+Fault with temporary traffic signals,Street Signs,A83
+Faulty street sign,Street Signs,A83
+Sign/Pole Damaged,Street Signs,A83
+Missing/ damaged traffic sign,Street Signs,A83
+Signal Failure/Damaged - Toucan/Pelican,Street Signs,A83
+Traffic signal faulty,Street Signs,A83
+Sign/Waymarking - Damaged/Missing,Street Signs,A83
+Safety Bollard - Damaged/Missing,Street Signs,A83
+Traffic Sign obstructed (vegetation),Street Signs,A83
+Sign Twisted/Misaligned,Street Signs,A83
+Request Timing Review,Street Signs,A83
+Safety fence or barrier,Street Signs,A83
+Sign Dirty/Degraded,Street Signs,A83
+Signs and bollards,Street Signs,A83
+Signal Failure,Street Signs,A83
+Signal Failure all out,Street Signs,A83
+Damaged / Missing / Facing Wrong Way,Street Signs,A83
+Safety fences and barriers,Street Signs,A83
+Signal Head Failure,Street Signs,A83
+Illum. Sign Minor Damage,Street Signs,A83
+Attachment Distract/Obstruct,Street Signs,A83
+Crossing running with no pedestrians,Street Signs,A83
+Permanent,Street Signs,A83
+Street washing,Street Signs,A83
+Traffic sign light,Street Signs,A83
+Sign Obstructed: Vegetation,Street Signs,A83
+Sign or road marking missing following works,Street Signs,A83
+Sign Missing/Knocked Down,Street Signs,A83
+Signal Stuck,Street Signs,A83
+Single pothole (less than 30cm wide and 4cm deep),Street Signs,A83
+Single pothole (less than 30cm wide and,Street Signs,A83
+Street nameplates,Street Name Plates,A82
+Damaged street nameplate,Street Name Plates,A82
+Street Name Plate,Street Name Plates,A82
+Damaged street name plates,Street Name Plates,A82
+Street Name Plates,Street Name Plates,A82
+Street Nameplate Dam./Miss.,Street Name Plates,A82
+Street nameplaces,Street Name Plates,A82
+Street Nameplate,Street Name Plates,A82
+Street nameplate damaged/missing,Street Name Plates,A82
+"Street lighting (parks, car parks, open spaces and footpaths)",Street Lights,A81
+Lighting,Street Lights,A81
+Street light on during the day,Street Lights,A81
+Street Lights,Street Lights,A81
+Street light dim,Street Lights,A81
+Street Light,Street Lights,A81
+Single Light out (street light),Street Lights,A81
+Flickering Light,Street Lights,A81
+Faulty street light,Street Lights,A81
+All out - three or more street lights in a row,Street Lights,A81
+1 signal light out,Street Lights,A81
+2 signal lights out,Street Lights,A81
+Light in outside car park,Street Lights,A81
+"Street lighting (parks, car parks and open spaces)",Street Lights,A81
+All out,Street Lights,A81
+Stuck on red,Street Lights,A81
+Lights too bright/ dull,Street Lights,A81
+"Street lighting (parks, car parks, open",Street Lights,A81
+Lamp post,Street Lights,A81
+Street Light Fault,Street Lights,A81
+Street light leaning,Street Lights,A81
+Light on during daylight hours,Street Lights,A81
+Street light wiring exposed,Street Lights,A81
+"Street lighting (parks, car parks and op",Street Lights,A81
+Lamp/Bulb Failure,Street Lights,A81
+All signal lights out,Street Lights,A81
+Streetlight Obscured by Veg,Street Lights,A81
+Light in park or open space,Street Lights,A81
+Street lighting,Street Lights,A81
+Light on during the day,Street Lights,A81
+Street Lighting and Road Signs,Street Lights,A81
+Lamp: Outage (Single Unit),Street Lights,A81
+Illuminated Sign,Street Lights,A81
+Not coming on/ faulty,Street Lights,A81
+Street lighting (on adopted highways),Street Lights,A81
+Iluminated Bollard,Street Lights,A81
+Street light not working,Street Lights,A81
+Street light intermittent,Street Lights,A81
+Street Lights (Electrical),Street Lights,A81
+Road lighting,Street Lights,A81
+Lights out in Pedestrian Subway,Street Lights,A81
+Crash Barriers,Street Furniture,A80
+Crash Barriers Damaged/Missing,Street Furniture,A80
+Damage to pedestrian guardrail,Street Furniture,A80
+Damaged/missing pedestrian guardrail,Street Furniture,A80
+Damage: Pedestrian Barrier,Street Furniture,A80
+Crash Barriers - Damaged / Missing,Street Furniture,A80
+Street furniture,Street Furniture,A80
+Unlit sign knocked down,Street Furniture,A80
+Bollard Out Of Light,Street Furniture,A80
+Bench/ memorial/ cycle hoop damaged or missing,Street Furniture,A80
+Other street furniture,Street Furniture,A80
+Street Furniture Enquiry,Street Furniture,A80
+Damaged bollards/posts,Street Furniture,A80
+unlit bollard knockdown/ missing (non hazardous),Street Furniture,A80
+Traffic bollard,Street Furniture,A80
+Bollard,Street Furniture,A80
+Bench Damaged Hazard,Street Furniture,A80
+Damage to paintwork/ column,Street Furniture,A80
+Column/Post: Paintwork Damage,Street Furniture,A80
+Unlit Bollard Issue Non Hazard,Street Furniture,A80
+unlit bollard knockdown/ missing (hazardous),Street Furniture,A80
+Unlit Bollard Issue Hazardous,Street Furniture,A80
+Bench Damaged NonHazard,Street Furniture,A80
+Street cleaning,Street Cleaning,A79
+Street,Street Cleaning,A79
+Street cleaning and litter,Street Cleaning,A79
+Street cleansing,Street Cleaning,A79
+Street Cleaning Enquiry,Street Cleaning,A79
+Hazardous spillage on road,Spillage on Road,A78
+Oil spillage,Spillage on Road,A78
+Spillage on the road,Spillage on Road,A78
+Spill - Oil/Diesel,Spillage on Road,A78
+Spillage on network,Spillage on Road,A78
+Spillage On Project Network,Spillage on Road,A78
+Skip on road/verge,Skips,A77
+Skips and scaffolding,Skips,A77
+Skips,Skips,A77
+Skip problem,Skips,A77
+Sign or Marking,Sign or Marking,A76
+Shopping trolleys,Shopping Trolley,A75
+Shopping Trolley,Shopping Trolley,A75
+Salt bin refill,Salt Bins,A74
+Salt Bin Request,Salt Bins,A74
+Salt bin damaged,Salt Bins,A74
+Rubbish,Rubbish,A73
+Rubbish (refuse and recycling),Rubbish,A73
+Roadworks,Road Works,A70
+Road or pavement damage,Road/Pavement Defects,A71
+Road or pavement defect,Road/Pavement Defects,A71
+Other street defect,Road/Pavement Defects,A71
+Road or pavement obstruction,Road/Pavement Defects,A71
+Damaged Control box,Road Works,A70
+Works not complete,Road Works,A70
+Winter Maintenance,Road Works,A70
+Works crew - way of working,Road Works,A70
+Damaged or missing utility cover,Road Works,A70
+Problem at other roadworks,Road Works,A70
+Timing of proposed works,Road Works,A70
+Damaged or missing cover,Road Works,A70
+Temp Roadwork Traffic Signals,Road Works,A70
+Problem at LCC roadworks,Road Works,A70
+Damaged Kerb/Aco/Channel Block,Road Works,A70
+Damage to property caused by works,Road Works,A70
+Current Roadworks,Road Works,A70
+Road Works,Road Works,A70
+Works notification letter/leaflet,Road Works,A70
+Road works problem,Road Works,A70
+Damaged cables,Road Works,A70
+Surface Defect on a road or footway,Road Surface Defects,A69
+Unpaved OS CP Surface Issue,Road Surface Defects,A69
+"Damaged Railing, manhole, or drain cover",Road Surface Defects,A69
+Road surface issue,Road Surface Defects,A69
+Road and Pavement Issues,Road Surface Defects,A69
+Damaged/missing boundary markers,Road Surface Defects,A69
+Carriageway Flood Hazardous,Road Surface Defects,A69
+Road surface,Road Surface Defects,A69
+Damaged/missing cats eye,Road Surface Defects,A69
+Damaged Speed Humps,Road Surface Defects,A69
+Carriageway Flood NonHazard,Road Surface Defects,A69
+Carriageway defect,Road Surface Defects,A69
+Roadside safety barrier,Road Surface Defects,A69
+Carriageway,Road Surface Defects,A69
+"Damaged road edge, encroaches more than 100mm",Road Surface Defects,A69
+Damaged road,Road Surface Defects,A69
+Roads and Highways,Road Surface Defects,A69
+Damaged road sign,Road Surface Defects,A69
+Mud / Slippery surface,Road Surface Defects,A69
+Road defect,Road Surface Defects,A69
+Damaged/Loose,Road Surface Defects,A69
+Damaged/missing paving slab,Road Surface Defects,A69
+"Damaged road edge, encroaches less than 100mm",Road Surface Defects,A69
+Surface Defect on a public right of way,Road Surface Defects,A69
+Damage to road,Road Surface Defects,A69
+Collapsed verge,Road Surface Defects,A69
 Visibility at junction or bend,Road Safety,A68
-Weed control,Grass/Weed Control,A34
-Weed problem on the highway,Grass/Weed Control,A34
+Road Safety,Road Safety,A68
+Faded road markings,Road Markings,A67
+Worn out road markings,Road Markings,A67
+Signal head turned around,Road Markings,A67
+Road markings,Road Markings,A67
+Lines and Markings (Council Car Park),Road Markings,A67
+Studs/Catseyes Missing/Damaged,Road Markings,A67
+Sign (unlit),Road Markings,A67
+Zebra crossing/ belisha faulty,Road Markings,A67
+White Bar Marking,Road Markings,A67
+Sign (lit),Road Markings,A67
+Road Marking,Road Markings,A67
+Signals stuck on red,Road Markings,A67
+Road Markings - Worn/Faded,Road Markings,A67
+Road markings faded/missing,Road Markings,A67
+Road lines / road markings,Road Markings,A67
+Defective road markings or signs,Road Markings,A67
+Sign light not working,Road Markings,A67
+Road Markings Missing/Faded,Road Markings,A67
+Zebra Crossing Light,Road Markings,A67
+Sign problem,Road Markings,A67
+Footway / carriageway,Right of Way,A66
+Footpaths/ Rights of way (usually not tarmac),Right of Way,A66
+Public Right of Way (including Cycleway),Right of Way,A66
+"Public rights of way, alleyways and brid",Right of Way,A66
+Footpaths/ Rights of way (usually not ta,Right of Way,A66
+Footpaths & rights of way,Right of Way,A66
+Public Rights of Ways,Right of Way,A66
+Rights of way,Right of Way,A66
+Footway or Footpath,Right of Way,A66
+Public footpath or cyclepath,Right of Way,A66
+Fault on public right of way,Right of Way,A66
+Public right of way - problem with access or damage,Right of Way,A66
+Public rights of way,Right of Way,A66
+Footpaths / Carriageway,Right of Way,A66
+Retaining Wall,Retaining Wall,A65
+Recycling (household waste),Recycling,A64
+Refuse & recycling,Recycling,A64
+Recycling and waste,Recycling,A64
+Public Conveniences,Public Toilets,A63
+Public toilets,Public Toilets,A63
+Public toilet,Public Toilets,A63
+Protected trees (in Conservations Areas),Protected Trees,A62
+Property damage,Property Damage,A61
+Pothole on a road or footway,Potholes,A60
+Multiple potholes (various sizes),Potholes,A60
+Pothole (Council Car Park),Potholes,A60
+Potholes (large),Potholes,A60
+Pothole / Surface Defect,Potholes,A60
+Pothole / Failed Reinstatement,Potholes,A60
+Pothole or other defect,Potholes,A60
+Single pothole (more than 30cm wide and 4cm deep),Potholes,A60
+Pothole on pavement/verge,Potholes,A60
+Potholes,Potholes,A60
+Potholes / Highway Condition,Potholes,A60
+Pothole In CW/FW,Potholes,A60
+Single pothole (more than 30cm wide and,Potholes,A60
+Pothole,Potholes,A60
+Pothole on road/cycleway,Potholes,A60
+Potholes (smaller than 30cm by 4cm),Potholes,A60
+Phoenix HA,Phoenix HA,A59
+Rats,Pest Control,A58
+Pest Control,Pest Control,A58
+Kerb not flush / no tactile paving,Pavement /Footway Defects,A57
+Pavement defect,Pavement /Footway Defects,A57
+Pavement Damaged/Cracked,Pavement /Footway Defects,A57
+Pavements/footpaths,Pavement /Footway Defects,A57
+Pavements & kerbs,Pavement /Footway Defects,A57
+Pavements,Pavement /Footway Defects,A57
+Steps Damaged/Uneven,Pavement /Footway Defects,A57
+Belisha Beacon broken,Pavement /Footway Defects,A57
+Countryside Paths / Public Rights of Way (usually not tarmac),Pavement /Footway Defects,A57
+Damaged pavement,Pavement /Footway Defects,A57
+Rotten timber handrails or decking,Pavement /Footway Defects,A57
+Pedestrian Barriers - Damaged / Missing,Pavement /Footway Defects,A57
+Uneven footway,Pavement /Footway Defects,A57
+Pedestrian Barrier Corroded,Pavement /Footway Defects,A57
+Pedestrian guard rail missing/damaged,Pavement /Footway Defects,A57
+Pedestrian Barrier Issue,Pavement /Footway Defects,A57
+Pavement,Pavement /Footway Defects,A57
+Footway Defect,Pavement /Footway Defects,A57
+Pedestrian barrier/ railing damaged,Pavement /Footway Defects,A57
+Damage to kerb,Pavement /Footway Defects,A57
+Slabs - Missing,Pavement /Footway Defects,A57
+Underpass light,Pavement /Footway Defects,A57
+Belisha Beacon Malfunction,Pavement /Footway Defects,A57
+Footway Defect on a road or footway,Pavement /Footway Defects,A57
+Pedestrian railing,Pavement /Footway Defects,A57
+Pavement Defect (uneven surface / cracked paving slab),Pavement /Footway Defects,A57
+Loose / Raised/Sunken,Pavement /Footway Defects,A57
+"Public rights of way, alleyways and bridlepaths",Pavement /Footway Defects,A57
+Missing safety fence,Pavement /Footway Defects,A57
+Rough/Uneven or Surface Issue,Pavement /Footway Defects,A57
+Damage to pavement,Pavement /Footway Defects,A57
+Footpath / pavement problem,Pavement /Footway Defects,A57
+Loose chippings,Pavement /Footway Defects,A57
+Pavement Jetting,Pavement /Footway Defects,A57
+Pavement and road repairs,Pavement /Footway Defects,A57
+Slabs - Uneven / Damaged / Cracked,Pavement /Footway Defects,A57
+Pedestrian wait button not working,Pavement /Footway Defects,A57
+Car Park Barrier / Equipment,Parking,A56
+Car Parks and ticket machines,Parking,A56
+Parking within pay and display car parks,Parking,A56
+Car parking,Parking,A56
+Car parking issues,Parking,A56
+Illegally parked vehicle,Parking,A56
+Parking queries/reports,Parking,A56
+Poor Parking (Council Car Park),Parking,A56
+Carparks,Parking,A56
+Parking,Parking,A56
+Parking Equipment (Council Car Park),Parking,A56
+Parking on street,Parking,A56
+Parking enforcement,Parking,A56
+Car Park Machine Not Working,Parking,A56
+Car parks (only council run ones),Parking,A56
+Off Street Parking,Parking,A56
+On Street Parking,Parking,A56
+On-street parking,Parking,A56
+Illegal parking,Parking,A56
+Parking/ congestion,Parking,A56
+Enforcement,Parking,A56
+Car parks (council run),Parking,A56
+Council car parks,Parking,A56
+Car parks,Parking,A56
+Bad Parking,Parking,A56
+Public Trees,Overgrown Vegetation,A55
+Overhanging vegetation,Overgrown Vegetation,A55
+Tree Pruning Request,Overgrown Vegetation,A55
+Trees or shrubs blocking visibility,Overgrown Vegetation,A55
+Trees/Hedges Overhanging Roads Or Footpaths,Overgrown Vegetation,A55
+Tree/Branch Fallen Non Hazard,Overgrown Vegetation,A55
+Trees overhanging/obstructing the road or footpath,Overgrown Vegetation,A55
+Tree Requires Pruning,Overgrown Vegetation,A55
+Vegetation Encroachment,Overgrown Vegetation,A55
+Public Tree related issue,Overgrown Vegetation,A55
+Overhanging Foliage,Overgrown Vegetation,A55
+Overhanging vegetation from private land,Overgrown Vegetation,A55
+Trees (on sites owned by Three Rivers District Council),Overgrown Vegetation,A55
+"Trees in parks, commons and open  spaces",Overgrown Vegetation,A55
+Tree Wound,Overgrown Vegetation,A55
+Passage-Obstructed/Overgrown,Overgrown Vegetation,A55
+Hedge causing obstruction,Overgrown Vegetation,A55
+Overhanging tree/foliage/bush,Overgrown Vegetation,A55
+Public tree requires pruning,Overgrown Vegetation,A55
+Roads and pavement surfaces - Overhanging vegetation,Overgrown Vegetation,A55
+Trees or shrubs causing obstruction of highway,Overgrown Vegetation,A55
+Veg Obstructed: Hway Vis,Overgrown Vegetation,A55
+Tree/branch/hedge - overgrown,Overgrown Vegetation,A55
+Overgrown tree/hedges,Overgrown Vegetation,A55
+Restricted Visibility / Overgrown / Overhanging,Overgrown Vegetation,A55
+Vegetation or Weeds,Overgrown Vegetation,A55
+Overgrown vegetation,Overgrown Vegetation,A55
+Veg Impeding FW/CW,Overgrown Vegetation,A55
+Pests in trees and shrubs,Overgrown Vegetation,A55
+Roads and pavement surfaces - Overhangin,Overgrown Vegetation,A55
 Weed spraying,Overgrown Vegetation,A55
-Weeds,Grass/Weed Control,A34
+Obstructive vegetation,Overgrown Vegetation,A55
+Trees or Vegetation,Overgrown Vegetation,A55
+Trees and woodland,Overgrown Vegetation,A55
+Restricted Visibility,Overgrown Vegetation,A55
+Trees on and near highways and footpaths,Overgrown Vegetation,A55
+Vegetation Or Weeds on a public right of way,Overgrown Vegetation,A55
+Trees/Hedges Overhanging Roads Or Footpa,Overgrown Vegetation,A55
+Trees overhanging/obstructing the road o,Overgrown Vegetation,A55
+Vegetation or Weeds on a public right of,Overgrown Vegetation,A55
+Trees overhanging roads/paths,Overgrown Vegetation,A55
+Vegetation Or Weeds on a verge or open space,Overgrown Vegetation,A55
+Trees overhanging highways,Overgrown Vegetation,A55
+Vegetation or Weeds on a verge or open s,Overgrown Vegetation,A55
+Vegetation on a public right of way,Overgrown Vegetation,A55
+"Vandalism/disturbance (example, cones moved from works)",Other,A54
+Helpfulness of staff,Other,A54
+Structure Damaged,Other,A54
+Vehicles for sale on the public road,Other,A54
+Complaint,Other,A54
+Livestock,Other,A54
+Unauthorised Attachment,Other,A54
+Dedication Plaque,Other,A54
+Private property,Other,A54
+Damaged/Exposed Wiring / Vandalised,Other,A54
+Skip Licence,Other,A54
+Bad smell,Other,A54
+Door Missing/ open,Other,A54
+Paved OS CP Surface Issue,Other,A54
+Other,Other,A54
+Vandalism,Other,A54
+Alleyway,Other,A54
+Other public road issue,Other,A54
+Unauthorised skip,Other,A54
+CP Ticket Machine NonHazard,Other,A54
+Structure Issue,Other,A54
+Contractor Enquiry/Complaints,Other,A54
+Cleanliness Sub Standard,Other,A54
+Miscellaneous,Other,A54
+Quality/Speed of Service,Other,A54
+Engine idling,Other,A54
+Empty tree Pit,Other,A54
+Accidents,Other,A54
+SL Post Knockdown,Other,A54
+Sponsor a tree,Other,A54
+Hoarding/ scaffold licence,Other,A54
+Other (TfL),Other,A54
+Development Proposal/ advice,Other,A54
+Disagree/ agree with the completed works installed,Other,A54
+Illegal encampments,Other,A54
+Unauthorised shop display,Other,A54
+Damaged structure,Other,A54
+Play area safety issue,Open Spaces/Parks,A53
+Parks/landscapes,Open Spaces/Parks,A53
+Parks and playgrounds,Open Spaces/Parks,A53
+Damaged equipment,Open Spaces/Parks,A53
+Playing Fields,Open Spaces/Parks,A53
+Parks and playing fields,Open Spaces/Parks,A53
 Wheel tracks or ruts,Open Spaces/Parks,A53
-Zebra crossing,Zebra Crossing,A94
+Parks & open spaces,Open Spaces/Parks,A53
+Play Area Issues on a verge or open space,Open Spaces/Parks,A53
+Parks & Green Spaces,Open Spaces/Parks,A53
+Parks and Greenspace,Open Spaces/Parks,A53
+Parks,Open Spaces/Parks,A53
+Play Area Issues on a verge or open spac,Open Spaces/Parks,A53
+Allotment issue,Open Spaces/Parks,A53
+Parks repairs,Open Spaces/Parks,A53
+Playground Equipment,Open Spaces/Parks,A53
+Parks and open spaces,Open Spaces/Parks,A53
+Play Equipment,Open Spaces/Parks,A53
+Park / Open space,Open Spaces/Parks,A53
+Obstruction on road or pavement,Obstruction,A52
+Obstruction on road/cycleway,Obstruction,A52
+Watercourse Block/Obstruction,Obstruction,A52
+Sweeping & Cleansing Hazard,Obstruction,A52
+Obstructions on pavements and roads,Obstruction,A52
+Objects in the road,Obstruction,A52
+Obstruction on public right of way,Obstruction,A52
+"Obstructions (skips, A boards)",Obstruction,A52
+Obstruction,Obstruction,A52
+Obstruction (Not Vegetation),Obstruction,A52
+Obstruction on Highways / Sight Lines,Obstruction,A52
+Obstruction or hazard on road,Obstruction,A52
+Obstruction on a public right of way,Obstruction,A52
+Obstruction on pavement/verge,Obstruction,A52
+Obscured by vegetation or Dirty,Obstruction,A52
+Noise nuisance,Noise,A51
+Missed Food Waste Collection,Missed Bin Collection,A50
+Missed Collection (Green Waste),Missed Bin Collection,A50
+Domestic Waste - Missed Collection,Missed Bin Collection,A50
+Missed Collection,Missed Bin Collection,A50
+Missed bin collection,Missed Bin Collection,A50
+Damaged/ cracked drain or man hole cover,Manhole Defects,A49
+Broken manhole cover,Manhole Defects,A49
+Manhole/drain cover on pavement/verge,Manhole Covers,A48
+Manhole Cover - Damaged (rocking or noisy),Manhole Covers,A48
+Missing,Manhole Covers,A48
+Missing Gully/Manhole,Manhole Covers,A48
+Missing drain or man hole cover,Manhole Covers,A48
+Manhole Cover,Manhole Covers,A48
+Inspection Covers,Manhole Covers,A48
+Manhole / Drain cover,Manhole Covers,A48
+Manhole,Manhole Covers,A48
+Broken / Missing,Manhole Covers,A48
+Noisy Ironwork,Manhole Covers,A48
+Gully or Manhole,Manhole Covers,A48
+Ironwork Collapsed,Manhole Covers,A48
+Ironwork Corroded/Damaged,Manhole Covers,A48
+Manhole/drain cover on road/cycleway,Manhole Covers,A48
+Manhole covers,Manhole Covers,A48
+Broken drain cover,Manhole Covers,A48
+Missing Ironwork,Manhole Covers,A48
+Litter in Parks & Open spaces,Litter/Litter Bin,A47
+Bin bags,Litter/Litter Bin,A47
+Litter Bin overflow,Litter/Litter Bin,A47
+Overflowing litter bin,Litter/Litter Bin,A47
+Litter bin,Litter/Litter Bin,A47
+Litter Bin on a verge or open space,Litter/Litter Bin,A47
+Litter,Litter/Litter Bin,A47
+Litter On Road/Street Cleaning,Litter/Litter Bin,A47
+Litter Bins Full/Damaged/Missing,Litter/Litter Bin,A47
+Full bin,Litter/Litter Bin,A47
+Overflowing Street Litter Bin,Litter/Litter Bin,A47
+Litter Bin Overflowing,Litter/Litter Bin,A47
+Litter Bin overflow in Parks & Open spaces,Litter/Litter Bin,A47
+Litter in the street,Litter/Litter Bin,A47
+Litter bin damaged,Litter/Litter Bin,A47
+Litter bin full,Litter/Litter Bin,A47
+Bin bags/ Cardboard boxes,Litter/Litter Bin,A47
+Lit Signs (Electrical),Lit Signs,A46
+Lewisham Homes,Lewisham Homes,A45
+Leaves/ leaf fall,Leafing,A44
+Leaves,Leafing,A44
+Leafing,Leafing,A44
+Icy Footpath,Ice & Snow,A43
+Ice & snow,Ice & Snow,A43
+Ice/Snow,Ice & Snow,A43
+Snow and ice problem/winter salting,Ice & Snow,A43
+Ice,Ice & Snow,A43
+Icy Road,Ice & Snow,A43
+Highways Drainage,Highway Drainage,A42
+Highway Drainage,Highway Drainage,A42
+Highway Drainage or Flooding,Highway Drainage,A42
+Highways Drainage on a road or footway,Highway Drainage,A42
+Highway Improvements on a road or footwa,Highway Condition,A41
+Highway Improvements on a road or footway,Highway Condition,A41
+Highways Maintenance,Highway Condition,A41
+Highway Condition Enquiry,Highway Condition,A41
+Roads/highways,Highway Condition,A41
+Motorways Defects,Highway Condition,A41
+Highway Condition (Assets),Highway Condition,A41
+Highway Condition,Highway Condition,A41
+Trunkroad or motorway defect,Highway Condition,A41
+Gully or manhole defect,Gully/Manhole Defects,A40
+Manholes,Gully/Manhole Defects,A40
+Markings/ lines Missing or faded,Gully/Manhole Defects,A40
+Gully/Drainage,Gullies,A39
+Gullies,Gullies,A39
+Gully Catch Soakwy: Non Func,Gullies,A39
+Gulley covers,Gullies,A39
+Other public drainage issue,Gullies,A39
+Ditch Problem Non Hazardous,Gullies,A39
+Gully Catch Soakwy: Bad Smell,Gullies,A39
+Gully,Gullies,A39
+Gully and Catchpits,Gullies,A39
+Street Works (Utilities),Grounds Maintenance,A38
+Grounds Maintenance,Grounds Maintenance,A38
+Street needs gritting,Gritting,A37
+Gritting,Gritting,A37
+Grit Bins,Grit Bins,A36
+Grit bin issue,Grit Bins,A36
+Grit bin refills,Grit Bins,A36
+Request refill of grit bin,Grit Bins,A36
+Grit Bin - damaged/replacement,Grit Bins,A36
+Grit Bin - empty/refill,Grit Bins,A36
+Smelly drain,Grids and Drains,A35
+Grids and Drains,Grids and Drains,A35
+Grass verges,Grass/Weed Control,A34
+Grass Cutting,Grass/Weed Control,A34
+Noxious weeds,Grass/Weed Control,A34
+Weeds on roads or footpaths,Grass/Weed Control,A34
+Weed Growth,Grass/Weed Control,A34
+Grass/Weeds,Grass/Weed Control,A34
+Missed Grass Cutting,Grass/Weed Control,A34
+Weed problem on the highway,Grass/Weed Control,A34
+Grass Cutting on a verge or open space,Grass/Weed Control,A34
+Long Grass NonHazard,Grass/Weed Control,A34
+Weed control,Grass/Weed Control,A34
+Verge cutting residential areas,Grass/Weed Control,A34
+Grass and Hedges,Grass/Weed Control,A34
+Grass damage/destroy/disease,Grass/Weed Control,A34
+Japanese knotweed / ragwort,Grass/Weed Control,A34
+Other Grass Cutting Issues,Grass/Weed Control,A34
+Verge cutting required,Grass/Weed Control,A34
+Grass cutting query,Grass/Weed Control,A34
+Weeds,Grass/Weed Control,A34
+Grass,Grass/Weed Control,A34
+Street weeds,Grass/Weed Control,A34
+Grass needs cutting,Grass/Weed Control,A34
+Grass Cutting on a public right of way,Grass/Weed Control,A34
+Graffiti/Flyposting: Offensive,Graffiti,A33
+Graffiti / Flyposting on traffic light (non-offensive),Graffiti,A33
+Graffiti on council buildings,Graffiti,A33
+Graffiti / Flyposting on stop or shelter (offensive),Graffiti,A33
+Graffiti / Flyposting (non-offensive),Graffiti,A33
+Grafitti,Graffiti,A33
+Graffiti / Flyposting on stop or shelter (non-offensive),Graffiti,A33
+Graffiti on bridges/subways,Graffiti,A33
+Graffiti (Offensive),Graffiti,A33
+Offensive Graffiti on Property,Graffiti,A33
+Graffiti,Graffiti,A33
+Graffiti or Flyposting (not offensive),Graffiti,A33
+Graffiti on Council Property,Graffiti,A33
+Graffiti and flyposting,Graffiti,A33
+Graffiti/Flyposting: Non-Offen,Graffiti,A33
+Graffiti or flyposting (offensive),Graffiti,A33
+General Fault,General Highways Enquiries,A32
+General Enquiry/Complaints,General Highways Enquiries,A32
+General Highways Enquiry,General Highways Enquiries,A32
+Highway Schemes,General Highways Enquiries,A32
+General Maintenance and pruning,General Highways Enquiries,A32
+Highways,General Highways Enquiries,A32
+Stile-Damaged/Missing,Gates/Stiles RoW,A31
+Gate - Damaged/ Missing,Gates/Stiles RoW,A31
+Gates/Stiles on a public right of way,Gates/Stiles RoW,A31
+Garage areas,Garden Waste,A30
+Garden Waste,Garden Waste,A30
+Fly tipping - Enforcement Request,Fly-tipping,A29
+"Fly Tipping on a road, footway, verge or",Fly-tipping,A29
+Fly tipping,Fly-tipping,A29
+"Fly Tipping on a road, footway, verge or open space",Fly-tipping,A29
+Flytipping (TfL),Fly-tipping,A29
+Fly-Tipping,Fly-tipping,A29
+Flytipping,Fly-tipping,A29
+Fly Tipping on a public right of way,Fly-tipping,A29
+Flytipping and dumped rubbish,Fly-tipping,A29
+Rubbish or fly tipping on the roads,Fly-tipping,A29
+Illegal advertising,Flyposting,A28
+Flyposting (not by roadside),Flyposting,A28
+Flyposting (on road or roadside),Flyposting,A28
+Fly-Posting,Flyposting,A28
+Unauthorised signs,Flyposting,A28
+Illegal posters,Flyposting,A28
+Flyposting,Flyposting,A28
+Fly Posting,Flyposting,A28
+Floral displays,Floral displays,A27
+Flooding from a blocked drain,Flooding,A26
+Flooding or standing water on road,Flooding,A26
+Flooded road,Flooding,A26
+Footway Flood Hazardous,Flooding,A26
+Flooding,Flooding,A26
+Property Damaged By Flooding,Flooding,A26
+Flooding on a road or footway,Flooding,A26
+Standing water,Flooding,A26
+Flooded underpass,Flooding,A26
+Flooding in the road,Flooding,A26
+Flooded subway,Flooding,A26
+Footway Flood Non Hazardous,Flooding,A26
+Fences & barriers,Fences,A25
+Fence Damaged/Missing Hazard,Fences,A25
+Fences,Fences,A25
+Fence Damage/Missing No Hazard,Fences,A25
+Tree or Shrub on a verge or open space,Fallen/Dangerous Trees,A24
+Damage - general (Trees),Fallen/Dangerous Trees,A24
+Trees,Fallen/Dangerous Trees,A24
+Tree obstructing street light,Fallen/Dangerous Trees,A24
+Tree causing damage to property,Fallen/Dangerous Trees,A24
+Fallen Tree,Fallen/Dangerous Trees,A24
+Dying or dangerous tree,Fallen/Dangerous Trees,A24
+Hazardous or fallen trees,Fallen/Dangerous Trees,A24
+Hedge Untrimmed,Fallen/Dangerous Trees,A24
+Damage By Tree to 3rd Party,Fallen/Dangerous Trees,A24
+Trees and Woodland Maintenance,Fallen/Dangerous Trees,A24
+Tree (dangerous),Fallen/Dangerous Trees,A24
+Trees & hedges,Fallen/Dangerous Trees,A24
+Tree Dead/Dying/Diseased,Fallen/Dangerous Trees,A24
+Trees (Urban Areas),Fallen/Dangerous Trees,A24
+Tree,Fallen/Dangerous Trees,A24
+Trees (on the highway verge),Fallen/Dangerous Trees,A24
+Tree matters / Preservation Orders,Fallen/Dangerous Trees,A24
+Dying or diseased tree,Fallen/Dangerous Trees,A24
+Shrubs and Hedge,Fallen/Dangerous Trees,A24
+Tree/branch - fallen,Fallen/Dangerous Trees,A24
+Hedge Oversized,Fallen/Dangerous Trees,A24
+Tree/branch - may fall,Fallen/Dangerous Trees,A24
+Tree Obstruction to 3rd Party,Fallen/Dangerous Trees,A24
+Tree Or Shrub,Fallen/Dangerous Trees,A24
+Highway Tree Removal,Fallen/Dangerous Trees,A24
+Hedge problem,Fallen/Dangerous Trees,A24
+Tree Branches Overhanging,Fallen/Dangerous Trees,A24
+Tree (fallen branches),Fallen/Dangerous Trees,A24
+Fallen tree across road or pavement,Fallen/Dangerous Trees,A24
+Tree Danger/Obstruction on PN,Fallen/Dangerous Trees,A24
+Fallen or leaning tree,Fallen/Dangerous Trees,A24
+Environmental health,Environmental Health,A23
+Needles,Environmental Health,A23
+Exposed cables/wires,Environmental Health,A23
+Dumped rubbish,Dumped Rubbish,A22
+Dumped cylinder,Dumped Rubbish,A22
+Dog and litter bins,Dog Litter Bin,A21
+Dog Bin overflow,Dog Litter Bin,A21
+Dog Waste Bin,Dog Litter Bin,A21
+Dog Waste Bin on a verge or open space,Dog Litter Bin,A21
+Dog bin overflowing,Dog Litter Bin,A21
+Dog Bin,Dog Litter Bin,A21
+Dog fouling,Dog Fouling,A20
+Dogs and Dogs Fouling,Dog Fouling,A20
+Poop Scoop Bins,Dog Fouling,A20
+Dog Mess,Dog Fouling,A20
+Discarded Syringes,Discarded Syringes,A19
+Demo,Demo,A18
+Removal of Debris,Debris/Spillage,A17
+Debris / Obstructions,Debris/Spillage,A17
+Mud and Debris,Debris/Spillage,A17
+Debris & spillage,Debris/Spillage,A17
+Mud on Road,Debris/Spillage,A17
+Debris in the carriageway,Debris/Spillage,A17
+Road obstruction,Debris/Spillage,A17
+Debris/Spillage,Debris/Spillage,A17
+Mud or Debris on the road,Debris/Spillage,A17
+Dead animal on a road or footpath,Dead Animals,A16
+Dead animals,Dead Animals,A16
+Dead animal,Dead Animals,A16
+Removal Of Carcass,Dead Animals,A16
+Dead animal in the carriageway or footway,Dead Animals,A16
+Dangerous structure,Dangerous Building/Structure,A15
+Dangerous Building,Dangerous Building/Structure,A15
+Access to a Countryside Pathway,Countryside RoW,A14
+Countryside Paths / Public Rights of Way,Countryside RoW,A14
+C.C.T.V Faults,C.C.T.V Faults,A13
+Seats and benches,Bus Stops Damage,A12
+Bus stop/shelter issue,Bus Stops Damage,A12
+Bus stops,Bus Stops Damage,A12
+Damage - wires exposed on bus shelter,Bus Stops Damage,A12
+Damage - shelter unstable or loose in the ground,Bus Stops Damage,A12
+Damage - pole leaning / equipment detached from pole/facing the wrong direction,Bus Stops Damage,A12
+Bus shelters,Bus Stops Damage,A12
+Shelter/Seat,Bus Stops Damage,A12
+Bus stop damage,Bus Stops Damage,A12
+Damage - other (bus stops and shelters),Bus Stops Damage,A12
+Damage - wires exposed,Bus Stops Damage,A12
+Damage - lighting not working (bus shelter),Bus Stops Damage,A12
+Damage - smashed glass or panels / jagged metal edges on shelter,Bus Stops Damage,A12
+Bus Stop Pole Leaning/Damaged,Bus Stops Damage,A12
+Shelter Damaged,Bus Stops Damage,A12
+Loose/missing/chipped kerbstone,Broken Kerbs,A11
+Kerbs,Broken Kerbs,A11
+Kerb damage / issue,Broken Kerbs,A11
+Broken Flags/Kerbs,Broken Kerbs,A11
+Fire hydrants,Broken Fire Hydrant,A10
+Broken Fire Hydrant Covers,Broken Fire Hydrant,A10
+Bridge-Damaged/ Missing,Bridge/Culvert Defects,A9
+Bridges/Subways,Bridge/Culvert Defects,A9
+"Bridge, Subway or Culvert on a road or f",Bridge/Culvert Defects,A9
+Bridge or culvert defect,Bridge/Culvert Defects,A9
+"Bridge, Subway or Culvert on a public right of way",Bridge/Culvert Defects,A9
+Bridges,Bridge/Culvert Defects,A9
+"Bridge, Subway Or Culvert on a road or footway",Bridge/Culvert Defects,A9
+Bridge,Bridge/Culvert Defects,A9
+"Bridge, Subway or Culvert in an open space",Bridge/Culvert Defects,A9
+Bridge or Structure,Bridge/Culvert Defects,A9
+"Damaged dyke, ditch or culvert",Bridge/Culvert Defects,A9
+Subway light faulty,Bridge/Culvert Defects,A9
+Ditch issue,Bridge/Culvert Defects,A9
+Subway Light Out or Flickering,Bridge/Culvert Defects,A9
+"Bridge, Subway or Culvert on a public ri",Bridge/Culvert Defects,A9
+Highway Bridges - Damaged/Unsafe,Bridge/Culvert Defects,A9
+"Bridge, Subway or Culvert in an open spa",Bridge/Culvert Defects,A9
+Subway light,Bridge/Culvert Defects,A9
+Blocked drainage gullies,Blocked Drains,A8
+Blocked drain / Flooding,Blocked Drains,A8
+Blocked - flooding private property,Blocked Drains,A8
+Blocked rainwater gulleys,Blocked Drains,A8
+Blocked drainage gully,Blocked Drains,A8
+Street drainage,Blocked Drains,A8
+Drains,Blocked Drains,A8
+Drainage Structure: Leakage,Blocked Drains,A8
+Blocked - flooding road/path,Blocked Drains,A8
+Blocked gully,Blocked Drains,A8
+Drainage,Blocked Drains,A8
+Blocked drain surface,Blocked Drains,A8
+Drainage Structure: Blockage,Blocked Drains,A8
+Blocked/Damaged,Blocked Drains,A8
+Flooding of a road or pavement,Blocked Drains,A8
+Blocked Ditch,Blocked Drains,A8
+Drain or Gully,Blocked Drains,A8
+Blocked drains and gullies,Blocked Drains,A8
+Drainage or Flooding on a public right o,Blocked Drains,A8
+Blocked Ditch Causing Flooding,Blocked Drains,A8
+Blocked  Drains,Blocked Drains,A8
+Blocked drain,Blocked Drains,A8
+Blocked drains,Blocked Drains,A8
+Blocked or damaged drain,Blocked Drains,A8
+Drainage Or Flooding on a public right of way,Blocked Drains,A8
+Bin Damaged Hazard,Bin Repair/Replacement,A7
+Damage to litter bin,Bin Repair/Replacement,A7
+"Damaged, dirty, or missing bin",Bin Repair/Replacement,A7
+Bin Damaged NonHazard,Bin Repair/Replacement,A7
+Empty Bin,Bin Repair/Replacement,A7
+Bin Repair,Bin Repair/Replacement,A7
+Bin Request,Bin Repair/Replacement,A7
+Damage Public Litter Bin,Bin Repair/Replacement,A7
+"Damage to bins, benches, and infrastructure",Bin Repair/Replacement,A7
+Refuse collection,Bin Collection,A6
+Refuse and recycling,Bin Collection,A6
+Bench/cycle rack/litter bin/planter,Benches/Bicycle Racks,A5
+Benches / bicycle racks,Benches/Bicycle Racks,A5
+Bollards on a road or footway,Barriers/Bollards on RoW,A4
+Barrier/Bollard on a public right of way,Barriers/Bollards on RoW,A4
+Bollards,Barriers/Bollards on RoW,A4
+lit bollard knocked down,Barriers/Bollards on RoW,A4
+Damaged bollard or post,Barriers/Bollards on RoW,A4
+Lit signs & bollards,Barriers/Bollards on RoW,A4
+Lit Bollards (Electrical),Barriers/Bollards on RoW,A4
+Admin,Admin,A3
+Household bins left out,Accumulated Litter,A2
+Excessive or dangerous littering,Accumulated Litter,A2
+Rubbish accumulation on private property,Accumulated Litter,A2
+Accumulated Litter,Accumulated Litter,A2
+Abandoned bike,Abandoned Vehicles,A1
+Abandoned vehicle,Abandoned Vehicles,A1
+Abandoned and Untaxed Vehicles,Abandoned Vehicles,A1
+Abandoned car,Abandoned Vehicles,A1
+Abandoned vehicles,Abandoned Vehicles,A1
+Pothole (minor),Potholes,A60

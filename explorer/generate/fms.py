@@ -156,7 +156,7 @@ class ACategories(FMSCollection):
 
     def get_labels(self):
         lookup = self.__class__.slug
-        df = pd.read_csv(join(self.lookup_folder, lookup + ".csv"))
+        df = pd.read_csv(join("resources","fms", lookup + ".csv"))
         final = []
         for n, r in df.iterrows():
             final.append([r[self.__class__.slug], r["category"]])

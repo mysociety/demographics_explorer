@@ -1,492 +1,829 @@
 category,SHEF_C,SHEF_C_CODE
-2 signal lights out,Road Safety & Defects,C7
-Abandoned and Untaxed Vehicles,Abandoned Vehicles & Parking,C8
-Abandoned car,Abandoned Vehicles & Parking,C8
-Abandoned vehicle,Abandoned Vehicles & Parking,C8
-Abandoned vehicles,Abandoned Vehicles & Parking,C8
-Access to a Countryside Pathway,Access,C1
-Accumulated Litter,Environmental Health,C3
-Admin,Other,C5
-All signal lights out,Road Safety & Defects,C7
-Allotment issue,Public Space,C6
-Bad Parking,Abandoned Vehicles & Parking,C8
-Barrier/Bollard on a public right of way,Access,C1
-Belisha Beacon broken,Access,C1
-Bench/cycle rack/litter bin/planter,Environmental Disruptions,C2
-Benches / bicycle racks,Environmental Disruptions,C2
-Bin Repair,Environmental Health,C3
-Blocked  Drains,Environmental Health,C3
-Blocked drain,Environmental Health,C3
-Blocked drain / Flooding,Environmental Health,C3
-Blocked drainage gullies,Environmental Health,C3
-Blocked drains,Environmental Health,C3
-Blocked drains and gullies,Environmental Health,C3
-Blocked or damaged drain,Environmental Health,C3
-Bollard light not working,Road Safety & Defects,C7
-Bollards,Access,C1
-Bollards (lit),Road Safety & Defects,C7
-Bollards (unlit),Road Safety & Defects,C7
-Bollards on a road or footway,Access,C1
-Bollards or railings,Road Safety & Defects,C7
-Bridge,Environmental Disruptions,C2
-Bridge or culvert defect,Environmental Disruptions,C2
-"Bridge, Subway or Culvert in an open spa",Environmental Disruptions,C2
-"Bridge, Subway or Culvert in an open space",Environmental Disruptions,C2
-"Bridge, Subway or Culvert on a public ri",Environmental Disruptions,C2
-"Bridge, Subway or Culvert on a public right of way",Environmental Disruptions,C2
-"Bridge, Subway or Culvert on a road or f",Environmental Disruptions,C2
-"Bridge, Subway Or Culvert on a road or footway",Environmental Disruptions,C2
-Bridges,Environmental Disruptions,C2
-Bridges/Subways,Environmental Disruptions,C2
-Broken Fire Hydrant Covers,Environmental Disruptions,C2
-Broken Flags/Kerbs,Environmental Disruptions,C2
-Broken manhole cover,Environmental Health,C3
-Bus shelters,Environmental Disruptions,C2
-Bus stop damage,Environmental Disruptions,C2
-Bus stop/shelter issue,Environmental Disruptions,C2
-Bus stops,Environmental Disruptions,C2
-C.C.T.V Faults,Environmental Disruptions,C2
-Car Park Barrier / Equipment,Abandoned Vehicles & Parking,C8
-Car parking,Abandoned Vehicles & Parking,C8
-Car parking issues,Abandoned Vehicles & Parking,C8
-Car parks,Abandoned Vehicles & Parking,C8
-Car parks (council run),Abandoned Vehicles & Parking,C8
-Car parks (only council run ones),Abandoned Vehicles & Parking,C8
-Car Parks and ticket machines,Abandoned Vehicles & Parking,C8
-Carparks,Abandoned Vehicles & Parking,C8
-Carriageway defect,Road Safety & Defects,C7
-Council car parks,Abandoned Vehicles & Parking,C8
-Countryside Paths / Public Rights of Way,Access,C1
-Countryside Paths / Public Rights of Way (usually not tarmac),Access,C1
-Crash Barriers,Road Safety & Defects,C7
-Crossing not working,Road Safety & Defects,C7
-Damage Public Litter Bin,Environmental Health,C3
-"Damage to bins, benches, and infrastructure",Environmental Health,C3
-Damage to pavement,Road Safety & Defects,C7
-Damage to road,Road Safety & Defects,C7
-Damaged bollard or post,Road Safety & Defects,C7
-"Damaged dyke, ditch or culvert",Environmental Disruptions,C2
-Damaged equipment,Public Space,C6
-"Damaged Railing, manhole, or drain cover",Road Safety & Defects,C7
-"Damaged road edge, encroaches less than 100mm",Road Safety & Defects,C7
-"Damaged road edge, encroaches more than 100mm",Road Safety & Defects,C7
-Damaged road sign,Road Safety & Defects,C7
-Damaged street nameplate,Environmental Disruptions,C2
-Damaged/missing boundary markers,Road Safety & Defects,C7
-Damaged/missing cats eye,Road Safety & Defects,C7
-Damaged/missing paving slab,Road Safety & Defects,C7
-Dangerous Building,Environmental Disruptions,C2
-Dangerous structure,Environmental Disruptions,C2
-Dead animal,Environmental Health,C3
-Dead animals,Environmental Health,C3
-Debris & spillage,Environmental Health,C3
-Debris / Obstructions,Environmental Health,C3
-Debris/Spillage,Environmental Health,C3
-Defective road markings or signs,Road Safety & Defects,C7
-Demo,Other,C5
-Discarded Syringes,Environmental Health,C3
-Ditch issue,Environmental Disruptions,C2
-Dog and litter bins,Environmental Health,C3
-Dog Bin,Environmental Health,C3
-Dog Bin overflow,Environmental Health,C3
-Dog bin overflowing,Environmental Health,C3
-Dog fouling,Environmental Health,C3
-Dog Mess,Environmental Health,C3
-Dog Waste Bin,Environmental Health,C3
-Dog Waste Bin on a verge or open space,Environmental Health,C3
-Dogs and Dogs Fouling,Environmental Health,C3
-Drain or Gully,Environmental Health,C3
-Drainage,Environmental Health,C3
-Drainage or Flooding on a public right o,Environmental Health,C3
-Drainage Or Flooding on a public right of way,Environmental Health,C3
-Drains,Environmental Health,C3
-Dumped cylinder,Environmental Health,C3
-Dumped rubbish,Environmental Health,C3
-Dying or diseased tree,Environmental Disruptions,C2
-Enforcement,Abandoned Vehicles & Parking,C8
-Environmental health,Environmental Health,C3
-Excessive or dangerous littering,Environmental Health,C3
-Exposed cables/wires,Environmental Health,C3
-Faded road markings,Road Safety & Defects,C7
-Fallen tree across road or pavement,Environmental Disruptions,C2
-Fault with temporary traffic signals,Road Safety & Defects,C7
-Faulty street light,Road Safety & Defects,C7
-Faulty street sign,Road Safety & Defects,C7
-Fences,Environmental Disruptions,C2
-Fences & barriers,Environmental Disruptions,C2
-Fire hydrants,Environmental Disruptions,C2
-Flooded subway,Environmental Health,C3
-Flooding,Environmental Health,C3
-Flooding of a road or pavement,Environmental Health,C3
-Flooding on a road or footway,Environmental Health,C3
-Flooding or standing water on road,Environmental Health,C3
-Floral displays,Other,C5
-Fly Posting,Incivilities,C4
-Fly tipping,Environmental Health,C3
-Fly Tipping on a public right of way,Environmental Health,C3
-"Fly Tipping on a road, footway, verge or",Environmental Health,C3
-"Fly Tipping on a road, footway, verge or open space",Environmental Health,C3
-Flyposting,Incivilities,C4
-Fly-Posting,Incivilities,C4
-Flyposting (not by roadside),Incivilities,C4
-Flyposting (on road or roadside),Incivilities,C4
-Flytipping,Environmental Health,C3
-Fly-Tipping,Environmental Health,C3
-Flytipping and dumped rubbish,Environmental Health,C3
-Footpath / pavement problem,Road Safety & Defects,C7
-Footpaths & rights of way,Access,C1
-Footpaths/ Rights of way (usually not ta,Access,C1
-Footpaths/ Rights of way (usually not tarmac),Access,C1
-Footway Defect,Access,C1
-Footway Defect on a road or footway,Access,C1
-Footway or Footpath,Access,C1
-Garden Waste,Environmental Health,C3
-Gates/Stiles on a public right of way,Access,C1
-General Highways Enquiry,Road Safety & Defects,C7
-Graffiti,Incivilities,C4
-Graffiti (Offensive),Incivilities,C4
-Graffiti and flyposting,Incivilities,C4
-Graffiti on bridges/subways,Incivilities,C4
-Graffiti on council buildings,Incivilities,C4
-Graffiti on Council Property,Incivilities,C4
-Grafitti,Incivilities,C4
-Grass and Hedges,Environmental Disruptions,C2
-Grass Cutting,Environmental Disruptions,C2
-Grass Cutting on a public right of way,Access,C1
-Grass Cutting on a verge or open space,Environmental Disruptions,C2
-Grass needs cutting,Environmental Disruptions,C2
-Grass verges,Environmental Disruptions,C2
-Grass/Weeds,Environmental Disruptions,C2
-Grids and Drains,Environmental Health,C3
-Grit bin issue,Road Safety & Defects,C7
-Grit bin refills,Road Safety & Defects,C7
-Grit Bins,Road Safety & Defects,C7
-Gritting,Road Safety & Defects,C7
-Grounds Maintenance,Road Safety & Defects,C7
-Gullies,Environmental Health,C3
-Gully,Environmental Health,C3
-Gully and Catchpits,Environmental Health,C3
-Gully or Manhole,Environmental Health,C3
-Gully or manhole defect,Environmental Health,C3
-Gully/Drainage,Environmental Health,C3
-Hazardous or fallen trees,Environmental Disruptions,C2
-Hazardous spillage on road,Environmental Health,C3
-Hedge problem,Environmental Disruptions,C2
-Hedges / trees on rights of way,Access,C1
-Hedges / Trees on road or verge,Access,C1
-Highway Condition,Road Safety & Defects,C7
-Highway Condition (Assets),Road Safety & Defects,C7
-Highway Condition Enquiry,Road Safety & Defects,C7
-Highway Drainage or Flooding,Environmental Health,C3
-Highway Improvements on a road or footwa,Road Safety & Defects,C7
-Highway Improvements on a road or footway,Road Safety & Defects,C7
-Highway Schemes,Road Safety & Defects,C7
-Highways,Road Safety & Defects,C7
-Highways Drainage,Environmental Health,C3
-Highways Drainage on a road or footway,Environmental Health,C3
-Highways Maintenance,Road Safety & Defects,C7
-Household bins left out,Environmental Health,C3
-Ice,Road Safety & Defects,C7
-Ice & snow,Road Safety & Defects,C7
-Ice/Snow,Road Safety & Defects,C7
-Illegal advertising,Incivilities,C4
-Illegal parking,Abandoned Vehicles & Parking,C8
-Illegally parked vehicle,Abandoned Vehicles & Parking,C8
-Illuminated Sign,Road Safety & Defects,C7
-Iluminated Bollard,Road Safety & Defects,C7
-Inspection Covers,Environmental Health,C3
-Japanese knotweed / ragwort,Environmental Disruptions,C2
-Kerb damage / issue,Environmental Disruptions,C2
-Kerbs,Environmental Disruptions,C2
-Leafing,Environmental Disruptions,C2
-Leaves,Environmental Disruptions,C2
-Lewisham Homes,Other,C5
-Light on during the day,Road Safety & Defects,C7
-Lines and Markings (Council Car Park),Road Safety & Defects,C7
-Lit Bollards (Electrical),Road Safety & Defects,C7
-Lit signs & bollards,Road Safety & Defects,C7
-Lit Signs (Electrical),Other,C5
-Litter,Environmental Health,C3
-Litter bin,Environmental Health,C3
-Litter bin damaged,Environmental Health,C3
-Litter bin full,Environmental Health,C3
-Litter Bin on a verge or open space,Environmental Health,C3
-Litter Bin overflow,Environmental Health,C3
-Litter Bin overflow in Parks & Open spaces,Environmental Health,C3
-Litter Bin Overflowing,Environmental Health,C3
-Litter in Parks & Open spaces,Environmental Health,C3
-Litter in the street,Environmental Health,C3
-Loose chippings,Road Safety & Defects,C7
-Loose/missing/chipped kerbstone,Environmental Disruptions,C2
-Manhole,Environmental Health,C3
-Manhole / Drain cover,Environmental Health,C3
-Manhole Cover,Environmental Health,C3
-Manhole covers,Environmental Health,C3
-Manhole/drain cover on pavement/verge,Environmental Health,C3
-Manhole/drain cover on road/cycleway,Environmental Health,C3
-Manholes,Environmental Health,C3
-Miscellaneous,Other,C5
-Missed bin collection,Environmental Health,C3
-Missed Collection,Environmental Health,C3
-Missed Collection (Green Waste),Environmental Health,C3
-Missed Food Waste Collection,Environmental Health,C3
-Missed Grass Cutting,Environmental Disruptions,C2
-Missing Gully/Manhole,Environmental Health,C3
-Missing safety fence,Road Safety & Defects,C7
-Missing/Broken Sign on a public right of,Access,C1
-Missing/Broken Sign on a public right of way,Access,C1
-Motorways Defects,Road Safety & Defects,C7
-Mud / Slippery surface,Road Safety & Defects,C7
-Mud and Debris,Environmental Health,C3
-Mud or Debris on the road,Environmental Health,C3
-Multiple potholes (various sizes),Road Safety & Defects,C7
-Needles,Environmental Health,C3
-Noise nuisance,Incivilities,C4
-Noxious weeds,Environmental Disruptions,C2
-Objects in the road,Access,C1
-Obstruction,Access,C1
-Obstruction on a public right of way,Access,C1
-Obstruction on Highways / Sight Lines,Access,C1
-Obstruction on pavement/verge,Access,C1
-Obstruction on road or pavement,Access,C1
-Obstruction on road/cycleway,Access,C1
-Obstruction or hazard on road,Access,C1
-"Obstructions (skips, A boards)",Access,C1
-Obstructive vegetation,Environmental Disruptions,C2
-Off Street Parking,Abandoned Vehicles & Parking,C8
-Offensive Graffiti on Property,Incivilities,C4
-Oil spillage,Environmental Health,C3
-On Street Parking,Abandoned Vehicles & Parking,C8
-On-street parking,Abandoned Vehicles & Parking,C8
-Other,Other,C5
-Overflowing litter bin,Environmental Health,C3
-Overflowing Street Litter Bin,Environmental Health,C3
-Overgrown tree/hedges,Environmental Disruptions,C2
-Overgrown vegetation,Environmental Disruptions,C2
-Overhanging Foliage,Environmental Disruptions,C2
-Overhanging tree/foliage/bush,Environmental Disruptions,C2
-Overhanging vegetation,Environmental Disruptions,C2
-Overhanging vegetation from private land,Environmental Disruptions,C2
-Parking,Abandoned Vehicles & Parking,C8
-Parking enforcement,Abandoned Vehicles & Parking,C8
-Parking Equipment (Council Car Park),Abandoned Vehicles & Parking,C8
-Parking queries/reports,Abandoned Vehicles & Parking,C8
-Parks,Public Space,C6
-Parks & Green Spaces,Public Space,C6
-Parks & open spaces,Public Space,C6
-Parks and Greenspace,Public Space,C6
-Parks and playgrounds,Public Space,C6
-Parks and playing fields,Public Space,C6
-Parks repairs,Environmental Disruptions,C2
-Parks/landscapes,Public Space,C6
-Pavement and road repairs,Road Safety & Defects,C7
-Pavement Damaged/Cracked,Road Safety & Defects,C7
-Pavement defect,Road Safety & Defects,C7
-Pavement Jetting,Road Safety & Defects,C7
-Pavements,Road Safety & Defects,C7
-Pavements & kerbs,Road Safety & Defects,C7
-Pavements/footpaths,Road Safety & Defects,C7
-Pedestrian guard rail missing/damaged,Access,C1
-Permanent Traffic Signals/Road Crossings,Road Safety & Defects,C7
-Pest Control,Environmental Health,C3
-Phoenix HA,Other,C5
-Play Area Issues on a verge or open spac,Public Space,C6
-Play Area Issues on a verge or open space,Public Space,C6
-Play area safety issue,Public Space,C6
-Playground Equipment,Environmental Disruptions,C2
-Playing Fields,Public Space,C6
-Pole/signal knocked down,Road Safety & Defects,C7
-Poop Scoop Bins,Environmental Health,C3
-Poor Parking (Council Car Park),Abandoned Vehicles & Parking,C8
-Pothole,Road Safety & Defects,C7
-Pothole (Council Car Park),Road Safety & Defects,C7
-Pothole / Surface Defect,Road Safety & Defects,C7
-Pothole on a road or footway,Road Safety & Defects,C7
-Pothole on pavement/verge,Road Safety & Defects,C7
-Pothole on road/cycleway,Road Safety & Defects,C7
-Potholes,Road Safety & Defects,C7
-Potholes (large),Road Safety & Defects,C7
-Potholes (smaller than 30cm by 4cm),Road Safety & Defects,C7
-Property damage,Environmental Disruptions,C2
-Protected trees (in Conservations Areas),Other,C5
-Public Conveniences,Public Space,C6
-Public Right of Way (including Cycleway),Access,C1
-Public rights of way,Access,C1
-"Public rights of way, alleyways and brid",Access,C1
-"Public rights of way, alleyways and bridlepaths",Access,C1
-Public Rights of Ways,Access,C1
-Public toilet,Access,C1
-Public toilets,Access,C1
-Public Tree related issue,Environmental Disruptions,C2
-Public tree requires pruning,Environmental Disruptions,C2
-Public Trees,Environmental Disruptions,C2
-Rats,Environmental Health,C3
-Recycling (household waste),Environmental Health,C3
-Recycling and waste,Environmental Health,C3
-Refuse & recycling,Environmental Health,C3
-Refuse and recycling,Environmental Health,C3
-Refuse collection,Environmental Health,C3
-Retaining Wall,Environmental Disruptions,C2
-Rights of way,Access,C1
-Road and Pavement Issues,Road Safety & Defects,C7
-Road defect,Road Safety & Defects,C7
-Road lighting,Road Safety & Defects,C7
-Road lines / road markings,Road Safety & Defects,C7
-Road Marking,Road Safety & Defects,C7
-Road markings,Road Safety & Defects,C7
-Road markings faded/missing,Road Safety & Defects,C7
-Road or pavement defect,Road Safety & Defects,C7
-Road or pavement obstruction,Road Safety & Defects,C7
-Road Safety,Road Safety & Defects,C7
-Road Safety & Defects,Road Safety & Defects,C7
-Road Sign,Road Safety & Defects,C7
-Road signage,Road Safety & Defects,C7
-Road signs,Road Safety & Defects,C7
-Road Signs and Markings,Road Safety & Defects,C7
-Road surface,Road Safety & Defects,C7
-Road surface issue,Road Safety & Defects,C7
-Road traffic signs,Road Safety & Defects,C7
-Road Traffic Signs and Road Markings,Road Safety & Defects,C7
-Road Works,Road Safety & Defects,C7
-Road works problem,Road Safety & Defects,C7
-Roads and Highways,Road Safety & Defects,C7
-Roads and pavement surfaces - Overhangin,Environmental Disruptions,C2
-Roads and pavement surfaces - Overhanging vegetation,Environmental Disruptions,C2
-Roads/highways,Road Safety & Defects,C7
-Roadside safety barrier,Road Safety & Defects,C7
-Roadworks,Road Safety & Defects,C7
-Rotten timber handrails or decking,Access,C1
-Rubbish,Environmental Health,C3
-Rubbish (refuse and recycling),Environmental Health,C3
-"Rubbish (refuse and recycling)	",Environmental Health,C3
-Rubbish accumulation on private property,Environmental Health,C3
-Rubbish or fly tipping on the roads,Environmental Health,C3
-Salt bin damaged,Road Safety & Defects,C7
-Salt bin refill,Road Safety & Defects,C7
-Salt Bin Request,Road Safety & Defects,C7
-Shopping Trolley,Incivilities,C4
-Shopping trolleys,Incivilities,C4
-Sign (lit),Road Safety & Defects,C7
-Sign (unlit),Road Safety & Defects,C7
-Sign light not working,Road Safety & Defects,C7
-Sign or Marking,Road Safety & Defects,C7
-Sign problem,Road Safety & Defects,C7
-Signal head turned around,Road Safety & Defects,C7
-Signals stuck on red,Road Safety & Defects,C7
-Signs,Road Safety & Defects,C7
-Signs on a public right of way,Access,C1
-Signs/Cones/Bollards/Barriers,Road Safety & Defects,C7
-Single pothole (less than 30cm wide and,Road Safety & Defects,C7
-Single pothole (less than 30cm wide and 4cm deep),Road Safety & Defects,C7
-Single pothole (more than 30cm wide and,Road Safety & Defects,C7
-Single pothole (more than 30cm wide and 4cm deep),Road Safety & Defects,C7
-Skip on road/verge,Road Safety & Defects,C7
-Skip problem,Environmental Health,C3
-Skips and scaffolding,Environmental Health,C3
-Snow and ice problem/winter salting,Road Safety & Defects,C7
-Spillage on the road,Environmental Health,C3
-Street cleaning,Environmental Health,C3
-Street cleansing,Environmental Health,C3
-Street drainage,Environmental Health,C3
-Street furniture,Environmental Disruptions,C2
-Street Light,Road Safety & Defects,C7
-Street light dim,Road Safety & Defects,C7
-Street Light Fault,Road Safety & Defects,C7
-Street light intermittent,Road Safety & Defects,C7
-Street light not working,Road Safety & Defects,C7
-Street lighting,Road Safety & Defects,C7
-Street lighting (on adopted highways),Road Safety & Defects,C7
-"Street lighting (parks, car parks and op",Road Safety & Defects,C7
-"Street lighting (parks, car parks and open spaces)",Road Safety & Defects,C7
-"Street lighting (parks, car parks, open",Road Safety & Defects,C7
-"Street lighting (parks, car parks, open spaces and footpaths)",Road Safety & Defects,C7
-Street Lighting and Road Signs,Road Safety & Defects,C7
-Street Lights,Road Safety & Defects,C7
-Street Lights (Electrical),Road Safety & Defects,C7
-Street Name Plate,Environmental Disruptions,C2
-Street Name Plates,Environmental Disruptions,C2
-Street nameplaces,Environmental Disruptions,C2
-Street Nameplate,Environmental Disruptions,C2
-Street nameplates,Environmental Disruptions,C2
-Street needs gritting,Road Safety & Defects,C7
-Street sign,Road Safety & Defects,C7
-Street weeds,Environmental Disruptions,C2
-Street Works (Utilities),Road Safety & Defects,C7
-Subway light,Environmental Disruptions,C2
-Surface Defect on a public right of way,Road Safety & Defects,C7
-Surface Defect on a road or footway,Road Safety & Defects,C7
-Temporary Traffic Signals,Road Safety & Defects,C7
-Timing issue,Road Safety & Defects,C7
-To let signs,Other,C5
-Trade Waste,Environmental Health,C3
-Traffic light,Road Safety & Defects,C7
-Traffic light / crossing - button/beep/lamp,Road Safety & Defects,C7
-Traffic light / crossing - timing issues,Road Safety & Defects,C7
-Traffic Light Fault,Road Safety & Defects,C7
-Traffic lights,Road Safety & Defects,C7
-"Traffic lights & crossings problems with buttons, beep or lamps",Road Safety & Defects,C7
-Traffic lights & crossings problems with timings,Road Safety & Defects,C7
-Traffic lights & signals,Road Safety & Defects,C7
-Traffic Lights (permanent only),Road Safety & Defects,C7
-Traffic Lights (temporary only),Road Safety & Defects,C7
-Traffic lights problem at temporary roadworks,Road Safety & Defects,C7
-Traffic Signals,Road Safety & Defects,C7
-Tree,Environmental Disruptions,C2
-Tree (dangerous),Environmental Disruptions,C2
-Tree (fallen branches),Environmental Disruptions,C2
-Tree matters / Preservation Orders,Environmental Disruptions,C2
-Tree Or Shrub,Environmental Disruptions,C2
-Tree or Shrub on a public right of way,Access,C1
-Tree or Shrub on a road or footway,Access,C1
-Tree or Shrub on a verge or open space,Public Space,C6
-Tree Requires Pruning,Environmental Disruptions,C2
-Tree/branch - fallen,Environmental Disruptions,C2
-Tree/branch - may fall,Environmental Disruptions,C2
-Tree/branch/hedge - overgrown,Environmental Disruptions,C2
-Trees,Environmental Disruptions,C2
-Trees & hedges,Environmental Disruptions,C2
-Trees (along Public Rights of Way),Access,C1
-Trees (on sites owned by Three Rivers Di,Access,C1
-Trees (on sites owned by Three Rivers District Council),Environmental Disruptions,C2
-Trees (on the highway verge),Environmental Disruptions,C2
-Trees (Urban Areas),Environmental Disruptions,C2
-Trees and woodland,Environmental Disruptions,C2
-Trees and Woodland Maintenance,Environmental Disruptions,C2
-"Trees in parks, commons and open  spaces",Environmental Disruptions,C2
-Trees on and near highways and footpaths,Access,C1
-Trees or Vegetation,Environmental Disruptions,C2
-Trees overhanging highways,Access,C1
-Trees overhanging roads/paths,Access,C1
-Trees overhanging/obstructing the road o,Access,C1
-Trees overhanging/obstructing the road or footpath,Environmental Disruptions,C2
-Trees/Hedges Overhanging Roads Or Footpa,Access,C1
-Trees/Hedges Overhanging Roads Or Footpaths,Environmental Disruptions,C2
-Trenches,Environmental Disruptions,C2
-Trip hazard,Environmental Health,C3
-Trip hazard/uneven surface,Environmental Health,C3
-Trunkroad or motorway defect,Road Safety & Defects,C7
-Unauthorised signs,Incivilities,C4
-Untaxed vehicle,Abandoned Vehicles & Parking,C8
+Zebra crossing,Road Safety & Defects,C7
+Damage to grass verges,Road Safety & Defects,C7
+Verges - Damaged by Vehicles,Road Safety & Defects,C7
+Soft Verge Damaged/Overrun,Road Safety & Defects,C7
+Vehicle Access (Assets),Access,C1
+Vehicle Barrier Issue,Access,C1
+Vehicle Access,Access,C1
+Utility equipment,Environmental Disruptions,C2
+Utlility Covers,Environmental Disruptions,C2
+Utility Works and Manhole Covers,Environmental Disruptions,C2
+Utility Issue,Environmental Disruptions,C2
 Utilities,Environmental Disruptions,C2
+Utility Works and Manhole Covers (Street,Environmental Disruptions,C2
 Utility cabinets,Environmental Disruptions,C2
 Utility Work,Environmental Disruptions,C2
-Utility Works and Manhole Covers,Environmental Disruptions,C2
-Utility Works and Manhole Covers (Street,Environmental Disruptions,C2
 Utility Works and Manhole Covers (Streetworks),Environmental Disruptions,C2
-Utlility Covers,Environmental Disruptions,C2
-Vegetation on a public right of way,Access,C1
-Vegetation or Weeds,Environmental Disruptions,C2
-Vegetation or Weeds on a public right of,Access,C1
-Vegetation Or Weeds on a public right of way,Access,C1
-Vegetation or Weeds on a verge or open s,Access,C1
-Vegetation Or Weeds on a verge or open space,Access,C1
-Vehicle Access,Access,C1
-Vehicle Access (Assets),Access,C1
-Verge cutting required,Environmental Disruptions,C2
+Utility Box/ cover damaged,Environmental Disruptions,C2
+Untaxed vehicle,Abandoned Vehicles & Parking,C8
+Trip hazard/uneven surface,Environmental Health,C3
+Trip hazard,Environmental Health,C3
+Trenches,Environmental Disruptions,C2
+Tree or Shrub on a public right of way,Access,C1
+Trees (along Public Rights of Way),Access,C1
+Trees (on sites owned by Three Rivers Di,Access,C1
+Tree or Shrub on a road or footway,Access,C1
+Low hanging branches and general maintenance,Access,C1
+Hedges / trees on rights of way,Access,C1
+Hedges / Trees on road or verge,Access,C1
+Traffic Signals Damaged,Road Safety & Defects,C7
+Timing issue,Road Safety & Defects,C7
+Traffic Signal Timing (perm),Road Safety & Defects,C7
+Traffic sign,Road Safety & Defects,C7
+Traffic Signals,Road Safety & Defects,C7
+Traffic light,Road Safety & Defects,C7
+Traffic lights problem at temporary roadworks,Road Safety & Defects,C7
+Traffic light / crossing - timing issues,Road Safety & Defects,C7
+Traffic Lights (temporary only),Road Safety & Defects,C7
+Traffic lights & signals,Road Safety & Defects,C7
+"Traffic lights & crossings problems with buttons, beep or lamps",Road Safety & Defects,C7
+Traffic lights & crossings problems with timings,Road Safety & Defects,C7
+Traffic Signals Not Working,Road Safety & Defects,C7
+Traffic lights,Road Safety & Defects,C7
+Traffic Lights (permanent only),Road Safety & Defects,C7
+Lamp out (traffic lights),Road Safety & Defects,C7
+Traffic signal obstructed by vegetation,Road Safety & Defects,C7
+Traffic Light Fault,Road Safety & Defects,C7
+Temporary Traffic Signals,Road Safety & Defects,C7
+Traffic light / crossing - button/beep/lamp,Road Safety & Defects,C7
+Temporary,Road Safety & Defects,C7
+Trade Waste Issue,Environmental Health,C3
+Business bins left out,Environmental Health,C3
+Trade Waste,Environmental Health,C3
+To let signs,Other,C5
+Missing/Broken Sign on a public right of way,Access,C1
+Missing/Broken Sign on a public right of,Access,C1
+Signs on a public right of way,Access,C1
+Signs/Cones/Bollards/Barriers,Road Safety & Defects,C7
+Road signs,Road Safety & Defects,C7
+Bollards or railings,Road Safety & Defects,C7
+Signs,Road Safety & Defects,C7
+Road Traffic Signs and Road Markings,Road Safety & Defects,C7
+Bollards (unlit),Road Safety & Defects,C7
+Road Signs and Markings,Road Safety & Defects,C7
+Street sign,Road Safety & Defects,C7
+Bollards (lit),Road Safety & Defects,C7
+Road traffic signs,Road Safety & Defects,C7
+Bollard light not working,Road Safety & Defects,C7
+Road Sign,Road Safety & Defects,C7
+Permanent Traffic Signals/Road Crossings,Road Safety & Defects,C7
+Crossing not working,Road Safety & Defects,C7
+Road signage,Road Safety & Defects,C7
+Pole/signal knocked down,Road Safety & Defects,C7
+Fault with temporary traffic signals,Road Safety & Defects,C7
+Faulty street sign,Road Safety & Defects,C7
+Sign/Pole Damaged,Road Safety & Defects,C7
+Missing/ damaged traffic sign,Road Safety & Defects,C7
+Signal Failure/Damaged - Toucan/Pelican,Road Safety & Defects,C7
+Traffic signal faulty,Road Safety & Defects,C7
+Sign/Waymarking - Damaged/Missing,Road Safety & Defects,C7
+Safety Bollard - Damaged/Missing,Road Safety & Defects,C7
+Traffic Sign obstructed (vegetation),Road Safety & Defects,C7
+Sign Twisted/Misaligned,Road Safety & Defects,C7
+Request Timing Review,Road Safety & Defects,C7
+Safety fence or barrier,Road Safety & Defects,C7
+Sign Dirty/Degraded,Road Safety & Defects,C7
+Signs and bollards,Road Safety & Defects,C7
+Signal Failure,Road Safety & Defects,C7
+Signal Failure all out,Road Safety & Defects,C7
+Damaged / Missing / Facing Wrong Way,Road Safety & Defects,C7
+Safety fences and barriers,Road Safety & Defects,C7
+Signal Head Failure,Road Safety & Defects,C7
+Illum. Sign Minor Damage,Road Safety & Defects,C7
+Attachment Distract/Obstruct,Road Safety & Defects,C7
+Crossing running with no pedestrians,Road Safety & Defects,C7
+Permanent,Road Safety & Defects,C7
+Street washing,Road Safety & Defects,C7
+Traffic sign light,Road Safety & Defects,C7
+Sign Obstructed: Vegetation,Road Safety & Defects,C7
+Sign or road marking missing following works,Road Safety & Defects,C7
+Sign Missing/Knocked Down,Road Safety & Defects,C7
+Signal Stuck,Road Safety & Defects,C7
+Single pothole (less than 30cm wide and 4cm deep),Road Safety & Defects,C7
+Single pothole (less than 30cm wide and,Road Safety & Defects,C7
+Street nameplates,Environmental Disruptions,C2
+Damaged street nameplate,Environmental Disruptions,C2
+Street Name Plate,Environmental Disruptions,C2
+Damaged street name plates,Environmental Disruptions,C2
+Street Name Plates,Environmental Disruptions,C2
+Street Nameplate Dam./Miss.,Environmental Disruptions,C2
+Street nameplaces,Environmental Disruptions,C2
+Street Nameplate,Environmental Disruptions,C2
+Street nameplate damaged/missing,Environmental Disruptions,C2
+"Street lighting (parks, car parks, open spaces and footpaths)",Road Safety & Defects,C7
+Lighting,Road Safety & Defects,C7
+Street light on during the day,Road Safety & Defects,C7
+Street Lights,Road Safety & Defects,C7
+Street light dim,Road Safety & Defects,C7
+Street Light,Road Safety & Defects,C7
+Single Light out (street light),Road Safety & Defects,C7
+Flickering Light,Road Safety & Defects,C7
+Faulty street light,Road Safety & Defects,C7
+All out - three or more street lights in a row,Road Safety & Defects,C7
+1 signal light out,Road Safety & Defects,C7
+2 signal lights out,Road Safety & Defects,C7
+Light in outside car park,Road Safety & Defects,C7
+"Street lighting (parks, car parks and open spaces)",Road Safety & Defects,C7
+All out,Road Safety & Defects,C7
+Stuck on red,Road Safety & Defects,C7
+Lights too bright/ dull,Road Safety & Defects,C7
+"Street lighting (parks, car parks, open",Road Safety & Defects,C7
+Lamp post,Road Safety & Defects,C7
+Street Light Fault,Road Safety & Defects,C7
+Street light leaning,Road Safety & Defects,C7
+Light on during daylight hours,Road Safety & Defects,C7
+Street light wiring exposed,Road Safety & Defects,C7
+"Street lighting (parks, car parks and op",Road Safety & Defects,C7
+Lamp/Bulb Failure,Road Safety & Defects,C7
+All signal lights out,Road Safety & Defects,C7
+Streetlight Obscured by Veg,Road Safety & Defects,C7
+Light in park or open space,Road Safety & Defects,C7
+Street lighting,Road Safety & Defects,C7
+Light on during the day,Road Safety & Defects,C7
+Street Lighting and Road Signs,Road Safety & Defects,C7
+Lamp: Outage (Single Unit),Road Safety & Defects,C7
+Illuminated Sign,Road Safety & Defects,C7
+Not coming on/ faulty,Road Safety & Defects,C7
+Street lighting (on adopted highways),Road Safety & Defects,C7
+Iluminated Bollard,Road Safety & Defects,C7
+Street light not working,Road Safety & Defects,C7
+Street light intermittent,Road Safety & Defects,C7
+Street Lights (Electrical),Road Safety & Defects,C7
+Road lighting,Road Safety & Defects,C7
+Lights out in Pedestrian Subway,Road Safety & Defects,C7
+Crash Barriers,Road Safety & Defects,C7
+Crash Barriers Damaged/Missing,Road Safety & Defects,C7
+Damage to pedestrian guardrail,Road Safety & Defects,C7
+Damaged/missing pedestrian guardrail,Road Safety & Defects,C7
+Damage: Pedestrian Barrier,Road Safety & Defects,C7
+Crash Barriers - Damaged / Missing,Road Safety & Defects,C7
+Street furniture,Environmental Disruptions,C2
+Unlit sign knocked down,Road Safety & Defects,C7
+Bollard Out Of Light,Road Safety & Defects,C7
+Bench/ memorial/ cycle hoop damaged or missing,Road Safety & Defects,C7
+Other street furniture,Road Safety & Defects,C7
+Street Furniture Enquiry,Road Safety & Defects,C7
+Damaged bollards/posts,Road Safety & Defects,C7
+unlit bollard knockdown/ missing (non hazardous),Road Safety & Defects,C7
+Traffic bollard,Road Safety & Defects,C7
+Bollard,Road Safety & Defects,C7
+Bench Damaged Hazard,Road Safety & Defects,C7
+Damage to paintwork/ column,Road Safety & Defects,C7
+Column/Post: Paintwork Damage,Road Safety & Defects,C7
+Unlit Bollard Issue Non Hazard,Road Safety & Defects,C7
+unlit bollard knockdown/ missing (hazardous),Road Safety & Defects,C7
+Unlit Bollard Issue Hazardous,Road Safety & Defects,C7
+Bench Damaged NonHazard,Road Safety & Defects,C7
+Street cleaning,Environmental Health,C3
+Street,Environmental Health,C3
+Street cleaning and litter,Environmental Health,C3
+Street cleansing,Environmental Health,C3
+Street Cleaning Enquiry,Environmental Health,C3
+Hazardous spillage on road,Environmental Health,C3
+Oil spillage,Environmental Health,C3
+Spillage on the road,Environmental Health,C3
+Spill - Oil/Diesel,Environmental Health,C3
+Spillage on network,Environmental Health,C3
+Spillage On Project Network,Environmental Health,C3
+Skip on road/verge,Road Safety & Defects,C7
+Skips and scaffolding,Environmental Health,C3
+Skips,Environmental Health,C3
+Skip problem,Environmental Health,C3
+Sign or Marking,Road Safety & Defects,C7
+Shopping trolleys,Incivilities,C4
+Shopping Trolley,Incivilities,C4
+Salt bin refill,Road Safety & Defects,C7
+Salt Bin Request,Road Safety & Defects,C7
+Salt bin damaged,Road Safety & Defects,C7
+Rubbish,Environmental Health,C3
+Rubbish (refuse and recycling),Environmental Health,C3
+Roadworks,Road Safety & Defects,C7
+Road or pavement damage,Road Safety & Defects,C7
+Road or pavement defect,Road Safety & Defects,C7
+Other street defect,Road Safety & Defects,C7
+Road or pavement obstruction,Road Safety & Defects,C7
+Damaged Control box,Road Safety & Defects,C7
+Works not complete,Road Safety & Defects,C7
+Winter Maintenance,Road Safety & Defects,C7
+Works crew - way of working,Road Safety & Defects,C7
+Damaged or missing utility cover,Road Safety & Defects,C7
+Problem at other roadworks,Road Safety & Defects,C7
+Timing of proposed works,Road Safety & Defects,C7
+Damaged or missing cover,Road Safety & Defects,C7
+Temp Roadwork Traffic Signals,Road Safety & Defects,C7
+Problem at LCC roadworks,Road Safety & Defects,C7
+Damaged Kerb/Aco/Channel Block,Road Safety & Defects,C7
+Damage to property caused by works,Road Safety & Defects,C7
+Current Roadworks,Road Safety & Defects,C7
+Road Works,Road Safety & Defects,C7
+Works notification letter/leaflet,Road Safety & Defects,C7
+Road works problem,Road Safety & Defects,C7
+Damaged cables,Road Safety & Defects,C7
+Surface Defect on a road or footway,Road Safety & Defects,C7
+Unpaved OS CP Surface Issue,Road Safety & Defects,C7
+"Damaged Railing, manhole, or drain cover",Road Safety & Defects,C7
+Road surface issue,Road Safety & Defects,C7
+Road and Pavement Issues,Road Safety & Defects,C7
+Damaged/missing boundary markers,Road Safety & Defects,C7
+Carriageway Flood Hazardous,Road Safety & Defects,C7
+Road surface,Road Safety & Defects,C7
+Damaged/missing cats eye,Road Safety & Defects,C7
+Damaged Speed Humps,Road Safety & Defects,C7
+Carriageway Flood NonHazard,Road Safety & Defects,C7
+Carriageway defect,Road Safety & Defects,C7
+Roadside safety barrier,Road Safety & Defects,C7
+Carriageway,Road Safety & Defects,C7
+"Damaged road edge, encroaches more than 100mm",Road Safety & Defects,C7
+Damaged road,Road Safety & Defects,C7
+Roads and Highways,Road Safety & Defects,C7
+Damaged road sign,Road Safety & Defects,C7
+Mud / Slippery surface,Road Safety & Defects,C7
+Road defect,Road Safety & Defects,C7
+Damaged/Loose,Road Safety & Defects,C7
+Damaged/missing paving slab,Road Safety & Defects,C7
+"Damaged road edge, encroaches less than 100mm",Road Safety & Defects,C7
+Surface Defect on a public right of way,Road Safety & Defects,C7
+Damage to road,Road Safety & Defects,C7
+Collapsed verge,Road Safety & Defects,C7
 Visibility at junction or bend,Road Safety & Defects,C7
-Weed control,Environmental Disruptions,C2
-Weed problem on the highway,Environmental Disruptions,C2
+Road Safety,Road Safety & Defects,C7
+Faded road markings,Road Safety & Defects,C7
+Worn out road markings,Road Safety & Defects,C7
+Signal head turned around,Road Safety & Defects,C7
+Road markings,Road Safety & Defects,C7
+Lines and Markings (Council Car Park),Road Safety & Defects,C7
+Studs/Catseyes Missing/Damaged,Road Safety & Defects,C7
+Sign (unlit),Road Safety & Defects,C7
+Zebra crossing/ belisha faulty,Road Safety & Defects,C7
+White Bar Marking,Road Safety & Defects,C7
+Sign (lit),Road Safety & Defects,C7
+Road Marking,Road Safety & Defects,C7
+Signals stuck on red,Road Safety & Defects,C7
+Road Markings - Worn/Faded,Road Safety & Defects,C7
+Road markings faded/missing,Road Safety & Defects,C7
+Road lines / road markings,Road Safety & Defects,C7
+Defective road markings or signs,Road Safety & Defects,C7
+Sign light not working,Road Safety & Defects,C7
+Road Markings Missing/Faded,Road Safety & Defects,C7
+Zebra Crossing Light,Road Safety & Defects,C7
+Sign problem,Road Safety & Defects,C7
+Footway / carriageway,Access,C1
+Footpaths/ Rights of way (usually not tarmac),Access,C1
+Public Right of Way (including Cycleway),Access,C1
+"Public rights of way, alleyways and brid",Access,C1
+Footpaths/ Rights of way (usually not ta,Access,C1
+Footpaths & rights of way,Access,C1
+Public Rights of Ways,Access,C1
+Rights of way,Access,C1
+Footway or Footpath,Access,C1
+Public footpath or cyclepath,Access,C1
+Fault on public right of way,Access,C1
+Public right of way - problem with access or damage,Access,C1
+Public rights of way,Access,C1
+Footpaths / Carriageway,Access,C1
+Retaining Wall,Environmental Disruptions,C2
+Recycling (household waste),Environmental Health,C3
+Refuse & recycling,Environmental Health,C3
+Recycling and waste,Environmental Health,C3
+Public Conveniences,Public Space,C6
+Public toilets,Access,C1
+Public toilet,Access,C1
+Protected trees (in Conservations Areas),Other,C5
+Property damage,Environmental Disruptions,C2
+Pothole on a road or footway,Road Safety & Defects,C7
+Multiple potholes (various sizes),Road Safety & Defects,C7
+Pothole (Council Car Park),Road Safety & Defects,C7
+Potholes (large),Road Safety & Defects,C7
+Pothole / Surface Defect,Road Safety & Defects,C7
+Pothole / Failed Reinstatement,Road Safety & Defects,C7
+Pothole or other defect,Road Safety & Defects,C7
+Single pothole (more than 30cm wide and 4cm deep),Road Safety & Defects,C7
+Pothole on pavement/verge,Road Safety & Defects,C7
+Potholes,Road Safety & Defects,C7
+Potholes / Highway Condition,Road Safety & Defects,C7
+Pothole In CW/FW,Road Safety & Defects,C7
+Single pothole (more than 30cm wide and,Road Safety & Defects,C7
+Pothole,Road Safety & Defects,C7
+Pothole on road/cycleway,Road Safety & Defects,C7
+Potholes (smaller than 30cm by 4cm),Road Safety & Defects,C7
+Phoenix HA,Other,C5
+Rats,Environmental Health,C3
+Pest Control,Environmental Health,C3
+Kerb not flush / no tactile paving,Road Safety & Defects,C7
+Pavement defect,Road Safety & Defects,C7
+Pavement Damaged/Cracked,Road Safety & Defects,C7
+Pavements/footpaths,Road Safety & Defects,C7
+Pavements & kerbs,Road Safety & Defects,C7
+Pavements,Road Safety & Defects,C7
+Steps Damaged/Uneven,Access,C1
+Belisha Beacon broken,Access,C1
+Countryside Paths / Public Rights of Way (usually not tarmac),Access,C1
+Damaged pavement,Access,C1
+Rotten timber handrails or decking,Access,C1
+Pedestrian Barriers - Damaged / Missing,Access,C1
+Uneven footway,Access,C1
+Pedestrian Barrier Corroded,Access,C1
+Pedestrian guard rail missing/damaged,Access,C1
+Pedestrian Barrier Issue,Access,C1
+Pavement,Access,C1
+Footway Defect,Access,C1
+Pedestrian barrier/ railing damaged,Access,C1
+Damage to kerb,Access,C1
+Slabs - Missing,Access,C1
+Underpass light,Access,C1
+Belisha Beacon Malfunction,Access,C1
+Footway Defect on a road or footway,Access,C1
+Pedestrian railing,Access,C1
+Pavement Defect (uneven surface / cracked paving slab),Access,C1
+Loose / Raised/Sunken,Access,C1
+"Public rights of way, alleyways and bridlepaths",Access,C1
+Missing safety fence,Road Safety & Defects,C7
+Rough/Uneven or Surface Issue,Road Safety & Defects,C7
+Damage to pavement,Road Safety & Defects,C7
+Footpath / pavement problem,Road Safety & Defects,C7
+Loose chippings,Road Safety & Defects,C7
+Pavement Jetting,Road Safety & Defects,C7
+Pavement and road repairs,Road Safety & Defects,C7
+Slabs - Uneven / Damaged / Cracked,Road Safety & Defects,C7
+Pedestrian wait button not working,Road Safety & Defects,C7
+Car Park Barrier / Equipment,Abandoned Vehicles & Parking,C8
+Car Parks and ticket machines,Abandoned Vehicles & Parking,C8
+Parking within pay and display car parks,Abandoned Vehicles & Parking,C8
+Car parking,Abandoned Vehicles & Parking,C8
+Car parking issues,Abandoned Vehicles & Parking,C8
+Illegally parked vehicle,Abandoned Vehicles & Parking,C8
+Parking queries/reports,Abandoned Vehicles & Parking,C8
+Poor Parking (Council Car Park),Abandoned Vehicles & Parking,C8
+Carparks,Abandoned Vehicles & Parking,C8
+Parking,Abandoned Vehicles & Parking,C8
+Parking Equipment (Council Car Park),Abandoned Vehicles & Parking,C8
+Parking on street,Abandoned Vehicles & Parking,C8
+Parking enforcement,Abandoned Vehicles & Parking,C8
+Car Park Machine Not Working,Abandoned Vehicles & Parking,C8
+Car parks (only council run ones),Abandoned Vehicles & Parking,C8
+Off Street Parking,Abandoned Vehicles & Parking,C8
+On Street Parking,Abandoned Vehicles & Parking,C8
+On-street parking,Abandoned Vehicles & Parking,C8
+Illegal parking,Abandoned Vehicles & Parking,C8
+Parking/ congestion,Abandoned Vehicles & Parking,C8
+Enforcement,Abandoned Vehicles & Parking,C8
+Car parks (council run),Abandoned Vehicles & Parking,C8
+Council car parks,Abandoned Vehicles & Parking,C8
+Car parks,Abandoned Vehicles & Parking,C8
+Bad Parking,Abandoned Vehicles & Parking,C8
+Public Trees,Environmental Disruptions,C2
+Overhanging vegetation,Environmental Disruptions,C2
+Tree Pruning Request,Environmental Disruptions,C2
+Trees or shrubs blocking visibility,Environmental Disruptions,C2
+Trees/Hedges Overhanging Roads Or Footpaths,Environmental Disruptions,C2
+Tree/Branch Fallen Non Hazard,Environmental Disruptions,C2
+Trees overhanging/obstructing the road or footpath,Environmental Disruptions,C2
+Tree Requires Pruning,Environmental Disruptions,C2
+Vegetation Encroachment,Environmental Disruptions,C2
+Public Tree related issue,Environmental Disruptions,C2
+Overhanging Foliage,Environmental Disruptions,C2
+Overhanging vegetation from private land,Environmental Disruptions,C2
+Trees (on sites owned by Three Rivers District Council),Environmental Disruptions,C2
+"Trees in parks, commons and open  spaces",Environmental Disruptions,C2
+Tree Wound,Environmental Disruptions,C2
+Passage-Obstructed/Overgrown,Environmental Disruptions,C2
+Hedge causing obstruction,Environmental Disruptions,C2
+Overhanging tree/foliage/bush,Environmental Disruptions,C2
+Public tree requires pruning,Environmental Disruptions,C2
+Roads and pavement surfaces - Overhanging vegetation,Environmental Disruptions,C2
+Trees or shrubs causing obstruction of highway,Environmental Disruptions,C2
+Veg Obstructed: Hway Vis,Environmental Disruptions,C2
+Tree/branch/hedge - overgrown,Environmental Disruptions,C2
+Overgrown tree/hedges,Environmental Disruptions,C2
+Restricted Visibility / Overgrown / Overhanging,Environmental Disruptions,C2
+Vegetation or Weeds,Environmental Disruptions,C2
+Overgrown vegetation,Environmental Disruptions,C2
+Veg Impeding FW/CW,Environmental Disruptions,C2
+Pests in trees and shrubs,Environmental Disruptions,C2
+Roads and pavement surfaces - Overhangin,Environmental Disruptions,C2
 Weed spraying,Environmental Disruptions,C2
-Weeds,Environmental Disruptions,C2
+Obstructive vegetation,Environmental Disruptions,C2
+Trees or Vegetation,Environmental Disruptions,C2
+Trees and woodland,Environmental Disruptions,C2
+Restricted Visibility,Environmental Disruptions,C2
+Trees on and near highways and footpaths,Access,C1
+Vegetation Or Weeds on a public right of way,Access,C1
+Trees/Hedges Overhanging Roads Or Footpa,Access,C1
+Trees overhanging/obstructing the road o,Access,C1
+Vegetation or Weeds on a public right of,Access,C1
+Trees overhanging roads/paths,Access,C1
+Vegetation Or Weeds on a verge or open space,Access,C1
+Trees overhanging highways,Access,C1
+Vegetation or Weeds on a verge or open s,Access,C1
+Vegetation on a public right of way,Access,C1
+"Vandalism/disturbance (example, cones moved from works)",Other,C5
+Helpfulness of staff,Other,C5
+Structure Damaged,Other,C5
+Vehicles for sale on the public road,Other,C5
+Complaint,Other,C5
+Livestock,Other,C5
+Unauthorised Attachment,Other,C5
+Dedication Plaque,Other,C5
+Private property,Other,C5
+Damaged/Exposed Wiring / Vandalised,Other,C5
+Skip Licence,Other,C5
+Bad smell,Other,C5
+Door Missing/ open,Other,C5
+Paved OS CP Surface Issue,Other,C5
+Other,Other,C5
+Vandalism,Other,C5
+Alleyway,Other,C5
+Other public road issue,Other,C5
+Unauthorised skip,Other,C5
+CP Ticket Machine NonHazard,Other,C5
+Structure Issue,Other,C5
+Contractor Enquiry/Complaints,Other,C5
+Cleanliness Sub Standard,Other,C5
+Miscellaneous,Other,C5
+Quality/Speed of Service,Other,C5
+Engine idling,Other,C5
+Empty tree Pit,Other,C5
+Accidents,Other,C5
+SL Post Knockdown,Other,C5
+Sponsor a tree,Other,C5
+Hoarding/ scaffold licence,Other,C5
+Other (TfL),Other,C5
+Development Proposal/ advice,Other,C5
+Disagree/ agree with the completed works installed,Other,C5
+Illegal encampments,Other,C5
+Unauthorised shop display,Other,C5
+Damaged structure,Other,C5
+Play area safety issue,Public Space,C6
+Parks/landscapes,Public Space,C6
+Parks and playgrounds,Public Space,C6
+Damaged equipment,Public Space,C6
+Playing Fields,Public Space,C6
+Parks and playing fields,Public Space,C6
 Wheel tracks or ruts,Public Space,C6
-Zebra crossing,Road Safety & Defects,C7
+Parks & open spaces,Public Space,C6
+Play Area Issues on a verge or open space,Public Space,C6
+Parks & Green Spaces,Public Space,C6
+Parks and Greenspace,Public Space,C6
+Parks,Public Space,C6
+Play Area Issues on a verge or open spac,Public Space,C6
+Allotment issue,Public Space,C6
+Parks repairs,Environmental Disruptions,C2
+Playground Equipment,Environmental Disruptions,C2
+Parks and open spaces,Public Space,C6
+Play Equipment,Public Space,C6
+Park / Open space,Public Space,C6
+Obstruction on road or pavement,Access,C1
+Obstruction on road/cycleway,Access,C1
+Watercourse Block/Obstruction,Access,C1
+Sweeping & Cleansing Hazard,Access,C1
+Obstructions on pavements and roads,Access,C1
+Objects in the road,Access,C1
+Obstruction on public right of way,Access,C1
+"Obstructions (skips, A boards)",Access,C1
+Obstruction,Access,C1
+Obstruction (Not Vegetation),Access,C1
+Obstruction on Highways / Sight Lines,Access,C1
+Obstruction or hazard on road,Access,C1
+Obstruction on a public right of way,Access,C1
+Obstruction on pavement/verge,Access,C1
+Obscured by vegetation or Dirty,Access,C1
+Noise nuisance,Incivilities,C4
+Missed Food Waste Collection,Environmental Health,C3
+Missed Collection (Green Waste),Environmental Health,C3
+Domestic Waste - Missed Collection,Environmental Health,C3
+Missed Collection,Environmental Health,C3
+Missed bin collection,Environmental Health,C3
+Damaged/ cracked drain or man hole cover,Environmental Health,C3
+Broken manhole cover,Environmental Health,C3
+Manhole/drain cover on pavement/verge,Environmental Health,C3
+Manhole Cover - Damaged (rocking or noisy),Environmental Health,C3
+Missing,Environmental Health,C3
+Missing Gully/Manhole,Environmental Health,C3
+Missing drain or man hole cover,Environmental Health,C3
+Manhole Cover,Environmental Health,C3
+Inspection Covers,Environmental Health,C3
+Manhole / Drain cover,Environmental Health,C3
+Manhole,Environmental Health,C3
+Broken / Missing,Environmental Health,C3
+Noisy Ironwork,Environmental Health,C3
+Gully or Manhole,Environmental Health,C3
+Ironwork Collapsed,Environmental Health,C3
+Ironwork Corroded/Damaged,Environmental Health,C3
+Manhole/drain cover on road/cycleway,Environmental Health,C3
+Manhole covers,Environmental Health,C3
+Broken drain cover,Environmental Health,C3
+Missing Ironwork,Environmental Health,C3
+Litter in Parks & Open spaces,Environmental Health,C3
+Bin bags,Environmental Health,C3
+Litter Bin overflow,Environmental Health,C3
+Overflowing litter bin,Environmental Health,C3
+Litter bin,Environmental Health,C3
+Litter Bin on a verge or open space,Environmental Health,C3
+Litter,Environmental Health,C3
+Litter On Road/Street Cleaning,Environmental Health,C3
+Litter Bins Full/Damaged/Missing,Environmental Health,C3
+Full bin,Environmental Health,C3
+Overflowing Street Litter Bin,Environmental Health,C3
+Litter Bin Overflowing,Environmental Health,C3
+Litter Bin overflow in Parks & Open spaces,Environmental Health,C3
+Litter in the street,Environmental Health,C3
+Litter bin damaged,Environmental Health,C3
+Litter bin full,Environmental Health,C3
+Bin bags/ Cardboard boxes,Environmental Health,C3
+Lit Signs (Electrical),Other,C5
+Lewisham Homes,Other,C5
+Leaves/ leaf fall,Environmental Disruptions,C2
+Leaves,Environmental Disruptions,C2
+Leafing,Environmental Disruptions,C2
+Icy Footpath,Road Safety & Defects,C7
+Ice & snow,Road Safety & Defects,C7
+Ice/Snow,Road Safety & Defects,C7
+Snow and ice problem/winter salting,Road Safety & Defects,C7
+Ice,Road Safety & Defects,C7
+Icy Road,Road Safety & Defects,C7
+Highways Drainage,Environmental Health,C3
+Highway Drainage,Environmental Health,C3
+Highway Drainage or Flooding,Environmental Health,C3
+Highways Drainage on a road or footway,Environmental Health,C3
+Highway Improvements on a road or footwa,Road Safety & Defects,C7
+Highway Improvements on a road or footway,Road Safety & Defects,C7
+Highways Maintenance,Road Safety & Defects,C7
+Highway Condition Enquiry,Road Safety & Defects,C7
+Roads/highways,Road Safety & Defects,C7
+Motorways Defects,Road Safety & Defects,C7
+Highway Condition (Assets),Road Safety & Defects,C7
+Highway Condition,Road Safety & Defects,C7
+Trunkroad or motorway defect,Road Safety & Defects,C7
+Gully or manhole defect,Environmental Health,C3
+Manholes,Environmental Health,C3
+Markings/ lines Missing or faded,Environmental Health,C3
+Gully/Drainage,Environmental Health,C3
+Gullies,Environmental Health,C3
+Gully Catch Soakwy: Non Func,Environmental Health,C3
+Gulley covers,Environmental Health,C3
+Other public drainage issue,Environmental Health,C3
+Ditch Problem Non Hazardous,Environmental Health,C3
+Gully Catch Soakwy: Bad Smell,Environmental Health,C3
+Gully,Environmental Health,C3
+Gully and Catchpits,Environmental Health,C3
+Street Works (Utilities),Road Safety & Defects,C7
+Grounds Maintenance,Road Safety & Defects,C7
+Street needs gritting,Road Safety & Defects,C7
+Gritting,Road Safety & Defects,C7
+Grit Bins,Road Safety & Defects,C7
+Grit bin issue,Road Safety & Defects,C7
+Grit bin refills,Road Safety & Defects,C7
+Request refill of grit bin,Road Safety & Defects,C7
+Grit Bin - damaged/replacement,Road Safety & Defects,C7
+Grit Bin - empty/refill,Road Safety & Defects,C7
+Smelly drain,Environmental Health,C3
+Grids and Drains,Environmental Health,C3
+Grass verges,Environmental Disruptions,C2
+Grass Cutting,Environmental Disruptions,C2
+Noxious weeds,Environmental Disruptions,C2
+Weeds on roads or footpaths,Environmental Disruptions,C2
+Weed Growth,Environmental Disruptions,C2
+Grass/Weeds,Environmental Disruptions,C2
+Missed Grass Cutting,Environmental Disruptions,C2
+Weed problem on the highway,Environmental Disruptions,C2
+Grass Cutting on a verge or open space,Environmental Disruptions,C2
+Long Grass NonHazard,Environmental Disruptions,C2
+Weed control,Environmental Disruptions,C2
+Verge cutting residential areas,Environmental Disruptions,C2
+Grass and Hedges,Environmental Disruptions,C2
+Grass damage/destroy/disease,Environmental Disruptions,C2
+Japanese knotweed / ragwort,Environmental Disruptions,C2
+Other Grass Cutting Issues,Environmental Disruptions,C2
+Verge cutting required,Environmental Disruptions,C2
+Grass cutting query,Environmental Disruptions,C2
+Weeds,Environmental Disruptions,C2
+Grass,Environmental Disruptions,C2
+Street weeds,Environmental Disruptions,C2
+Grass needs cutting,Environmental Disruptions,C2
+Grass Cutting on a public right of way,Access,C1
+Graffiti/Flyposting: Offensive,Incivilities,C4
+Graffiti / Flyposting on traffic light (non-offensive),Incivilities,C4
+Graffiti on council buildings,Incivilities,C4
+Graffiti / Flyposting on stop or shelter (offensive),Incivilities,C4
+Graffiti / Flyposting (non-offensive),Incivilities,C4
+Grafitti,Incivilities,C4
+Graffiti / Flyposting on stop or shelter (non-offensive),Incivilities,C4
+Graffiti on bridges/subways,Incivilities,C4
+Graffiti (Offensive),Incivilities,C4
+Offensive Graffiti on Property,Incivilities,C4
+Graffiti,Incivilities,C4
+Graffiti or Flyposting (not offensive),Incivilities,C4
+Graffiti on Council Property,Incivilities,C4
+Graffiti and flyposting,Incivilities,C4
+Graffiti/Flyposting: Non-Offen,Incivilities,C4
+Graffiti or flyposting (offensive),Incivilities,C4
+General Fault,Road Safety & Defects,C7
+General Enquiry/Complaints,Road Safety & Defects,C7
+General Highways Enquiry,Road Safety & Defects,C7
+Highway Schemes,Road Safety & Defects,C7
+General Maintenance and pruning,Road Safety & Defects,C7
+Highways,Road Safety & Defects,C7
+Stile-Damaged/Missing,Access,C1
+Gate - Damaged/ Missing,Access,C1
+Gates/Stiles on a public right of way,Access,C1
+Garage areas,Environmental Health,C3
+Garden Waste,Environmental Health,C3
+Fly tipping - Enforcement Request,Environmental Health,C3
+"Fly Tipping on a road, footway, verge or",Environmental Health,C3
+Fly tipping,Environmental Health,C3
+"Fly Tipping on a road, footway, verge or open space",Environmental Health,C3
+Flytipping (TfL),Environmental Health,C3
+Fly-Tipping,Environmental Health,C3
+Flytipping,Environmental Health,C3
+Fly Tipping on a public right of way,Environmental Health,C3
+Flytipping and dumped rubbish,Environmental Health,C3
+Rubbish or fly tipping on the roads,Environmental Health,C3
+Illegal advertising,Incivilities,C4
+Flyposting (not by roadside),Incivilities,C4
+Flyposting (on road or roadside),Incivilities,C4
+Fly-Posting,Incivilities,C4
+Unauthorised signs,Incivilities,C4
+Illegal posters,Incivilities,C4
+Flyposting,Incivilities,C4
+Fly Posting,Incivilities,C4
+Floral displays,Other,C5
+Flooding from a blocked drain,Environmental Health,C3
+Flooding or standing water on road,Environmental Health,C3
+Flooded road,Environmental Health,C3
+Footway Flood Hazardous,Environmental Health,C3
+Flooding,Environmental Health,C3
+Property Damaged By Flooding,Environmental Health,C3
+Flooding on a road or footway,Environmental Health,C3
+Standing water,Environmental Health,C3
+Flooded underpass,Environmental Health,C3
+Flooding in the road,Environmental Health,C3
+Flooded subway,Environmental Health,C3
+Footway Flood Non Hazardous,Environmental Health,C3
+Fences & barriers,Environmental Disruptions,C2
+Fence Damaged/Missing Hazard,Environmental Disruptions,C2
+Fences,Environmental Disruptions,C2
+Fence Damage/Missing No Hazard,Environmental Disruptions,C2
+Tree or Shrub on a verge or open space,Public Space,C6
+Damage - general (Trees),Environmental Disruptions,C2
+Trees,Environmental Disruptions,C2
+Tree obstructing street light,Environmental Disruptions,C2
+Tree causing damage to property,Environmental Disruptions,C2
+Fallen Tree,Environmental Disruptions,C2
+Dying or dangerous tree,Environmental Disruptions,C2
+Hazardous or fallen trees,Environmental Disruptions,C2
+Hedge Untrimmed,Environmental Disruptions,C2
+Damage By Tree to 3rd Party,Environmental Disruptions,C2
+Trees and Woodland Maintenance,Environmental Disruptions,C2
+Tree (dangerous),Environmental Disruptions,C2
+Trees & hedges,Environmental Disruptions,C2
+Tree Dead/Dying/Diseased,Environmental Disruptions,C2
+Trees (Urban Areas),Environmental Disruptions,C2
+Tree,Environmental Disruptions,C2
+Trees (on the highway verge),Environmental Disruptions,C2
+Tree matters / Preservation Orders,Environmental Disruptions,C2
+Dying or diseased tree,Environmental Disruptions,C2
+Shrubs and Hedge,Environmental Disruptions,C2
+Tree/branch - fallen,Environmental Disruptions,C2
+Hedge Oversized,Environmental Disruptions,C2
+Tree/branch - may fall,Environmental Disruptions,C2
+Tree Obstruction to 3rd Party,Environmental Disruptions,C2
+Tree Or Shrub,Environmental Disruptions,C2
+Highway Tree Removal,Environmental Disruptions,C2
+Hedge problem,Environmental Disruptions,C2
+Tree Branches Overhanging,Environmental Disruptions,C2
+Tree (fallen branches),Environmental Disruptions,C2
+Fallen tree across road or pavement,Environmental Disruptions,C2
+Tree Danger/Obstruction on PN,Environmental Disruptions,C2
+Fallen or leaning tree,Environmental Disruptions,C2
+Environmental health,Environmental Health,C3
+Needles,Environmental Health,C3
+Exposed cables/wires,Environmental Health,C3
+Dumped rubbish,Environmental Health,C3
+Dumped cylinder,Environmental Health,C3
+Dog and litter bins,Environmental Health,C3
+Dog Bin overflow,Environmental Health,C3
+Dog Waste Bin,Environmental Health,C3
+Dog Waste Bin on a verge or open space,Environmental Health,C3
+Dog bin overflowing,Environmental Health,C3
+Dog Bin,Environmental Health,C3
+Dog fouling,Environmental Health,C3
+Dogs and Dogs Fouling,Environmental Health,C3
+Poop Scoop Bins,Environmental Health,C3
+Dog Mess,Environmental Health,C3
+Discarded Syringes,Environmental Health,C3
+Demo,Other,C5
+Removal of Debris,Environmental Health,C3
+Debris / Obstructions,Environmental Health,C3
+Mud and Debris,Environmental Health,C3
+Debris & spillage,Environmental Health,C3
+Mud on Road,Environmental Health,C3
+Debris in the carriageway,Environmental Health,C3
+Road obstruction,Environmental Health,C3
+Debris/Spillage,Environmental Health,C3
+Mud or Debris on the road,Environmental Health,C3
+Dead animal on a road or footpath,Environmental Health,C3
+Dead animals,Environmental Health,C3
+Dead animal,Environmental Health,C3
+Removal Of Carcass,Environmental Health,C3
+Dead animal in the carriageway or footway,Environmental Health,C3
+Dangerous structure,Environmental Disruptions,C2
+Dangerous Building,Environmental Disruptions,C2
+Access to a Countryside Pathway,Access,C1
+Countryside Paths / Public Rights of Way,Access,C1
+C.C.T.V Faults,Environmental Disruptions,C2
+Seats and benches,Environmental Disruptions,C2
+Bus stop/shelter issue,Environmental Disruptions,C2
+Bus stops,Environmental Disruptions,C2
+Damage - wires exposed on bus shelter,Environmental Disruptions,C2
+Damage - shelter unstable or loose in the ground,Environmental Disruptions,C2
+Damage - pole leaning / equipment detached from pole/facing the wrong direction,Environmental Disruptions,C2
+Bus shelters,Environmental Disruptions,C2
+Shelter/Seat,Environmental Disruptions,C2
+Bus stop damage,Environmental Disruptions,C2
+Damage - other (bus stops and shelters),Environmental Disruptions,C2
+Damage - wires exposed,Environmental Disruptions,C2
+Damage - lighting not working (bus shelter),Environmental Disruptions,C2
+Damage - smashed glass or panels / jagged metal edges on shelter,Environmental Disruptions,C2
+Bus Stop Pole Leaning/Damaged,Environmental Disruptions,C2
+Shelter Damaged,Environmental Disruptions,C2
+Loose/missing/chipped kerbstone,Environmental Disruptions,C2
+Kerbs,Environmental Disruptions,C2
+Kerb damage / issue,Environmental Disruptions,C2
+Broken Flags/Kerbs,Environmental Disruptions,C2
+Fire hydrants,Environmental Disruptions,C2
+Broken Fire Hydrant Covers,Environmental Disruptions,C2
+Bridge-Damaged/ Missing,Environmental Disruptions,C2
+Bridges/Subways,Environmental Disruptions,C2
+"Bridge, Subway or Culvert on a road or f",Environmental Disruptions,C2
+Bridge or culvert defect,Environmental Disruptions,C2
+"Bridge, Subway or Culvert on a public right of way",Environmental Disruptions,C2
+Bridges,Environmental Disruptions,C2
+"Bridge, Subway Or Culvert on a road or footway",Environmental Disruptions,C2
+Bridge,Environmental Disruptions,C2
+"Bridge, Subway or Culvert in an open space",Environmental Disruptions,C2
+Bridge or Structure,Environmental Disruptions,C2
+"Damaged dyke, ditch or culvert",Environmental Disruptions,C2
+Subway light faulty,Environmental Disruptions,C2
+Ditch issue,Environmental Disruptions,C2
+Subway Light Out or Flickering,Environmental Disruptions,C2
+"Bridge, Subway or Culvert on a public ri",Environmental Disruptions,C2
+Highway Bridges - Damaged/Unsafe,Environmental Disruptions,C2
+"Bridge, Subway or Culvert in an open spa",Environmental Disruptions,C2
+Subway light,Environmental Disruptions,C2
+Blocked drainage gullies,Environmental Health,C3
+Blocked drain / Flooding,Environmental Health,C3
+Blocked - flooding private property,Environmental Health,C3
+Blocked rainwater gulleys,Environmental Health,C3
+Blocked drainage gully,Environmental Health,C3
+Street drainage,Environmental Health,C3
+Drains,Environmental Health,C3
+Drainage Structure: Leakage,Environmental Health,C3
+Blocked - flooding road/path,Environmental Health,C3
+Blocked gully,Environmental Health,C3
+Drainage,Environmental Health,C3
+Blocked drain surface,Environmental Health,C3
+Drainage Structure: Blockage,Environmental Health,C3
+Blocked/Damaged,Environmental Health,C3
+Flooding of a road or pavement,Environmental Health,C3
+Blocked Ditch,Environmental Health,C3
+Drain or Gully,Environmental Health,C3
+Blocked drains and gullies,Environmental Health,C3
+Drainage or Flooding on a public right o,Environmental Health,C3
+Blocked Ditch Causing Flooding,Environmental Health,C3
+Blocked  Drains,Environmental Health,C3
+Blocked drain,Environmental Health,C3
+Blocked drains,Environmental Health,C3
+Blocked or damaged drain,Environmental Health,C3
+Drainage Or Flooding on a public right of way,Environmental Health,C3
+Bin Damaged Hazard,Environmental Health,C3
+Damage to litter bin,Environmental Health,C3
+"Damaged, dirty, or missing bin",Environmental Health,C3
+Bin Damaged NonHazard,Environmental Health,C3
+Empty Bin,Environmental Health,C3
+Bin Repair,Environmental Health,C3
+Bin Request,Environmental Health,C3
+Damage Public Litter Bin,Environmental Health,C3
+"Damage to bins, benches, and infrastructure",Environmental Health,C3
+Refuse collection,Environmental Health,C3
+Refuse and recycling,Environmental Health,C3
+Bench/cycle rack/litter bin/planter,Environmental Disruptions,C2
+Benches / bicycle racks,Environmental Disruptions,C2
+Bollards on a road or footway,Access,C1
+Barrier/Bollard on a public right of way,Access,C1
+Bollards,Access,C1
+lit bollard knocked down,Road Safety & Defects,C7
+Damaged bollard or post,Road Safety & Defects,C7
+Lit signs & bollards,Road Safety & Defects,C7
+Lit Bollards (Electrical),Road Safety & Defects,C7
+Admin,Other,C5
+Household bins left out,Environmental Health,C3
+Excessive or dangerous littering,Environmental Health,C3
+Rubbish accumulation on private property,Environmental Health,C3
+Accumulated Litter,Environmental Health,C3
+Abandoned bike,Abandoned Vehicles & Parking,C8
+Abandoned vehicle,Abandoned Vehicles & Parking,C8
+Abandoned and Untaxed Vehicles,Abandoned Vehicles & Parking,C8
+Abandoned car,Abandoned Vehicles & Parking,C8
+Abandoned vehicles,Abandoned Vehicles & Parking,C8
+Pothole (minor),Road Safety & Defects,C7
