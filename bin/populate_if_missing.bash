@@ -10,5 +10,7 @@ fi
 
 if [ ! -f /app/databases/db.sqlite3 ]; then
     python manage.py migrate
-    python manage.py populate explorer
+    python manage.py populate
+else
+    python manage.py migrate
 fi
