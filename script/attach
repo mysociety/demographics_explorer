@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+
+cd "$(dirname "$0")/.."
+
+export $(grep -v '^#' .env | xargs)
+
+docker attach $DOCKER_IMAGE_NAME

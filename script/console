@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# script/console: opens bash on docker instance
+#
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+export $(grep -v '^#' .env | xargs)
+
+docker run --env-file .env -it -v ${PWD}/bake_dir:/bake_dir mysocietyorg/$DOCKER_IMAGE_NAME:latest bash

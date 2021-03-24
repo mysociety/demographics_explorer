@@ -10,7 +10,7 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
--e git+https://github.com/ajparsons/django-sourdough@79269a28d5473845f47896bc769d3428edaccfdf#egg=django-sourdough
+-e git+https://github.com/ajparsons/django-sourdough@737c3bf0917c19f97a06b5b19b8c00265eebd6ce#egg=django-sourdough
 -e git+https://github.com/ajparsons/everypolitician-popolo-python.git@export_merge_function#egg=everypolitician-popolo
 -e git+https://github.com/ajparsons/useful-decorator@6945b7017be19ebc2f5e243254bc65356e219d2f#egg=useful-decorator
 -e git+https://github.com/ajparsons/useful-grid#e0b86882c9284b3d765abb11b7f3146421769998#egg=useful-grid
@@ -25,7 +25,7 @@ django-import-export
 django-pipeline==2.0.5
 django==3.0.4
 fabric
-markdown==2.6.2
+markdown==3.3.4
 numpy
 openpyxl
 pillow
