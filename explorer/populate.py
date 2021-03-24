@@ -73,7 +73,7 @@ def populate_fms_plain():
 
     service, new = Service.objects.get_or_create(name="FixMyStreet",
                                                  collective_name="Reports",
-                                                 singular_name="Reports",
+                                                 singular_name="Report",
                                                  slug="fms")
 
     register = fms_register
@@ -86,7 +86,7 @@ def populate_fms_no_cobrand():
 
     service, new = Service.objects.get_or_create(name="FMS (no cobrands)",
                                                  collective_name="Reports",
-                                                 singular_name="Reports",
+                                                 singular_name="Report",
                                                  slug="fms_no_cobrands")
 
     register = fms_no_cobrands
@@ -103,7 +103,7 @@ def populate_fms_year(register):
 
     service, new = Service.objects.get_or_create(name="FMS ({0})".format(year),
                                                  collective_name="Reports",
-                                                 singular_name="Reports",
+                                                 singular_name="Report",
                                                  slug=slug)
 
     register = register
@@ -229,6 +229,7 @@ def populate_wdtk():
     wdtk_register.run_all()
     name = "WhatDoTheyKnow survey"
     slug = ("wdtk")
+    Service.objects.filter(slug=slug).delete()
     service, new = Service.objects.get_or_create(
         name=name, slug=slug, collective_name="Requests", singular_name="Request")
 
@@ -282,7 +283,11 @@ def populate_all_wtt():
         populate_wtt_year(y)
 
 
-def populate():
-    populate_all_fms()
-    populate_all_wtt()
-    populate_wdtk()
+def populate(service=["all"]):
+    service = service[0].lower().strip()
+    if service in ["all", "fms"]:
+        populate_all_fms()
+    if service in ["all", "wtt"]:
+        populate_all_wtt()
+    if service in ["all", "wdtk"]:
+        populate_wdtk()

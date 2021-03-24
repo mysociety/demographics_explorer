@@ -361,6 +361,8 @@ class ComparisonSetView(GenericSocial, ComboView, ServiceLogic):
 
         self.chart = cs.get_chart(self.category)
         self.tidy_chart = cs.get_chart(self.category, tidy=True)
+        self.tidy_percent_chart = cs.get_chart(
+            self.category, tidy=True, percentage=True)
         self.expected_chart = cs.get_expected_comparison_chart(
             self.category)
         self.percentage_diff = cs.get_comparison_chart(

@@ -156,7 +156,7 @@ class ACategories(FMSCollection):
 
     def get_labels(self):
         lookup = self.__class__.slug
-        df = pd.read_csv(join("resources","fms", lookup + ".csv"))
+        df = pd.read_csv(join("resources", "fms", lookup + ".csv"))
         final = []
         for n, r in df.iterrows():
             final.append([r[self.__class__.slug], r["category"]])
@@ -550,6 +550,7 @@ class Ruc(FMSAnalysis):
         ruc_map = ruc.set_index("lsoa")["ukruc-3"].to_dict()
         df[self.slug] = df["lsoa"].map(ruc_map)
 
+
 @fms_register.register
 class Ruc(FMSAnalysis):
     name = "Reports by English rural/urban classification"
@@ -646,7 +647,7 @@ for i in welsh_imds:
             slug = "w_" + i
             h_label = f"{nice_i} deciles"
         exclusions = ["cobrand"]
-        
+
         description = "Reports sorted by the decile rank in against the Welsh Indices of Multiple Deprivation of the LSOA a report was made in.\n Lower deciles are more deprived, while higher deciles are better off on this measure."
         group = "Welsh IMD"
         column = i
@@ -729,10 +730,12 @@ for i in uk_imds:
         allowed_values = [x for x in range(1, 11)]
         description = "Reports sorted by the decile rank in against the composite Index of Multiple Deprivation of the LSOA a report was made in.\n Lower deciles are more deprived, while higher deciles are better off on this measure. This measure excludes NI."
         require_columns = ["lsoa"]
+
         def create_analysis_column(self):
 
             df = self.source_df
-            imd = pd.read_csv(join(self.lookup_folder, "imd", f"{self.slug}.csv"))
+            imd = pd.read_csv(
+                join(self.lookup_folder, "imd", f"{self.slug}.csv"))
             index_lookup = imd.set_index(
                 "lsoa")[self.slug + "_pop_decile"].to_dict()
             df[self.slug] = df["lsoa"].map(index_lookup)

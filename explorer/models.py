@@ -748,7 +748,7 @@ class ComparisonSet(FlexiBulkModel):
 
         return chart
 
-    def get_chart(self, collection_item, tidy=False):
+    def get_chart(self, collection_item, tidy=False, percentage=False):
         """
         chart showing distribution of comparison set
         """
@@ -760,7 +760,7 @@ class ComparisonSet(FlexiBulkModel):
                               for m in stored_units])/len(stored_units)
 
         name = " ".join(["comparison", self.superset.name,
-                         self.collectiontype.name])
+                         self.collectiontype.name, str(percentage)])
 
         def get_url(x):
             group_service_slug = self.superset.group.service.slug
@@ -776,7 +776,10 @@ class ComparisonSet(FlexiBulkModel):
 
         odf = ObjectsToDataFrame()
         odf[h_label] = lambda m: fix_label(m.label)
-        odf[collective_name] = lambda m: m.value
+        if percentage:
+            odf[collective_name] = lambda m: m.as_column_percent / 100
+        else:
+            odf[collective_name] = lambda m: m.value
         odf["style"] = lambda m: m.cell_style()
         odf["%"] = lambda m: str(m.as_row_percent) + "%"
         odf["Expected"] = lambda m: m.expected
@@ -798,12 +801,26 @@ class ComparisonSet(FlexiBulkModel):
         # if long text in description, switch the axis
         switch = avg_length > 10
 
+        if percentage:
+            y_label = ""
+            y_axis = alt.Axis(format=".0%")
+            text_format = ".0%"
+        else:
+            y_label = collective_name
+            y_axis = alt.Axis()
+            text_format = ".2s"
+
         if switch:
-            xx = alt.X(collective_name)
+            xx = alt.X(collective_name, title=y_label, axis=y_axis)
             yy = alt.Y(h_label, sort=None, axis=alt.Axis(labelAngle=0))
+            text_options = {'align': 'left',
+                            'baseline': 'middle',
+                            'dx': 3}
         else:
             xx = alt.X(h_label, sort=None, axis=alt.Axis(labelAngle=0))
-            yy = alt.Y(collective_name)
+            yy = alt.Y(collective_name, title=y_label, axis=y_axis)
+            text_options = {'align': 'center',
+                            'baseline': 'bottom'}
 
         disclaimer = (f"A {local_positive_label.lower()} bar means "
                       f"the value is higher than expected"
@@ -818,7 +835,10 @@ class ComparisonSet(FlexiBulkModel):
         else:
             subtitle = [disclaimer, category_label]
 
-        title = alt.TitleParams(self.superset.name, subtitle=subtitle)
+        if percentage:
+            title = f"{collection_item.name} {collective_name.lower()} as % of all {collective_name.lower()}"
+        else:
+            title = alt.TitleParams(self.superset.name, subtitle=subtitle)
 
         chart = AltairChart(
             df=df, name=name, title=title, chart_type="bar")
@@ -828,6 +848,10 @@ class ComparisonSet(FlexiBulkModel):
                                    "Expected", "Diff", "Std. Res"],
                           color=alt.Color("style", scale=None),
                           href="url")
+                          
+        if tidy:
+            chart.set_text_options(text=alt.Text(
+                collective_name, format=text_format), **text_options)
 
         if tidy:
             # do not show a different colour for bars
@@ -1085,6 +1109,10 @@ class ComparisonUnit(FlexiBulkModel):
     @ property
     def as_row_percent(self):
         return round((self.value / float(self.row_total)) * 100, 2)
+
+    @ property
+    def as_column_percent(self):
+        return round((self.value / float(self.column_total)) * 100, 2)
 
     @ property
     def round_chi(self):
