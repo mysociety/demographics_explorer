@@ -26,3 +26,4 @@ fi
 
 # ensure there's a `bake_dir/`
 mkdir -p bake_dir
+mkdir -p databases
