@@ -232,7 +232,7 @@ class CollectionTypeView(GenericSocial, ComboView, ServiceLogic):
             slug=self.collection_slug, service=self.service)
         self.year = self.period
         self.allowed_years = [str(x)
-                              for x in range(start_year, end_year)][::-1]
+                              for x in range(start_year, end_year+1)][::-1]
 
         # can't show year by year if the collection is year
         if self.collection_slug == "year":
@@ -275,7 +275,7 @@ class CollectionTypeViewYear(CollectionTypeView):
             start_year = s.start_year
             end_year = s.end_year
             for t in s.collections.all():
-                for year in range(start_year, end_year):
+                for year in range(start_year, end_year + 1):
                     yield [s.slug, t.slug, year]
 
 

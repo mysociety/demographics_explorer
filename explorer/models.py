@@ -33,7 +33,7 @@ dark_grey = theme.colours["colour_dark_grey"]
 background_blue = theme.monochrome_colours["colour_blue_light_20"]
 highlight_blue = theme.monochrome_colours["colour_blue_dark_30"]
 offwhite = theme.colours["colour_off_white"]
-
+end_year = 2020
 
 class ObjectsToDataFrame(dict):
     """
@@ -117,7 +117,7 @@ class Service(FlexiBulkModel):
 
     @property
     def start_year(self):
-        if self.slug != "wdtk":
+        if self.slug not in ["wdtk", "fms_no_cobrands"]:
             return 2007
         else:
             return 2012
@@ -125,9 +125,9 @@ class Service(FlexiBulkModel):
     @property
     def end_year(self):
         if self.slug != "wdtk":
-            return 2020
+            return end_year
         else:
-            return 2020
+            return end_year
 
 
 class CollectionType(FlexiBulkModel):
