@@ -17,11 +17,10 @@ import research_common.altair_theme as theme
 from scipy.stats import chi2_contingency
 from scipy.stats.contingency import margins
 from useful_grid import QuickGrid
+import calendar
 
-#local_negative = theme.adjusted_colours["colour_berry"]
-#local_positive = theme.adjusted_colours["colour_blue"]
-#local_positive_label = "Blue"
-#local_negative_label = "Red"
+month_lookup = {month: index for index,
+                month in enumerate(calendar.month_abbr) if month}
 
 local_negative = theme.adjusted_colours["colour_blue"]
 local_positive = theme.adjusted_colours["colour_berry"]
@@ -34,6 +33,7 @@ background_blue = theme.monochrome_colours["colour_blue_light_20"]
 highlight_blue = theme.monochrome_colours["colour_blue_dark_30"]
 offwhite = theme.colours["colour_off_white"]
 end_year = 2020
+
 
 class ObjectsToDataFrame(dict):
     """
@@ -663,6 +663,10 @@ class ComparisonSet(FlexiBulkModel):
         else:
             unique_options = (item_count + 1) * 1.2
 
+        sort = None
+        if "Jan" in df["item"].unique():
+            sort = list(df["item"].map(month_lookup))
+
         chart = AltairChart(df, name=name, title=title,
                             chart_type="bar", facet_width=unique_options)
 
@@ -675,7 +679,7 @@ class ComparisonSet(FlexiBulkModel):
                     axis=alt.Axis(offset=0, titleX=-15)),
             tooltip="tooltip",
             color=alt.Color("style", scale=None),
-            column=alt.Column("item", sort=None, title=None, header=header_options))
+            column=alt.Column("item", sort=sort, title=None, header=header_options))
 
         return chart
 
@@ -848,7 +852,7 @@ class ComparisonSet(FlexiBulkModel):
                                    "Expected", "Diff", "Std. Res"],
                           color=alt.Color("style", scale=None),
                           href="url")
-                          
+
         if tidy:
             chart.set_text_options(text=alt.Text(
                 collective_name, format=text_format), **text_options)
