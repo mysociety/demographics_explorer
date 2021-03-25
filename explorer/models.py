@@ -117,7 +117,7 @@ class Service(FlexiBulkModel):
 
     @property
     def start_year(self):
-        if self.slug not in ["wdtk", "fms_no_cobrands"]:
+        if self.slug not in ["wdtk"]:
             return 2007
         else:
             return 2012

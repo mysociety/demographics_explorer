@@ -1,24 +1,30 @@
 SHEF_B,2-20 Reports,21-50 Reports,50+ Reports,One Report
-Abandoned Vehicles,13559.0,3823.0,4624.0,9522.0
-Bridge/Culvert Defects,197.0,103.0,58.0,40.0
-Bus Stops Damage,1407.0,574.0,1483.0,594.0
-Dangerous Building/Structure,206.0,79.0,104.0,128.0
-Dog Fouling,6720.0,2564.0,3646.0,3876.0
-Environmental Health,311.0,122.0,166.0,99.0
-Fences,74.0,31.0,28.0,27.0
-Gritting,101.0,27.0,42.0,36.0
-Grounds Maintenance,348.0,121.0,169.0,159.0
-Open Spaces/Parks,7190.0,3015.0,6234.0,1921.0
-Other,27792.0,8219.0,12806.0,15599.0
-Parking,15712.0,3604.0,4576.0,12653.0
-Pavement /Footway Defects,30202.0,11106.0,18960.0,11785.0
+Abandoned Vehicles,15648.0,4116.0,5375.0,12013.0
+Bin Replacement,186.0,67.0,289.0,31.0
+Bridge/Culvert Defects,197.0,103.0,339.0,40.0
+Bus Stops Damage,1739.0,659.0,1690.0,742.0
+Dangerous Building/Structure,240.0,85.0,108.0,155.0
+Dog Fouling,9444.0,2938.0,4354.0,7079.0
+Drainage,5904.0,2297.0,8263.0,1620.0
+Environmental Health,325.0,125.0,325.0,104.0
+Fences,74.0,31.0,40.0,27.0
+Floral Displays,20.0,4.0,22.0,3.0
+Gritting,105.0,27.0,165.0,36.0
+Grounds Maintenance,348.0,121.0,395.0,161.0
+Highways Enquiries,47733.0,18981.0,39000.0,19369.0
+Incivilities,8639.0,4860.0,22045.0,2434.0
+Open Spaces/Parks,8433.0,3399.0,6934.0,2428.0
+Other,37117.0,10005.0,24498.0,22787.0
+Overgrown/Fallen Veg/Trees,16235.0,4996.0,9665.0,6162.0
+Parking,18712.0,4063.0,4994.0,15212.0
+Pavement /Footway Defects,36390.0,12778.0,21128.0,15469.0
 Property Damage,63.0,24.0,26.0,19.0
-Public Toilets,250.0,128.0,217.0,104.0
+Public Toilets,329.0,139.0,257.0,135.0
 Retaining Wall,16.0,9.0,6.0,3.0
-Right of Way,4122.0,1607.0,3956.0,1151.0
-Road Safety,15502.0,6864.0,16077.0,4645.0
-Road Surface Defects,105730.0,41817.0,65013.0,36509.0
-Rubbish,86261.0,45627.0,116243.0,20513.0
-Street Furniture,4613.0,1935.0,4988.0,1162.0
-Street Lights,36213.0,10895.0,29440.0,18869.0
-Utility Works,207.0,95.0,102.0,52.0
+Right of Way,4179.0,1636.0,6104.0,1166.0
+Road Safety,18433.0,7909.0,20637.0,5810.0
+Road Surface Defects,128882.0,48485.0,84226.0,47293.0
+Rubbish,97493.0,49259.0,127349.0,26078.0
+Street Furniture,5475.0,2199.0,6090.0,1581.0
+Street Lights,45172.0,12698.0,38715.0,25693.0
+Utility Works,208.0,95.0,205.0,54.0

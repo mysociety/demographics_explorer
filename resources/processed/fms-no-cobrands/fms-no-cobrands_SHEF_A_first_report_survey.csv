@@ -1,85 +1,87 @@
-SHEF_A,First Report
-Abandoned Vehicles,7557
-Accumulated Litter,196
-Admin,9
-Barriers/Bollards on RoW,22
-Benches/Bicycle Racks,4
-Bin Collection,77
-Bin Repair/Replacement,45
-Blocked Drains,1273
-Bridge/Culvert Defects,83
-Broken Kerbs,47
-Bus Stops Damage,534
-Countryside RoW,3
-Dangerous Building/Structure,91
-Dead Animals,91
-Debris/Spillage,134
-Demo,4
-Dog Fouling,2726
-Dog Litter Bin,14
-Dumped Rubbish,1122
-Environmental Health,5
-Fallen/Dangerous Trees,4709
-Fences,25
-Flooding,183
-Floral displays,6
-Fly-tipping,14971
-Flyposting,267
-Garden Waste,62
-Gates/Stiles RoW,4
-General Highways Enquiries,249
-Graffiti,1576
-Grass/Weed Control,610
-Grids and Drains,13
-Grit Bins,4
-Gritting,15
-Grounds Maintenance,9
-Gullies,106
-Gully/Manhole Defects,150
-Highway Condition,15495
-Highway Drainage,31
-Ice & Snow,11
-Leafing,47
-Lewisham Homes,20
-Litter/Litter Bin,227
-Manhole Covers,296
-Manhole Defects,17
-Missed Bin Collection,100
-Noise,16
-Obstruction,337
-Open Spaces/Parks,2169
-Other,12992
-Overgrown Vegetation,1118
-Parking,8351
-Pavement /Footway Defects,13547
-Pest Control,4
-Potholes,37533
-Property Damage,18
-Public Toilets,80
-Recycling,89
-Retaining Wall,9
-Right of Way,385
-Road Markings,305
-Road Safety,5
-Road Surface Defects,1569
-Road Works,95
-Road/Pavement Defects,1735
-Rubbish,5331
-Salt Bins,2
-Shopping Trolley,26
-Sign or Marking,3
-Skips,15
-Spillage on Road,26
-Street Cleaning,4007
-Street Furniture,112
-Street Lights,19045
-Street Name Plates,1057
-Street Signs,3135
-Trade Waste,17
-Traffic Lights,1851
-Trees and Hedges RoW,184
-Trees on RoW,71
-Trip Hazard,70
-Untaxed Vehcile,28
-Utility Works,70
-Vehicle Access,4
+SHEF_A,First Report,Reported Before
+Abandoned Vehicles,3758.0,5820.0
+Accumulated Litter,130.0,66.0
+Admin,3.0,6.0
+Barriers/Bollards on RoW,12.0,10.0
+Benches/Bicycle Racks,3.0,2.0
+Bin Collection,65.0,34.0
+Bin Repair/Replacement,31.0,14.0
+Blocked Drains,821.0,491.0
+Bridge/Culvert Defects,41.0,42.0
+Broken Kerbs,33.0,14.0
+Bus Stops Damage,341.0,397.0
+Countryside RoW,1.0,2.0
+Dangerous Building/Structure,53.0,60.0
+Dead Animals,45.0,49.0
+Debris/Spillage,84.0,50.0
+Demo,1.0,3.0
+Dog Fouling,2063.0,3096.0
+Dog Litter Bin,5.0,9.0
+Dumped Rubbish,743.0,480.0
+Environmental Health,2.0,3.0
+Fallen/Dangerous Trees,2924.0,3202.0
+Fences,15.0,10.0
+Flooding,115.0,68.0
+Floral displays,2.0,4.0
+Fly-tipping,10756.0,7582.0
+Flyposting,217.0,179.0
+Garden Waste,25.0,37.0
+Gates/Stiles RoW,2.0,2.0
+General Highways Enquiries,131.0,118.0
+Graffiti,1940.0,1288.0
+Grass/Weed Control,363.0,247.0
+Grids and Drains,9.0,4.0
+Grit Bins,3.0,1.0
+Gritting,8.0,9.0
+Grounds Maintenance,6.0,4.0
+Gullies,74.0,33.0
+Gully/Manhole Defects,71.0,87.0
+Highway Condition,10324.0,11163.0
+Highway Drainage,12.0,19.0
+Ice & Snow,5.0,6.0
+Leafing,38.0,9.0
+Lewisham Homes,15.0,5.0
+Litter/Litter Bin,155.0,80.0
+Manhole Covers,151.0,145.0
+Manhole Defects,6.0,11.0
+Missed Bin Collection,70.0,30.0
+Noise,5.0,11.0
+Obstruction,188.0,149.0
+Open Spaces/Parks,1561.0,1396.0
+Other,9046.0,10541.0
+Overgrown Vegetation,657.0,467.0
+Parking,3928.0,6615.0
+Pavement /Footway Defects,8646.0,9766.0
+Pest Control,3.0,1.0
+Potholes,24378.0,27908.0
+Property Damage,9.0,9.0
+Public Toilets,50.0,62.0
+Recycling,87.0,57.0
+Retaining Wall,6.0,3.0
+Right of Way,190.0,210.0
+Road Markings,181.0,124.0
+Road Safety,3.0,2.0
+Road Surface Defects,964.0,606.0
+Road Works,49.0,46.0
+Road/Pavement Defects,911.0,1095.0
+Rubbish,4060.0,3660.0
+Salt Bins,1.0,1.0
+Shopping Trolley,15.0,11.0
+Sign or Marking,2.0,1.0
+Skips,10.0,8.0
+Spillage on Road,17.0,9.0
+Street Cleaning,3172.0,2185.0
+Street Furniture,70.0,64.0
+Street Lights,12704.0,13946.0
+Street Name Plates,775.0,900.0
+Street Signs,2249.0,2004.0
+Trade Waste,10.0,7.0
+Traffic Lights,1213.0,1381.0
+Trees and Hedges RoW,87.0,97.0
+Trees on RoW,44.0,27.0
+Trip Hazard,30.0,40.0
+Untaxed Vehcile,16.0,23.0
+Utility Works,34.0,38.0
+Vehicle Access,2.0,2.0
+Verge Damage,3.0,4.0
+Zebra Crossing,,4.0

@@ -789,8 +789,7 @@ class fms_no_cobrands(AnalysisRegister):
     def get_restriction_function(self):
 
         def inner(df):
-            allowed = set(["", "fixmystreet"])
-            df = df[df["cobrand"].isin(allowed)]
+            df = df[(df["cobrand"] == "fixmystreet") | (df["cobrand"].isnull())]
             return df
 
         return inner

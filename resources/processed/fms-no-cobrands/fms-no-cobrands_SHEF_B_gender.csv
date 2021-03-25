@@ -1,24 +1,30 @@
 SHEF_B,Female,Male
-Abandoned Vehicles,9902,22513
+Abandoned Vehicles,11075,25591
+Bin Replacement,191,346
 Bridge/Culvert Defects,202,454
-Bus Stops Damage,1028,3117
-Dangerous Building/Structure,134,309
-Dog Fouling,6474,9034
-Environmental Health,316,426
+Bus Stops Damage,1181,3567
+Dangerous Building/Structure,152,356
+Dog Fouling,8948,12322
+Drainage,4263,12333
+Environmental Health,324,438
 Fences,54,105
-Gritting,84,131
-Grounds Maintenance,282,729
-Open Spaces/Parks,6410,12549
-Other,23909,42322
-Parking,12209,25849
-Pavement /Footway Defects,21779,51462
+Floral Displays,18,16
+Gritting,85,136
+Grounds Maintenance,283,730
+Highways Enquiries,26084,94680
+Incivilities,6937,29869
+Open Spaces/Parks,6998,14192
+Other,28971,54800
+Overgrown/Fallen Veg/Trees,13601,23958
+Parking,13636,29772
+Pavement /Footway Defects,24661,60097
 Property Damage,45,68
-Public Toilets,183,503
+Public Toilets,220,604
 Retaining Wall,16,34
-Right of Way,3904,8083
-Road Safety,9760,35263
-Road Surface Defects,64564,194329
-Rubbish,92203,193845
-Street Furniture,5253,10689
-Street Lights,24586,74014
-Utility Works,111,423
+Right of Way,3926,8151
+Road Safety,10699,40948
+Road Surface Defects,73490,228571
+Rubbish,98102,209754
+Street Furniture,5692,12036
+Street Lights,29032,88416
+Utility Works,111,427

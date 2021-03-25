@@ -1,24 +1,30 @@
 SHEF_B,Urban,Rural,More Rural
-Abandoned Vehicles,33520.0,2554.0,2291.0
-Bridge/Culvert Defects,375.0,112.0,265.0
-Bus Stops Damage,4377.0,287.0,179.0
-Dangerous Building/Structure,519.0,3.0,3.0
-Dog Fouling,16477.0,1694.0,968.0
-Environmental Health,794.0,19.0,82.0
-Fences,137.0,19.0,26.0
-Gritting,169.0,25.0,61.0
-Grounds Maintenance,845.0,202.0,165.0
-Open Spaces/Parks,21107.0,1131.0,767.0
-Other,64251.0,6829.0,8320.0
-Parking,39824.0,3108.0,1475.0
-Pavement /Footway Defects,72385.0,7580.0,5682.0
+Abandoned Vehicles,38821.0,3019.0,2610.0
+Bin Replacement,855.0,69.0,25.0
+Bridge/Culvert Defects,566.0,237.0,547.0
+Bus Stops Damage,5076.0,345.0,234.0
+Dangerous Building/Structure,667.0,7.0,29.0
+Dog Fouling,22484.0,2461.0,1408.0
+Drainage,17240.0,4528.0,7652.0
+Environmental Health,1134.0,117.0,224.0
+Fences,170.0,29.0,37.0
+Floral Displays,49.0,,
+Gritting,224.0,57.0,152.0
+Grounds Maintenance,1728.0,505.0,448.0
+Highways Enquiries,104604.0,14036.0,22004.0
+Incivilities,42447.0,1379.0,1031.0
+Open Spaces/Parks,23642.0,1336.0,951.0
+Other,88453.0,10509.0,12316.0
+Overgrown/Fallen Veg/Trees,40428.0,6041.0,7123.0
+Parking,45826.0,3616.0,1764.0
+Pavement /Footway Defects,85048.0,8651.0,6661.0
 Property Damage,106.0,10.0,19.0
-Public Toilets,604.0,112.0,89.0
+Public Toilets,729.0,135.0,102.0
 Retaining Wall,50.0,4.0,3.0
-Right of Way,9361.0,1652.0,4362.0
-Road Safety,39749.0,4871.0,7325.0
-Road Surface Defects,189378.0,37265.0,71624.0
-Rubbish,306378.0,15468.0,27005.0
-Street Furniture,17773.0,692.0,794.0
-Street Lights,95153.0,11752.0,6635.0
-Utility Works,449.0,69.0,96.0
+Right of Way,11247.0,2329.0,5630.0
+Road Safety,48560.0,6064.0,9070.0
+Road Surface Defects,238178.0,47133.0,89608.0
+Rubbish,337064.0,17394.0,29684.0
+Street Furniture,21348.0,1016.0,1356.0
+Street Lights,119089.0,15598.0,9045.0
+Utility Works,934.0,173.0,141.0
