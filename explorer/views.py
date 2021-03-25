@@ -138,16 +138,22 @@ class GroupedAnalysisChartView(GenericSocial, ComboView, ServiceLogic):
     share_description = "Overall charts for {{group.name}}."
 
     def logic(self):
+
+        self.group = self.service.groups.get(slug=self.group_slug)
+
+        #get only groups with things in them
         populated_slugs = ComparisonSuperSet.objects.filter(
             group__service=self.service).values_list('group__slug', flat=True)
-        self.group = self.service.groups.get(slug=self.group_slug)
         self.groups = self.service.groups.filter(
             slug__in=populated_slugs).order_by("order")
+
+        # get supersets for this group
         self.sets = ComparisonSuperSet.objects.filter(
             group=self.group).order_by('-priority')
+
         for s in self.sets:
             label = s.labels.first()
-            set = s.sets.first()
+            set = s.sets.get(collectiontype__default=True)
             s.chart = set.get_grand_total_chart(label, summary=True)
             self.chart_collection.register(s.chart)
 
