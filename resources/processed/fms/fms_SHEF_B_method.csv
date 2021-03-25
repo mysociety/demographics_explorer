@@ -1,24 +1,30 @@
-SHEF_B,Cobrand,FixMyStreet.com,Mobile
-Abandoned Vehicles,24259,33245,12732
-Bridge/Culvert Defects,1347,983,585
-Bus Stops Damage,747,3706,1997
-Dangerous Building/Structure,20,594,109
-Dog Fouling,4125,19779,6816
-Environmental Health,5481,1030,740
-Fences,213,185,61
-Gritting,1026,311,191
-Grounds Maintenance,1800,1798,1089
-Open Spaces/Parks,6142,15604,10836
-Other,18505,90318,22381
-Parking,3919,40112,11562
-Pavement /Footway Defects,25554,69874,31369
-Property Damage,189,106,29
-Public Toilets,117,707,266
-Retaining Wall,205,35,37
-Right of Way,25060,13766,7539
-Road Safety,29011,46630,19699
-Road Surface Defects,150947,287099,95193
-Rubbish,114026,208111,184861
-Street Furniture,20607,14528,11644
-Street Lights,53489,107918,42157
-Utility Works,1180,860,446
+SHEF_B,Desktop,Mobile,Open311,Unclear
+Abandoned Vehicles,1522.0,11082.0,128.0,57504.0
+Bin Replacement,54.0,344.0,34.0,1074.0
+Bridge/Culvert Defects,204.0,283.0,98.0,2330.0
+Bus Stops Damage,87.0,1897.0,13.0,4453.0
+Dangerous Building/Structure,2.0,69.0,38.0,614.0
+Dog Fouling,298.0,6456.0,62.0,23904.0
+Drainage,3455.0,6882.0,1795.0,56830.0
+Environmental Health,190.0,469.0,81.0,6511.0
+Fences,7.0,49.0,5.0,398.0
+Floral Displays,,16.0,,153.0
+Gritting,66.0,89.0,36.0,1337.0
+Grounds Maintenance,158.0,520.0,411.0,3598.0
+Highways Enquiries,1883.0,32854.0,1.0,121137.0
+Incivilities,1047.0,17773.0,43.0,37680.0
+Open Spaces/Parks,506.0,10307.0,23.0,21746.0
+Other,2572.0,19428.0,381.0,108823.0
+Overgrown/Fallen Veg/Trees,2433.0,10818.0,1757.0,87862.0
+Parking,1027.0,10407.0,128.0,44031.0
+Pavement /Footway Defects,1703.0,29305.0,361.0,95428.0
+Property Damage,,29.0,,295.0
+Public Toilets,11.0,255.0,,824.0
+Retaining Wall,12.0,25.0,,240.0
+Right of Way,1919.0,5302.0,318.0,38826.0
+Road Safety,2825.0,16324.0,550.0,75641.0
+Road Surface Defects,8804.0,81775.0,4614.0,438046.0
+Rubbish,8874.0,175269.0,718.0,322137.0
+Street Furniture,2129.0,8849.0,666.0,35135.0
+Street Lights,6840.0,33773.0,1544.0,161407.0
+Utility Works,46.0,233.0,167.0,2040.0

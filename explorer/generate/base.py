@@ -434,7 +434,7 @@ class AnalysisType(object):
             final[self.collection.slug] = new
 
         # remove any not allowed values
-        allowed_row_values = self.collection.allowed_values()
+        allowed_row_values = list(set(self.collection.allowed_values()))
         if isinstance(allowed_row_values[0], int):
             allowed_row_values = [str(x) for x in allowed_row_values]
 

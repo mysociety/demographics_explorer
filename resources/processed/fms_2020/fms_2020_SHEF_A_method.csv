@@ -1,83 +1,84 @@
-SHEF_A,Cobrand,FixMyStreet.com,Mobile
-Abandoned Vehicles,4430.0,4017.0,5329.0
-Accumulated Litter,792.0,201.0,648.0
-Barriers/Bollards on RoW,115.0,37.0,154.0
-Benches/Bicycle Racks,17.0,8.0,16.0
-Bin Collection,,19.0,3.0
-Bin Repair/Replacement,211.0,165.0,182.0
-Blocked Drains,5235.0,2843.0,4733.0
-Bridge/Culvert Defects,421.0,433.0,491.0
-Broken Kerbs,323.0,346.0,327.0
-Bus Stops Damage,160.0,304.0,621.0
-Countryside RoW,,1.0,
-Dead Animals,958.0,387.0,494.0
-Debris/Spillage,238.0,213.0,291.0
-Demo,,13.0,6.0
-Discarded Syringes,13.0,2.0,1.0
-Dog Fouling,645.0,1256.0,1758.0
-Dog Litter Bin,24.0,83.0,34.0
-Environmental Health,41.0,7.0,17.0
-Fallen/Dangerous Trees,4843.0,4722.0,3677.0
-Fences,29.0,49.0,30.0
-Flooding,1185.0,1481.0,1568.0
-Fly-tipping,18977.0,22526.0,51398.0
-Flyposting,103.0,287.0,615.0
-Garden Waste,113.0,64.0,99.0
-Gates/Stiles RoW,141.0,38.0,71.0
-General Highways Enquiries,673.0,273.0,518.0
-Graffiti,2976.0,1963.0,5725.0
-Grass/Weed Control,1921.0,1505.0,893.0
-Grids and Drains,74.0,17.0,73.0
-Grit Bins,74.0,27.0,92.0
-Gritting,,1.0,9.0
-Grounds Maintenance,,3.0,2.0
-Gullies,979.0,1262.0,1209.0
-Gully/Manhole Defects,299.0,144.0,216.0
-Highway Condition,752.0,7318.0,9111.0
-Highway Drainage,,23.0,31.0
-Ice & Snow,33.0,16.0,31.0
-Leafing,103.0,27.0,241.0
-Lewisham Homes,,43.0,139.0
-Litter/Litter Bin,2928.0,733.0,2732.0
-Manhole Covers,861.0,1077.0,938.0
-Manhole Defects,37.0,22.0,34.0
-Missed Bin Collection,40.0,161.0,320.0
-Noise,,4.0,4.0
-Obstruction,3328.0,1489.0,1835.0
-Open Spaces/Parks,2075.0,2119.0,3348.0
-Other,4519.0,10373.0,8588.0
-Overgrown Vegetation,5937.0,4947.0,3847.0
-Parking,1105.0,5089.0,4118.0
-Pavement /Footway Defects,7174.0,9728.0,12671.0
-Pest Control,,,1.0
-Phoenix HA,,13.0,18.0
-Potholes,17069.0,36341.0,29031.0
-Property Damage,,3.0,
-Protected Trees,,1.0,1.0
-Public Toilets,12.0,50.0,67.0
-Recycling,,71.0,52.0
-Retaining Wall,38.0,12.0,27.0
-Right of Way,916.0,729.0,846.0
-Road Markings,2128.0,1447.0,1646.0
-Road Safety,56.0,70.0,41.0
-Road Surface Defects,8556.0,5542.0,6866.0
-Road Works,555.0,1025.0,802.0
-Road/Pavement Defects,180.0,358.0,216.0
-Rubbish,814.0,3629.0,5621.0
-Salt Bins,10.0,4.0,6.0
-Shopping Trolley,,81.0,140.0
-Skips,5.0,2.0,1.0
-Spillage on Road,149.0,102.0,136.0
-Street Cleaning,6373.0,4551.0,10369.0
-Street Furniture,500.0,627.0,561.0
-Street Lights,11432.0,9761.0,20209.0
-Street Name Plates,368.0,650.0,777.0
-Street Signs,4080.0,3793.0,4817.0
-Trade Waste,1.0,30.0,46.0
-Traffic Lights,664.0,1320.0,1631.0
-Trees and Hedges RoW,642.0,239.0,222.0
-Trees on RoW,60.0,109.0,69.0
-Trip Hazard,369.0,358.0,430.0
-Utility Works,206.0,469.0,308.0
-Vehicle Access,,12.0,7.0
-Zebra Crossing,,21.0,20.0
+SHEF_A,Desktop,Mobile,Open311,Unclear
+Abandoned Vehicles,1522.0,3679.0,128.0,8447.0
+Accumulated Litter,280.0,368.0,,993.0
+Barriers/Bollards on RoW,46.0,104.0,4.0,152.0
+Benches/Bicycle Racks,8.0,8.0,,25.0
+Bin Collection,1.0,2.0,,19.0
+Bin Repair/Replacement,44.0,115.0,23.0,376.0
+Blocked Drains,2251.0,2079.0,403.0,8078.0
+Bridge/Culvert Defects,204.0,189.0,98.0,854.0
+Broken Kerbs,89.0,132.0,106.0,669.0
+Bus Stops Damage,87.0,521.0,13.0,464.0
+Countryside RoW,,,,1.0
+Dead Animals,180.0,233.0,81.0,1345.0
+Debris/Spillage,115.0,115.0,61.0,451.0
+Demo,,6.0,,13.0
+Discarded Syringes,1.0,,,15.0
+Dog Fouling,298.0,1398.0,62.0,1901.0
+Dog Litter Bin,10.0,13.0,11.0,107.0
+Environmental Health,9.0,8.0,,48.0
+Fallen/Dangerous Trees,1023.0,2410.0,244.0,9565.0
+Fences,7.0,18.0,5.0,78.0
+Flooding,481.0,473.0,614.0,2666.0
+Fly-tipping,5993.0,45000.0,405.0,41503.0
+Flyposting,84.0,526.0,5.0,390.0
+Garden Waste,22.0,77.0,,177.0
+Gates/Stiles RoW,37.0,29.0,5.0,179.0
+General Highways Enquiries,178.0,339.0,1.0,946.0
+Graffiti,962.0,4725.0,38.0,4939.0
+Grass/Weed Control,315.0,504.0,74.0,3426.0
+Grids and Drains,11.0,62.0,,91.0
+Grit Bins,36.0,23.0,33.0,101.0
+Gritting,3.0,6.0,,1.0
+Grounds Maintenance,,2.0,,3.0
+Gullies,352.0,273.0,584.0,2241.0
+Gully/Manhole Defects,73.0,142.0,1.0,443.0
+Highway Condition,1714.0,7397.0,,8070.0
+Highway Drainage,6.0,25.0,,23.0
+Ice & Snow,21.0,7.0,3.0,49.0
+Leafing,107.0,128.0,6.0,130.0
+Lewisham Homes,2.0,137.0,,43.0
+Litter/Litter Bin,621.0,1991.0,120.0,3661.0
+Manhole Covers,272.0,477.0,189.0,1938.0
+Manhole Defects,9.0,23.0,2.0,59.0
+Missed Bin Collection,17.0,303.0,,201.0
+Noise,,4.0,,4.0
+Obstruction,757.0,951.0,127.0,4817.0
+Open Spaces/Parks,506.0,2819.0,23.0,4194.0
+Other,2481.0,5832.0,275.0,14892.0
+Overgrown Vegetation,1132.0,1276.0,1439.0,10884.0
+Parking,1027.0,2963.0,128.0,6194.0
+Pavement /Footway Defects,3094.0,8710.0,867.0,16902.0
+Pest Control,1.0,,,
+Phoenix HA,,18.0,,13.0
+Potholes,5741.0,19908.0,3382.0,53410.0
+Property Damage,,,,3.0
+Protected Trees,,1.0,,1.0
+Public Toilets,11.0,56.0,,62.0
+Recycling,18.0,34.0,,71.0
+Retaining Wall,12.0,15.0,,50.0
+Right of Way,330.0,516.0,,1645.0
+Road Markings,740.0,632.0,274.0,3575.0
+Road Safety,11.0,21.0,9.0,126.0
+Road Surface Defects,2285.0,3621.0,960.0,14098.0
+Road Works,152.0,239.0,411.0,1580.0
+Road/Pavement Defects,56.0,58.0,102.0,538.0
+Rubbish,722.0,4899.0,,4443.0
+Salt Bins,6.0,,,14.0
+Shopping Trolley,2.0,138.0,,81.0
+Skips,1.0,,,7.0
+Spillage on Road,48.0,46.0,42.0,251.0
+Street Cleaning,2430.0,7930.0,9.0,10924.0
+Street Furniture,174.0,181.0,206.0,1127.0
+Street Lights,6840.0,11825.0,1544.0,21193.0
+Street Name Plates,205.0,484.0,88.0,1018.0
+Street Signs,1547.0,2874.0,396.0,7873.0
+Trade Waste,2.0,44.0,,31.0
+Traffic Lights,448.0,1105.0,78.0,1984.0
+Trees and Hedges RoW,81.0,141.0,,881.0
+Trees on RoW,12.0,57.0,,169.0
+Trip Hazard,162.0,184.0,84.0,727.0
+Utility Works,46.0,95.0,167.0,675.0
+Vehicle Access,,7.0,,12.0
+Verge Damage,103.0,51.0,19.0,369.0
+Zebra Crossing,,,20.0,21.0

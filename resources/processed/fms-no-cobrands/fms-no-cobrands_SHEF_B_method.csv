@@ -1,30 +1,24 @@
-SHEF_B,FixMyStreet.com,Mobile
-Abandoned Vehicles,33245,11205
-Bin Replacement,586,363
-Bridge/Culvert Defects,983,367
-Bus Stops Damage,3706,1949
-Dangerous Building/Structure,594,109
-Dog Fouling,19779,6574
-Drainage,20878,8542
-Environmental Health,1030,445
-Fences,185,51
-Floral Displays,33,16
-Gritting,311,122
-Grounds Maintenance,1798,883
-Highways Enquiries,106320,34324
-Incivilities,27316,17541
-Open Spaces/Parks,15604,10325
-Other,90318,20960
-Overgrown/Fallen Veg/Trees,40848,12744
-Parking,40112,11094
-Pavement /Footway Defects,69874,30486
-Property Damage,106,29
-Public Toilets,707,259
-Retaining Wall,35,22
-Right of Way,13766,5440
-Road Safety,46630,17064
-Road Surface Defects,287099,87820
-Rubbish,208111,176031
-Street Furniture,14528,9192
-Street Lights,107918,35814
-Utility Works,860,388
+SHEF_B,Desktop,Mobile,Open311,Unclear
+Abandoned Vehicles,724.0,10353.0,128.0,33245.0
+Bridge/Culvert Defects,49.0,220.0,98.0,983.0
+Bus Stops Damage,58.0,1878.0,13.0,3706.0
+Dangerous Building/Structure,2.0,69.0,38.0,594.0
+Dog Fouling,165.0,6347.0,62.0,19779.0
+Environmental Health,19.0,345.0,81.0,1030.0
+Fences,2.0,44.0,5.0,185.0
+Gritting,6.0,80.0,36.0,311.0
+Grounds Maintenance,47.0,425.0,411.0,1798.0
+Open Spaces/Parks,221.0,10081.0,23.0,15604.0
+Other,1685.0,18894.0,381.0,90318.0
+Parking,768.0,10198.0,128.0,40112.0
+Pavement /Footway Defects,1244.0,28881.0,361.0,69874.0
+Property Damage,,29.0,,106.0
+Public Toilets,7.0,252.0,,707.0
+Retaining Wall,2.0,20.0,,35.0
+Right of Way,468.0,4654.0,318.0,13766.0
+Road Safety,999.0,15515.0,550.0,46630.0
+Road Surface Defects,3896.0,79310.0,4614.0,287099.0
+Rubbish,4584.0,170729.0,718.0,208111.0
+Street Furniture,592.0,7934.0,666.0,14528.0
+Street Lights,2813.0,31457.0,1544.0,107918.0
+Utility Works,8.0,213.0,167.0,860.0

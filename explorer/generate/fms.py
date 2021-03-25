@@ -150,6 +150,18 @@ class ACategories(FMSCollection):
                    "- [More Info](https://github.com/mysociety/fms_meta_categories).")
     require_columns = [slug]
 
+    def _get_labels(self):
+        if self.__class__.stored_labels is None:
+            self.__class__.stored_labels = {}
+        
+        sl = self.__class__.stored_labels
+        if self.__class__.slug in sl:
+            return sl[self.__class__.slug]
+        else:
+            labels = self.get_labels()
+            sl[self.__class__.slug] = labels
+            return labels
+
     def get_labels(self):
         lookup = self.__class__.slug
         df = pd.read_csv(join("resources", "fms", lookup + ".csv"))
@@ -250,34 +262,51 @@ class ReportedFixedCouncil(FMSCollection):
 
 
 @fms_register.register
-class MethodCollection(FMSCollection):
-    name = "Reporting method"
-    slug = "method"
+class CobrandCollection(FMSCollection):
+    name = "Cobrand reports"
+    slug = "cobrand_reduced"
     lookup = None
     md5_lookup = None
-    description = "There are different ways reports can be made. FixMyStreet.com represents reports made by FixMyStreet.com, Mobile reports are made on an app, and Cobrand are made through [cobranded websites](https://www.fixmystreet.com/pro/)."
+    description = "There are different ways reports can be made. FixMyStreet.com represents reports made by FixMyStreet.com, Cobrand are made through [cobranded websites](https://www.fixmystreet.com/pro/)."
     require_columns = ["id", "cobrand"]
 
     def create_collection_column(self, df):
 
-        if self.__class__.lookup is None:
-            lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
-            ids = lookup["id"]
-            lookup = set(ids)
-            self.__class__.lookup = lookup
-        else:
-            lookup = self.__class__.lookup
-
         df[self.slug] = "Cobrand"
         df.loc[(df["cobrand"] == "fixmystreet"), self.slug] = "FixMyStreet.com"
         df.loc[df["cobrand"].isnull(), self.slug] = "FixMyStreet.com"
-        df.loc[df["id"].isin(lookup), self.slug] = "Mobile"
 
         return df
 
     def get_labels(self):
 
-        options = ["Cobrand", "Mobile", "FixMyStreet.com"]
+        options = ["Cobrand", "FixMyStreet.com"]
+        return [[x, ""] for x in options]
+
+
+@fms_register.register
+class MethodCollection(FMSCollection):
+    name = "Reporting method"
+    slug = "method"
+    lookup = None
+    md5_lookup = None
+    description = "Mobile reports are reports made through dedicated apps, or through a website on a mobile."
+    require_columns = ["id"]
+
+    def create_collection_column(self, df):
+
+        lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
+        df = df.merge(lookup, on="id", how="left")
+        df[self.slug] = "Mobile"
+        df.loc[(df["service"] == "desktop"), self.slug] = "Desktop"
+        df.loc[(df["service"] == "Open311"), self.slug] = "Open311"
+        df.loc[(df["service"].isnull()), self.slug] = "Unclear"
+
+        return df
+
+    def get_labels(self):
+
+        options = ["Mobile", "Desktop", "Open311", "Unclear"]
         return [[x, ""] for x in options]
 
 
@@ -310,12 +339,12 @@ class MethodAnalysis(FMSAnalysis):
     name = "Reports by method of report"
     slug = "method"
     h_label = name
-    description = "There are different ways reports can be made. FixMyStreet.com represents reports made by FixMyStreet.com, Mobile reports are made on an app, and Cobrand are made through [cobranded websites](https://www.fixmystreet.com/pro/)."
+    description = "Mobile reports are those."
     group = "Characteristics"
     overview = True
     exclusions = ["method", "cobrand"]
-    allowed_values = ["Cobrand", "Mobile", "FixMyStreet.com"]
-    require_columns = ["id", "cobrand"]
+    allowed_values = ["Mobile", "Desktop", "Open311", "Unclear"]
+    require_columns = ["id"]
 
     lookup = None
     md5_lookup = None
@@ -323,19 +352,14 @@ class MethodAnalysis(FMSAnalysis):
     def create_analysis_column(self):
 
         df = self.source_df
-        if self.__class__.lookup is None:
-            lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
-            lookup = set(lookup["id"])
-            self.__class__.lookup = lookup
-        else:
-            lookup = self.__class__.lookup
+        lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
+        df = df.merge(lookup, on="id", how="left")
+        df[self.slug] = "Mobile"
+        df.loc[(df["service"] == "desktop"), self.slug] = "Desktop"
+        df.loc[(df["service"] == "Open311"), self.slug] = "Open311"
+        df.loc[(df["service"].isnull()), self.slug] = "Unclear"
+        self.source_df = df
 
-        df[self.slug] = "Cobrand"
-        df.loc[df["cobrand"] == "fixmystreet", self.slug] = "FixMyStreet.com"
-        df.loc[df["cobrand"].isnull(), self.slug] = "FixMyStreet.com"
-        df.loc[df["id"].isin(lookup), self.slug] = "Mobile"
-
-        print("done")
 
 
 @ fms_register.register
@@ -789,81 +813,15 @@ class fms_no_cobrands(AnalysisRegister):
     def get_restriction_function(self):
 
         def inner(df):
-            df = df[(df["cobrand"] == "fixmystreet") | (df["cobrand"].isnull())]
+            df = df[(df["cobrand"] == "fixmystreet")
+                    | (df["cobrand"].isnull())]
             return df
 
         return inner
 
 
 fms_no_cobrands.clone(fms_register, exclude=[
-                      "MethodCollection", "MethodAnalysis"])
-
-
-@fms_no_cobrands.register
-class NoCoMethodCollection(FMSCollection):
-    name = "Reporting method"
-    slug = "method"
-    lookup = None
-    md5_lookup = None
-    description = "There are different ways reports can be made. FixMyStreet.com represents reports made by FixMyStreet.com, Mobile reports are made on an app, and Cobrand are made through [cobranded websites](https://www.fixmystreet.com/pro/)."
-    require_columns = ["id"]
-
-    def create_collection_column(self, df):
-
-        df = self.source_df
-        if self.__class__.lookup is None:
-            lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
-            lookup = set(lookup["id"])
-            self.__class__.lookup = lookup
-        else:
-            lookup = self.__class__.lookup
-
-        df[self.slug] = "Cobrand"
-        df.loc[~(df["cobrand"] == "fixmystreet"),
-               self.slug] = "FixMyStreet.com"
-        df.loc[~df["cobrand"].isnull(), self.slug] = "FixMyStreet.com"
-        df.loc[df["id"].isin(lookup), self.slug] = "Mobile"
-
-        print("done")
-
-    def get_labels(self):
-
-        options = ["Mobile", "FixMyStreet.com"]
-        return [[x, ""] for x in options]
-
-
-@fms_no_cobrands.register
-class NoCoMethodAnalysis(FMSAnalysis):
-
-    name = "Reports by method of report"
-    slug = "method"
-    h_label = "Method used to report"
-    description = "There are different ways reports can be made. FixMyStreet.com represents reports made by FixMyStreet.com, Mobile reports are made on an app, and Cobrand are made through [cobranded websites](https://www.fixmystreet.com/pro/)."
-    group = "Characteristics"
-    overview = True
-    exclusions = ["method", "cobrand"]
-    require_columns = ["id"]
-
-    allowed_values = ["Mobile", "FixMyStreet.com"]
-
-    lookup = None
-    md5_lookup = None
-
-    def create_analysis_column(self):
-
-        df = self.source_df
-        if self.__class__.lookup == None:
-            lookup = pd.read_csv(join(self.source_folder, "service_ids.csv"))
-            ids = lookup["id"]
-            lookup = set(ids)
-            self.__class__.lookup = lookup
-        else:
-            lookup = self.__class__.lookup
-
-        df[self.slug] = "Cobrand"
-        df.loc[(df["cobrand"] == "fixmystreet"), self.slug] = "FixMyStreet.com"
-        df.loc[df["cobrand"].isnull(), self.slug] = "FixMyStreet.com"
-        df.loc[df["id"].isin(lookup), self.slug] = "Mobile"
+                      "CobrandCollection"])
 
 
 class fms_base_year(AnalysisRegister):

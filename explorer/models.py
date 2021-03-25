@@ -519,10 +519,15 @@ class ComparisonSet(FlexiBulkModel):
         if switch:
             xx = col_name
             yy = alt.Y("label", sort=None, axis=alt.Axis(title=""))
+            text_options = {'align': 'left',
+                            'baseline': 'middle',
+                            'dx': 3}
         else:
             xx = alt.X("label", sort=None, axis=alt.Axis(
                 title="", labelAngle=0))
             yy = col_name
+            text_options = {'align': 'center',
+                            'baseline': 'bottom'}
 
         # try and remove cap while preserving acronyms
         l_case_name = self.superset.name
@@ -544,6 +549,10 @@ class ComparisonSet(FlexiBulkModel):
                           tooltip=["label",
                                    alt.Tooltip(col_name, format=',.2r'),
                                    "percent"])
+        if summary:
+            text_format = ".2s"
+            chart.set_text_options(text=alt.Text(
+                col_name, format=text_format), **text_options)
 
         if summary:
             del chart.options["color"]
