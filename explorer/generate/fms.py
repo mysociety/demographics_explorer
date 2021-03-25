@@ -91,16 +91,12 @@ class RepeatUse(FMSCollection):
     slug = "repeat_use"
     display_in_header = False
     description = "First vs subsequent reports by this user on FMS"
-    require_columns = ["id"]
+    require_columns = ["id", "first_report_by_user"]
 
     def create_collection_column(self, df):
-        repeat = pd.read_csv(
-            join(settings.FMS_EXPLORER_SOURCE, "first_report.csv"))
-        repeat = repeat.set_index("id")
-        repeat = repeat["first_fms_report"].to_dict()
-        print("generating repeat use")
-        print(len(df), len(repeat))
-        df[self.slug] = df["id"].map(repeat)
+        map = {True: "First Report",
+               False: "Reported Before"}
+        df[self.slug] = df["first_report_by_user"].map(map)
 
     def get_labels(self):
         return [[str(x), ""] for x in ["First Report", "Reported Before"]]
