@@ -22,6 +22,10 @@ import calendar
 month_lookup = {month: index for index,
                 month in enumerate(calendar.month_abbr) if month}
 
+def get_long_month(x):
+    index = list(calendar.month_abbr).index(x)
+    return calendar.month_name[index]
+
 local_negative = theme.adjusted_colours["colour_blue"]
 local_positive = theme.adjusted_colours["colour_berry"]
 local_positive_label = "Red"
@@ -761,7 +765,7 @@ class ComparisonSet(FlexiBulkModel):
 
         return chart
 
-    def get_chart(self, collection_item, tidy=False, percentage=False):
+    def get_chart(self, collection_item, tidy=False, percentage=None):
         """
         chart showing distribution of comparison set
         """
@@ -789,8 +793,10 @@ class ComparisonSet(FlexiBulkModel):
 
         odf = ObjectsToDataFrame()
         odf[h_label] = lambda m: fix_label(m.label)
-        if percentage:
+        if percentage == "column":
             odf[collective_name] = lambda m: m.as_column_percent / 100
+        elif percentage == "row":
+            odf[collective_name] = lambda m: m.as_row_percent / 100
         else:
             odf[collective_name] = lambda m: m.value
         odf["style"] = lambda m: m.cell_style()
@@ -814,7 +820,7 @@ class ComparisonSet(FlexiBulkModel):
         # if long text in description, switch the axis
         switch = avg_length > 10
 
-        if percentage:
+        if percentage is not None:
             y_label = ""
             y_axis = alt.Axis(format=".0%")
             text_format = ".0%"
@@ -848,8 +854,10 @@ class ComparisonSet(FlexiBulkModel):
         else:
             subtitle = [disclaimer, category_label]
 
-        if percentage:
-            title = f"{collection_item.name} {collective_name.lower()} as % of all {collective_name.lower()}"
+        if percentage == "column":
+            title = f"{collection_item.name} {collective_name.lower()} as percentage of all {collective_name.lower()}"
+        elif percentage == "row":
+            title = f"Relative proportion of {collection_item.name} {collective_name.lower()}"
         else:
             title = alt.TitleParams(self.superset.name, subtitle=subtitle)
 
@@ -980,6 +988,90 @@ class ComparisonLabel(FlexiBulkModel):
         units.sort(key=sort_by_both, reverse=True)
 
         return units
+
+    def short_name(self):
+        if "deprivation" in self.parent.name:
+            return "Decile " + self.name
+        if "hour" in self.parent.name:
+            return "Hour " + self.name
+        if "month" in self.parent.name:
+            return get_long_month(self.name)
+        return self.name
+
+    def label_chart(self, collection_type, superset, percentage=False):
+        """
+        define google table that shows the chi table of collection type
+        vs label
+        """
+        ordered_units = self.ordered_units(collection_type.slug)
+
+        name = " ".join([self.name, superset.name, collection_type.name])
+
+        service = superset.group.service
+        odf = ObjectsToDataFrame()
+        odf["Category"] = lambda x: x.collection.name
+        odf["Reports"] = lambda x: int(x.value)
+        odf["%"] = lambda x: x.as_row_percent / 100
+        odf["Expected"] = lambda x: x.expected
+        odf["Expected Diff%"] = lambda x: x.diff_percent
+        odf["Std. Res."] = lambda x: x.chi_value
+
+        df = odf.apply_objects(ordered_units)
+
+        avg_length = df["Category"].str.len().mean()
+
+        def lower_if_allowed(w):
+            if w in calendar.month_name:
+                return w
+            if len(w) > 1:
+                return w.lower()
+            else:
+                return w
+
+        def lower(s):
+            words = s.split(" ")
+            return " ".join([lower_if_allowed(x) for x in words])
+
+        if percentage:
+            col_name = "%"
+            y_label = "%"
+            y_axis = alt.Axis(format=".0%")
+            text_format = ".0%"
+            title = f"Proportion of {lower(collection_type.name)} that were {lower(self.short_name())} {lower(service.collective_name)}"
+            subtitle = superset.name
+        else:
+            col_name = "Reports"
+            y_label = service.collective_name
+            y_axis = alt.Axis()
+            text_format = ".2s"
+            title = f"{self.short_name()} {lower(service.collective_name)} by {lower(collection_type.name)}"
+            subtitle = superset.name
+
+        df = df.sort_values(col_name, ascending=False)
+        switch = avg_length > 10
+        if switch:
+            xx = alt.X(col_name, title=y_label, axis=y_axis)
+            yy = alt.Y("Category", sort=None, axis=alt.Axis(title=""))
+            text_options = {'align': 'left',
+                            'baseline': 'middle',
+                            'dx': 3}
+        else:
+            xx = alt.X("Category", axis=alt.Axis(
+                title="", labelAngle=0))
+            yy = alt.Y(col_name, title=y_label, axis=y_axis)
+            text_options = {'align': 'center',
+                            'baseline': 'bottom'}
+
+        chart = AltairChart(df, chart_type="bar", title=alt.TitleParams(
+            text=title, subtitle=subtitle), name=name)
+
+        chart.set_options(x=xx,
+                          y=yy)
+
+        chart.set_text_options(
+            text=alt.Text(col_name, format=text_format), **text_options)
+
+        return chart
 
     def label_table(self, collection_type, superset):
         """

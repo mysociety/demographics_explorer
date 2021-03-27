@@ -141,7 +141,7 @@ class GroupedAnalysisChartView(GenericSocial, ComboView, ServiceLogic):
 
         self.group = self.service.groups.get(slug=self.group_slug)
 
-        #get only groups with things in them
+        # get only groups with things in them
         populated_slugs = ComparisonSuperSet.objects.filter(
             group__service=self.service).values_list('group__slug', flat=True)
         self.groups = self.service.groups.filter(
@@ -209,7 +209,11 @@ class AnalysisView(GenericSocial, ComboView, ServiceLogic):
 
         self.table = self.label.label_table(
             self.collection_type, self.superset)
-        self.chart = self.local_set.get_grand_total_chart(self.label)
+        self.label_chart = self.label.label_chart(
+            self.collection_type, self.superset)
+        self.label_chart_p = self.label.label_chart(
+            self.collection_type, self.superset, percentage=True)
+        #self.chart = self.local_set.get_grand_total_chart(self.label)
 
     def bake_args(self):
         for s in service_query:
@@ -370,8 +374,10 @@ class ComparisonSetView(GenericSocial, ComboView, ServiceLogic):
 
         self.chart = cs.get_chart(self.category)
         self.tidy_chart = cs.get_chart(self.category, tidy=True)
-        self.tidy_percent_chart = cs.get_chart(
-            self.category, tidy=True, percentage=True)
+        self.tidy_percent_row_chart = cs.get_chart(
+            self.category, tidy=True, percentage="row")
+        self.tidy_percent_column_chart = cs.get_chart(
+            self.category, tidy=True, percentage="column")
         self.expected_chart = cs.get_expected_comparison_chart(
             self.category)
         self.percentage_diff = cs.get_comparison_chart(

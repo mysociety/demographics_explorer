@@ -50,9 +50,15 @@
 
 	<hr style="padding-bottom:20px;">
 
-	{{tidy_percent_chart.render_div}}
+	{{tidy_percent_row_chart.render_div}}
 
-	<p> This chart shows the percentage of this type or report ({{collection.name}} - {{category.name}}) as a percentage of the overall dataset.</p>
+	<p> This chart shows the percentage of this type or report ({{collection.name}} - {{category.name}}) as a percentage of all reports in the {{collection.name}} collection.</p>
+
+	<hr style="padding-bottom:20px;">
+
+	{{tidy_percent_column_chart.render_div}}
+
+	<p> This chart shows the percentage of this type or report ({{collection.name}} - {{category.name}}) as a percentage of reports of the same category in the overall dataset. </p>
 
 	<hr>
 	<br>
