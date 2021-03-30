@@ -1,23 +1,28 @@
-SHEF_B,First Report
-Abandoned Vehicles,1523
-Bridge/Culvert Defects,42
-Bus Stops Damage,58
-Dog Fouling,279
-Environmental Health,125
-Fences,6
-Gritting,2
-Grounds Maintenance,44
-Open Spaces/Parks,438
-Other,2589
-Parking,1483
-Pavement /Footway Defects,1975
-Property Damage,1
-Public Toilets,12
-Retaining Wall,4
-Right of Way,801
-Road Safety,932
-Road Surface Defects,5982
-Rubbish,5460
-Street Furniture,554
-Street Lights,2951
-Utility Works,19
+SHEF_B,First Report,Reported Before
+Abandoned Vehicles,664.0,859.0
+Bin Replacement,12.0,2.0
+Bridge/Culvert Defects,23.0,19.0
+Bus Stops Damage,27.0,31.0
+Dog Fouling,119.0,160.0
+Drainage,379.0,166.0
+Environmental Health,37.0,88.0
+Fences,3.0,3.0
+Gritting,2.0,
+Grounds Maintenance,24.0,20.0
+Highways Enquiries,1044.0,1039.0
+Incivilities,184.0,127.0
+Open Spaces/Parks,230.0,208.0
+Other,1285.0,1304.0
+Overgrown/Fallen Veg/Trees,691.0,617.0
+Parking,580.0,903.0
+Pavement /Footway Defects,974.0,1001.0
+Property Damage,,1.0
+Public Toilets,4.0,8.0
+Retaining Wall,3.0,1.0
+Right of Way,472.0,329.0
+Road Safety,486.0,446.0
+Road Surface Defects,3218.0,2764.0
+Rubbish,3171.0,2289.0
+Street Furniture,330.0,224.0
+Street Lights,1572.0,1379.0
+Utility Works,5.0,14.0

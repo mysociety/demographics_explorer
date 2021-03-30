@@ -1,74 +1,75 @@
-SHEF_A,First Report
-Abandoned Vehicles,1479
-Accumulated Litter,46
-Barriers/Bollards on RoW,1
-Bin Collection,6
-Bin Repair/Replacement,12
-Blocked Drains,249
-Bridge/Culvert Defects,18
-Broken Kerbs,13
-Bus Stops Damage,74
-Dead Animals,77
-Debris/Spillage,8
-Demo,1
-Discarded Syringes,1
-Dog Fouling,265
-Dog Litter Bin,5
-Fallen/Dangerous Trees,681
-Fences,3
-Flooding,58
-Fly-tipping,2532
-Flyposting,37
-Garden Waste,9
-Gates/Stiles RoW,3
-General Highways Enquiries,28
-Graffiti,247
-Grass/Weed Control,94
-Grids and Drains,1
-Grit Bins,3
-Gritting,1
-Grounds Maintenance,1
-Gullies,34
-Gully/Manhole Defects,26
-Highway Condition,1542
-Highway Drainage,8
-Ice & Snow,2
-Leafing,4
-Litter/Litter Bin,22
-Manhole Covers,61
-Manhole Defects,2
-Missed Bin Collection,16
-Noise,2
-Obstruction,141
-Open Spaces/Parks,332
-Other,1938
-Overgrown Vegetation,231
-Parking,1115
-Pavement /Footway Defects,1748
-Pest Control,1
-Potholes,4094
-Property Damage,2
-Public Toilets,11
-Recycling,11
-Retaining Wall,1
-Right of Way,67
-Road Markings,76
-Road Safety,4
-Road Surface Defects,387
-Road Works,27
-Road/Pavement Defects,17
-Rubbish,703
-Salt Bins,1
-Shopping Trolley,1
-Spillage on Road,2
-Street Cleaning,749
-Street Furniture,18
-Street Lights,2589
-Street Name Plates,153
-Street Signs,414
-Trade Waste,4
-Traffic Lights,262
-Trees and Hedges RoW,50
-Trees on RoW,19
-Trip Hazard,20
-Utility Works,17
+SHEF_A,First Report,Reported Before
+Abandoned Vehicles,589.0,890.0
+Accumulated Litter,30.0,16.0
+Barriers/Bollards on RoW,1.0,
+Bin Collection,4.0,2.0
+Bin Repair/Replacement,8.0,4.0
+Blocked Drains,169.0,80.0
+Bridge/Culvert Defects,13.0,5.0
+Broken Kerbs,9.0,4.0
+Bus Stops Damage,36.0,38.0
+Dead Animals,26.0,51.0
+Debris/Spillage,6.0,2.0
+Demo,,1.0
+Discarded Syringes,,1.0
+Dog Fouling,119.0,146.0
+Dog Litter Bin,2.0,3.0
+Fallen/Dangerous Trees,336.0,345.0
+Fences,1.0,2.0
+Flooding,38.0,20.0
+Fly-tipping,1467.0,1065.0
+Flyposting,19.0,18.0
+Garden Waste,4.0,5.0
+Gates/Stiles RoW,2.0,1.0
+General Highways Enquiries,18.0,10.0
+Graffiti,123.0,124.0
+Grass/Weed Control,56.0,38.0
+Grids and Drains,1.0,
+Grit Bins,2.0,1.0
+Gritting,1.0,
+Grounds Maintenance,1.0,
+Gullies,23.0,11.0
+Gully/Manhole Defects,12.0,14.0
+Highway Condition,758.0,784.0
+Highway Drainage,1.0,7.0
+Ice & Snow,,2.0
+Leafing,3.0,1.0
+Litter/Litter Bin,16.0,6.0
+Manhole Covers,31.0,30.0
+Manhole Defects,2.0,
+Missed Bin Collection,13.0,3.0
+Noise,,2.0
+Obstruction,73.0,68.0
+Open Spaces/Parks,163.0,169.0
+Other,917.0,1021.0
+Overgrown Vegetation,136.0,95.0
+Parking,455.0,660.0
+Pavement /Footway Defects,792.0,956.0
+Pest Control,,1.0
+Potholes,2144.0,1950.0
+Property Damage,1.0,1.0
+Public Toilets,5.0,6.0
+Recycling,4.0,7.0
+Retaining Wall,,1.0
+Right of Way,34.0,33.0
+Road Markings,49.0,27.0
+Road Safety,1.0,3.0
+Road Surface Defects,246.0,141.0
+Road Works,15.0,12.0
+Road/Pavement Defects,10.0,7.0
+Rubbish,378.0,325.0
+Salt Bins,,1.0
+Shopping Trolley,,1.0
+Spillage on Road,1.0,1.0
+Street Cleaning,463.0,286.0
+Street Furniture,12.0,6.0
+Street Lights,1346.0,1243.0
+Street Name Plates,79.0,74.0
+Street Signs,229.0,185.0
+Trade Waste,3.0,1.0
+Traffic Lights,129.0,133.0
+Trees and Hedges RoW,22.0,28.0
+Trees on RoW,9.0,10.0
+Trip Hazard,11.0,9.0
+Utility Works,5.0,12.0
+Verge Damage,2.0,1.0
