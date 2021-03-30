@@ -1018,7 +1018,9 @@ class ComparisonLabel(FlexiBulkModel):
 
         df = odf.apply_objects(ordered_units)
 
-        avg_length = df["Category"].str.len().mean()
+        avg_length = 0
+        if len(df["Category"]) > 0:
+            avg_length = df["Category"].str.len().mean()
 
         def lower_if_allowed(w):
             if w in calendar.month_name:
